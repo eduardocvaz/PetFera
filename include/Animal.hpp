@@ -32,7 +32,6 @@ public:
 class AnimalSilvestre
 {
 protected:
-
 public:
     AnimalSilvestre();
     ~AnimalSilvestre();
@@ -41,7 +40,6 @@ public:
 class AnimalNativo : protected AnimalSilvestre
 {
 protected:
-
 public:
     AnimalNativo();
     ~AnimalNativo();
@@ -50,7 +48,6 @@ public:
 class AnimalExotico : protected AnimalSilvestre
 {
 protected:
-
 public:
     AnimalExotico();
     ~AnimalExotico();
