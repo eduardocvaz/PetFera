@@ -14,19 +14,19 @@ protected:
 
 public:
     char get_sexo();
-    void set_sexo(char _sexo);
+    void set_sexo(char sexo);
 
     double get_tamanho();
-    void set_tamanho(double _tamanho);
+    void set_tamanho(double tamanho);
 
     string get_nome();
-    void set_nome(string _nome);
+    void set_nome(string nome);
 
     string get_nome_cientifico();
-    void set_nome_cientifico(string _nome_cientifico);
+    void set_nome_cientifico(string nome_cientifico);
 
     string get_alimentacao();
-    void set_alimentacao(string _alimentacao);
+    void set_alimentacao(string alimentacao);
 };
 
 class AnimalSilvestre
