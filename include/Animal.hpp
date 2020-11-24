@@ -29,13 +29,22 @@ public:
     void set_alimentacao(string alimentacao);
 };
 
-class AnimalSilvestre
+class AnimalSilvestre : protected Animal
 {
 protected:
 public:
     AnimalSilvestre();
     ~AnimalSilvestre();
 };
+
+class AnimalDomestico : protected Animal
+{
+protected:
+public:
+    AnimalDomestico();
+    ~AnimalDomestico();
+};
+
 
 class AnimalNativo : protected AnimalSilvestre
 {
