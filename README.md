@@ -4,5 +4,5 @@ Cadastro de animais de um pet shop.
 
 ## Alunos:
 > Dawerton Eduardo Carlos Vaz \
-> Leandro Silva Ferreira Junior \
+> Leandro Silva Ferreira Junior
     
