@@ -1,46 +1,63 @@
-#include <iostream>
 #include "Animal.hpp"
 
-/* Gets e Sets*/
+//construtor e destrutor
+Animal::Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto):
+                sexo(sexo),
+                tamanho(tamanho),
+                peso(peso),
+                nome(nome),
+                nome_cientifico(nome_cientifico),
+                alimentacao(alimentacao),
+                extinto(extinto)
+                {}
 
-char Animal::get_sexo()
-{
+Animal::~Animal() {}
+
+/* Gets & Sets*/
+char Animal::getSexo() const{
     return this->sexo;
 }
-void Animal::set_sexo(char sexo)
-{
+
+void Animal::setSexo(char sexo){
     this->sexo = sexo;
 }
 
-double Animal::get_tamanho()
-{
+double Animal::getTamanho() const{
     return this->tamanho;
 }
-void Animal::set_tamanho(double tamanho)
-{
+
+void Animal::setTamanho(double tamanho){
     this->tamanho = tamanho;
 }
-string Animal::get_nome()
-{
+
+double Animal::getPeso() const{
+    return this->peso;
+}
+
+void Animal::setPeso(double peso){
+    this->peso = peso;
+}
+
+string Animal::getNome() const{
     return this->nome;
 }
-void Animal::set_nome(string nome)
-{
+
+void Animal::setNome(string nome){
     this->nome = nome;
 }
-string Animal::get_nome_cientifico()
-{
+
+string Animal::getNomeCientifico() const{
     return this->nome_cientifico;
 }
-void Animal::set_nome_cientifico(string nome_cientifico)
-{
+
+void Animal::setNomeCientifico(string nome_cientifico){
     this->nome_cientifico = nome_cientifico;
 }
-string Animal::get_alimentacao()
-{
+
+string Animal::getAlimentacao() const{
     return this->alimentacao;
 }
-void Animal::set_alimentacao(string alimentacao)
-{
+
+void Animal::setAlimentacao(string alimentacao){
     this->alimentacao = alimentacao;
 }
