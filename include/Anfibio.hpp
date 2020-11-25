@@ -1,14 +1,16 @@
 #pragma once
 
+#include "date.hpp"
 #include "Animal.hpp"
 
 class Anfibio : public Animal //usar public pra ter acesso externo
 {
 protected:
-    //atributos específicos
+    int mudas_total;
+    date ultima_muda;
 
 public:
-    Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto);
+    Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao,int mudas_total,date ultima_muda);
     ~Anfibio();
 
     friend ostream& operator<< (ostream& o, Anfibio& anfibio);
