@@ -10,8 +10,13 @@ protected:
     string ultima_muda;
 
 public:
-    Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,Tratador& tratador, Veterinario& veterinario,int mudas_total,string ultima_muda);
+    Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto, int mudas_total, string ultima_muda);
     ~Anfibio();
+
+    void setMudas(int mudas_total);
+    int getMudas() const;
+    void setUltimaMuda(string ultima_muda);
+    string getUltimaMuda() const;
 
     friend ostream& operator<< (ostream& o, Anfibio& anfibio);
 

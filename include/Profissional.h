@@ -4,6 +4,9 @@
 #include <iostream>
 #include <iomanip>
 #include <ostream>
+#include <vector>
+
+#include "Animal.hpp"
 
 using std::string;
 using std::ostream;
@@ -13,15 +16,16 @@ protected:
     string nome;
     string idade;
     string telefone;
+    vector<Animal*> meus_animais;
 
 public:
     Profissional(string nome, string idade, string telefone);
     virtual ~Profissional();
 
-    //get e set
     string getNome() const;
     string getIdade() const;
     string getTelefone() const;
+    vector<Animal*> getMeusAnimais() const;
 
     void setNome(string nome);
     void setIdade(string idade);

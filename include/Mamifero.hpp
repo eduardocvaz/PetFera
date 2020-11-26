@@ -3,18 +3,20 @@
 #include "Animal.hpp"
 #include "string"
 
-class Mamifero : public Animal //usar public pra ter acesso externo
+class Mamifero : public Animal
 {
-protected:
+private:
     string cor_da_pelagem;
-    bool glandulas_sudoriparas;
 
 public:
-    Mamifero(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,Tratador& tratador, Veterinario& veterinario,string cor_da_pelagem,bool glandulas_sudoriparas);
+    Mamifero(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,string cor_da_pelagem);
     ~Mamifero();
+
+    void setCorPelagem(string cor_da_pelagem);
+    string getCorPelagem() const;
 
     friend ostream& operator<< (ostream& o, Mamifero& Mamifero);
 
-    ostream& imprimeDados(ostream& o) const; // implementar de acordo com os atributos próprios
+    ostream& imprimeDados(ostream& o) const;
 };
 

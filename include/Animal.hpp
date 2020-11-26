@@ -17,14 +17,11 @@ protected:
     string nome_cientifico;
     string alimentacao;
     bool extinto;
-    Tratador& tratador;
-    Veterinario& veterinario;
 
 public:
     //construtores
-    Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto, Tratador& tratador, Veterinario& veterinario);
+    Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto);
     virtual ~Animal();
-
 
     friend ostream& operator<< (ostream& o, Animal& animal);
     virtual ostream& imprimeDados(ostream& o) const = 0;
@@ -44,8 +41,4 @@ public:
     void setAlimentacao(string alimentacao);
     bool getExtinto() const;
     void setExtinto(bool extinto);
-    Tratador& getTratador() const;
-    void setTratador(Tratador& tratador);
-    Veterinario& getVeterinario() const;
-    void setVeterinario(Veterinario& veterinario);
 };

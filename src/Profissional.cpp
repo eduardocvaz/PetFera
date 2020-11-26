@@ -6,7 +6,13 @@ Profissional::Profissional(string nome, string idade, string telefone):
                             telefone(telefone)
                             {}
 
-Profissional::~Profissional(){}
+Profissional::~Profissional(){
+
+    for (auto& animal : this->meus_animais)
+    {
+        delete animal;
+    }
+}
 
 string Profissional::getNome() const{
     return this->nome;
@@ -28,6 +34,10 @@ void Profissional::setIdade(string idade){
 }
 void Profissional::setTelefone(string telefone){
     this->telefone = telefone;
+}
+
+vector<Animal*> Profissional::getMeusAnimais() const{
+    return this->meus_animais;
 }
 
 ostream& operator<< (ostream& o, Profissional & p){

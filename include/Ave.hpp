@@ -5,16 +5,21 @@
 
 class Ave : public Animal //usar public pra ter acesso externo
 {
-protected:
+private:
     double tamanho_do_bico;
-    double tamanho_da_invergadura;
+    double tamanho_da_envergadura;
 
 public:
-    Ave(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,Tratador& tratador, Veterinario& veterinario,double tamanho_do_bico,double tamanho_da_invergadura);
+    Ave(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,double tamanho_do_bico,double tamanho_da_envergadura);
     ~Ave();
+
+    void setTamanhoBico(double tamanho_do_bico);
+    double getTamanhoBico() const;
+    void setTamanhoEnvergadura(double tamanho_da_envergadura);
+    double getTamanhoEnvergadura() const;
 
     friend ostream& operator<< (ostream& o, Ave& Ave);
 
-    ostream& imprimeDados(ostream& o) const; // implementar de acordo com os atributos próprios
+    ostream& imprimeDados(ostream& o) const;
 };
 
