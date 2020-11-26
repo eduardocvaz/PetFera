@@ -30,9 +30,60 @@ void limpaTela()
 void menuPrincipal(PetFera* petfera) {
     char opcao;
     limpaTela();
+	
+	do {	 
+		cout<< endl << "Opções: ";
+		cout<< endl << "========";
+		cout<< endl << "1 - Cadastrar animal";
+		cout<< endl << "2 - Remover animal.";
+		cout<< endl << "3 - Alterar dados de um animal.";
+		cout<< endl << "4 - Listar animais de uma determinada espécie.";
+		cout<< endl << "5 - Listar dados de um determinada animal.";
+		cout<< endl << "6 - Listar animais sob a resposabilidade de um profissional.";
+		cout<< endl << "7 - Cadastrar profissional.";
+		cout<< endl << "8 - Remover profissional.";
+        cout<< endl << "9 - Alterar dados de um profissional.";
+		cout<< endl << "---------";
+		cout<< endl << "---------";
+		cout<< endl << endl << "X - Encerrar.";
 
-    //implementar
+		cout<< endl << endl << "Selecione a opção: ";
 
+		cin >> opcao;
+
+		limpaTela();
+		 
+		switch(opcao)
+		{
+			case '1' :{ petfera->cadastrarAnimal();}
+			break;
+			case '2' :{ petfera->removerAnimal();}
+			break;
+			case '3' :{ petfera->alterarAnimal();}
+			break;
+			case '4' :{ petfera->listarClasseAnimal();}
+			break;
+			case '5' :{ petfera->listarDadosAnimal();}
+			break;
+			case '6' :{ petfera->listarAnimaisProfissional();}
+			break;
+			case '7' :{ petfera->cadastrarProfissional();}
+			break;
+			case '8' :{ petfera->removerProfissional();}
+			break;
+			case '9' :{ petfera->alterarProfissional();}
+			break;
+			case 'X' :
+			case 'x' :{ return;}
+			break;
+			default : cout << endl << "Opção inválida!";
+		}
+		cout << endl;
+
+		pausar();
+		limpaTela();
+	
+	} while (opcao != 'X' && opcao !='x')
 }
 
 int main()
