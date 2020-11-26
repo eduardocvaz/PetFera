@@ -53,8 +53,7 @@ private:
     vector<Profissional*> profissionais;
 
     /** Métodos internos */
-    Animal* findConta(string nome);
+    Animal* findAnimal(string nome);
     Profissional* findProfissional(string nome);
     void printTitle(string title, int largura);
-
 };
