@@ -10,7 +10,7 @@ protected:
     bool glandulas_sudoriparas;
 
 public:
-    Mamifero(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,string cor_da_pelagem,bool glandulas_sudoriparas);
+    Mamifero(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,Tratador& tratador, Veterinario& veterinario,string cor_da_pelagem,bool glandulas_sudoriparas);
     ~Mamifero();
 
     friend ostream& operator<< (ostream& o, Mamifero& Mamifero);

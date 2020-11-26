@@ -10,7 +10,7 @@ protected:
     double tamanho_da_invergadura;
 
 public:
-    Ave(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,double tamanho_do_bico,double tamanho_da_invergadura);
+    Ave(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,Tratador& tratador, Veterinario& veterinario,double tamanho_do_bico,double tamanho_da_invergadura);
     ~Ave();
 
     friend ostream& operator<< (ostream& o, Ave& Ave);

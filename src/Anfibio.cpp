@@ -1,7 +1,7 @@
 #include "Anfibio.hpp"
 
-Anfibio::Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,int mudas_total,string ultima_muda):
-                Animal(sexo,tamanho,peso,nome,nome_cientifico,alimentacao,extinto),
+Anfibio::Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,Tratador& tratador, Veterinario& veterinario,int mudas_total,string ultima_muda):
+                Animal(sexo,tamanho,peso,nome,nome_cientifico,alimentacao,extinto,tratador,veterinario),
                 mudas_total(mudas_total),
                 ultima_muda(ultima_muda) {}
 

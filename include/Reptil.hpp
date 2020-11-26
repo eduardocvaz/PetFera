@@ -10,7 +10,7 @@ protected:
     string tipo_veneno;
 
 public:
-    Reptil(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,bool peconheto,string tipo_veneno);
+    Reptil(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,Tratador& tratador, Veterinario& veterinario,bool peconheto,string tipo_veneno);
     ~Reptil();
 
     friend ostream& operator<< (ostream& o, Reptil& Reptil);
