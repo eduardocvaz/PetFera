@@ -17,19 +17,16 @@ protected:
     string nome_cientifico;
     string alimentacao;
     bool extinto;
-    //Tratador tratador;
-    //Veterinario veterinario; //acredito que e mais facil implementar associando o nome do profissional a uma string em vez de copiar o objeto
-                                //implementar a lógica nos contrutores puxando da lista de vets e tratadores(que precisam ser implementadas antes)
+    Tratador& tratador;
+    Veterinario& veterinario;
 
 public:
     //construtores
-    Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto);
+    Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto, Tratador& tratador, Veterinario& veterinario);
     virtual ~Animal();
 
-//    implementar: para uso na impressão que chama imprimeDados de cada uma:
-    friend ostream& operator<< (ostream& o, Animal& animal);
 
-//    virtual puro implementado somente nas derivadas para imprimir de acordo com o corpo de cada uma:
+    friend ostream& operator<< (ostream& o, Animal& animal);
     virtual ostream& imprimeDados(ostream& o) const = 0;
 
     //gets & sets
@@ -47,4 +44,8 @@ public:
     void setAlimentacao(string alimentacao);
     bool getExtinto() const;
     void setExtinto(bool extinto);
+    Tratador& getTratador() const;
+    void setTratador(Tratador& tratador);
+    Veterinario& getVeterinario() const;
+    void setVeterinario(Veterinario& veterinario);
 };

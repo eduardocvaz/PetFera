@@ -1,14 +1,16 @@
 #include "Animal.hpp"
 
 //construtor e destrutor
-Animal::Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto):
+Animal::Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto, Tratador& tratador, Veterinario& veterinario):
                 sexo(sexo),
                 tamanho(tamanho),
                 peso(peso),
                 nome(nome),
                 nome_cientifico(nome_cientifico),
                 alimentacao(alimentacao),
-                extinto(extinto)
+                extinto(extinto),
+                tratador(tratador),
+                veterinario(veterinario)
                 {}
 
 Animal::~Animal() {}
@@ -61,3 +63,38 @@ string Animal::getAlimentacao() const{
 void Animal::setAlimentacao(string alimentacao){
     this->alimentacao = alimentacao;
 }
+
+bool Animal::getExtinto() const{
+    return this->extinto;
+}
+void Animal::setExtinto(bool extinto){
+    this->extinto = extinto;
+}
+
+Tratador& Animal::getTratador() const{
+    return this->tratador;
+}
+
+void Animal::setTratador(Tratador& tratador){
+    this->tratador = tratador;
+}
+
+Veterinario& Animal::getVeterinario() const{
+    return this->veterinario;
+}
+void Animal::setVeterinario(Veterinario& veterinario){
+    this->veterinario = veterinario;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
