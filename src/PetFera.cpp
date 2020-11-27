@@ -85,11 +85,23 @@ void PetFera::alterarProfissional(){
 }
 
 bool PetFera::adicionaAnimal(Animal* novo){
-    //implementar
+    this->animais.push_back(novo);
+    return true;
 }
 
 Animal* PetFera::removeAnimal(string nome){
-    //implementar
+    int index = 0;
+    for (auto& animal : this->animais)
+    {
+        if (animal->getNome()==nome)
+        {
+            Animal* removido = animal;
+            this->animais.erase(this->animais.begin()+index);
+            return removido;
+        }
+        index++;
+    }
+    return nullptr;
 }
 
 bool PetFera::alteraAnimal(){
@@ -101,23 +113,55 @@ void PetFera::listaClasseAnimal(){
 }
 
 void PetFera::listaDadosAnimal(string nome_animal){
-    //implementar
+    Animal* animal = this->findAnimal(nome_animal);
+    if (animal!=nullptr) {
+        cout << animal << endl;
+    }
 }
 
 void PetFera::listaAnimaisProfissional(string nome_profissional){
-    //implementar
+    Profissional* profissional = this->findProfissional(nome_profissional);
+    if (profissional!=nullptr) {
+        vector<Animal*> meus_animais = profissional->getMeusAnimais();
+        for (auto& animal : meus_animais)
+        {
+            cout << animal << endl;
+        }
+
+    }
 }
 
 bool PetFera::adicionaProfissional(Profissional* novo){
-    //implementar
+    this->profissionais.push_back(novo);
+    return true;
 }
 
 Profissional* PetFera::removeProfissional(string nome){
-    //implementar
+    int index = 0;
+    for (auto& profissional : this->profissionais)
+    {
+        if (profissional->getNome()==nome)
+        {
+            Profissional* removido = profissional;
+            this->profissionais.erase(this->profissionais.begin()+index);
+            return removido;
+        }
+        index++;
+    }
+    return nullptr;
 }
 
 bool PetFera::alteraProfissional(){
     //implementar
+
+
+
+
+
+
+
+
+
 }
 
 Animal* PetFera::findAnimal(string nome) {
