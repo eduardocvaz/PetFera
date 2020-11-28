@@ -11,7 +11,7 @@ protected:
 
 public:
     Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto, int mudas_total, string ultima_muda);
-    ~Anfibio();
+    virtual ~Anfibio();
 
     void setMudas(int mudas_total);
     int getMudas() const;
@@ -22,4 +22,9 @@ public:
 
     ostream& imprimeDados(ostream& o) const; // implementar de acordo com os atributos próprios
 };
+
+
+
+
+
 

@@ -69,6 +69,11 @@ void Animal::setExtinto(bool extinto){
     this->extinto = extinto;
 }
 
+tpAnimal Animal::getTipo() 
+{
+    return this->tipo;
+}
+
 
 
 

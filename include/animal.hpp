@@ -7,6 +7,21 @@
 #include "veterinario.hpp"
 
 using namespace std;
+enum tpAnimal
+{
+	anfibioExotico,
+	anfibioNativo,
+    anfibioDomestico,
+    aveExotico,
+	aveNativo,
+    aveDomestico,
+	mamiferoExotico,
+	mamiferoNativo,
+    mamiferoDomestico,
+    reptilExotico,
+	reptilNativo,
+    reptilDomestico
+};
 
 class Animal {
 protected:
@@ -17,6 +32,7 @@ protected:
     string nome_cientifico;
     string alimentacao;
     bool extinto;
+    tpAnimal tipo;
 
 public:
     //construtores
@@ -41,4 +57,5 @@ public:
     void setAlimentacao(string alimentacao);
     bool getExtinto() const;
     void setExtinto(bool extinto);
+    tpAnimal getTipo();
 };
