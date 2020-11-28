@@ -1,24 +1,43 @@
 #include "animal.hpp"
 
-//construtor e destrutor
-Animal::Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto):
+Animal::Animal(string nome, string idade, bool sexo, double tamanho, double peso, double valor, tpAnimal tipo, bool extinto):
+                nome(nome),
+                idade(idade),
                 sexo(sexo),
                 tamanho(tamanho),
                 peso(peso),
-                nome(nome),
-                nome_cientifico(nome_cientifico),
-                alimentacao(alimentacao),
+                valor(valor),
+                tipo(tipo),
                 extinto(extinto)
                 {}
 
-Animal::~Animal() {}
+Animal::~Animal() = default;
 
-/* Gets & Sets*/
-char Animal::getSexo() const{
+ostream& operator<< (ostream& o, Animal& animal) {
+    return animal.imprimeDados(o);
+}
+
+string Animal::getNome() const{
+    return this->nome;
+}
+
+void Animal::setNome(string nome){
+    this->nome = nome;
+}
+
+string Animal::getIdade() const{
+    return this->idade;
+}
+
+void Animal::setIdade(string idade){
+    this->idade = idade;
+}
+
+bool Animal::getSexo() const{
     return this->sexo;
 }
 
-void Animal::setSexo(char sexo){
+void Animal::setSexo(bool sexo){
     this->sexo = sexo;
 }
 
@@ -34,45 +53,29 @@ double Animal::getPeso() const{
     return this->peso;
 }
 
-void Animal::setPeso(double peso){
+void Animal::setPeso(double peso) {
     this->peso = peso;
 }
 
-string Animal::getNome() const{
-    return this->nome;
+double Animal::getValor() const {
+    return this->valor;
 }
 
-void Animal::setNome(string nome){
-    this->nome = nome;
+void Animal::setValor(double valor) {
+    this->valor = valor;
 }
 
-string Animal::getNomeCientifico() const{
-    return this->nome_cientifico;
+tpAnimal Animal::getTipo() const {
+    return this->tipo;
 }
 
-void Animal::setNomeCientifico(string nome_cientifico){
-    this->nome_cientifico = nome_cientifico;
-}
-
-string Animal::getAlimentacao() const{
-    return this->alimentacao;
-}
-
-void Animal::setAlimentacao(string alimentacao){
-    this->alimentacao = alimentacao;
-}
-
-bool Animal::getExtinto() const{
+bool Animal::getExtinto() const {
     return this->extinto;
 }
-void Animal::setExtinto(bool extinto){
+void Animal::setExtinto(bool extinto) {
     this->extinto = extinto;
 }
 
-tpAnimal Animal::getTipo() 
-{
-    return this->tipo;
-}
 
 
 

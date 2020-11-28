@@ -7,6 +7,7 @@
 #include "veterinario.hpp"
 
 using namespace std;
+
 enum tpAnimal
 {
 	anfibioExotico,
@@ -25,37 +26,36 @@ enum tpAnimal
 
 class Animal {
 protected:
-    char sexo;
+    string nome;
+    string idade;
+    bool sexo;
     double tamanho;
     double peso;
-    string nome;
-    string nome_cientifico;
-    string alimentacao;
-    bool extinto;
+    double valor;
     tpAnimal tipo;
+    bool extinto;
 
 public:
     //construtores
-    Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto);
+    Animal(string nome, string idade, bool sexo, double tamanho, double peso, double valor, tpAnimal tipo, bool extinto);
     virtual ~Animal();
 
     friend ostream& operator<< (ostream& o, Animal& animal);
     virtual ostream& imprimeDados(ostream& o) const = 0;
 
-    //gets & sets
-    char getSexo() const;
-    void setSexo(char sexo);
+    string getNome() const;
+    void setNome(string nome);
+    string getIdade() const;
+    void setIdade(string idade);
+    bool getSexo() const;
+    void setSexo(bool sexo);
     double getTamanho() const;
     void setTamanho(double tamanho);
     double getPeso() const;
     void setPeso(double peso);
-    string getNome() const;
-    void setNome(string nome);
-    string getNomeCientifico() const;
-    void setNomeCientifico(string nome_cientifico);
-    string getAlimentacao() const;
-    void setAlimentacao(string alimentacao);
+    double getValor() const;
+    void setValor(double valor);
+    tpAnimal getTipo() const;
     bool getExtinto() const;
     void setExtinto(bool extinto);
-    tpAnimal getTipo();
 };
