@@ -9,7 +9,7 @@ private:
     string cor_da_pelagem;
 
 public:
-    Mamifero(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,string cor_da_pelagem);
+    Mamifero(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto,string cor_da_pelagem);
     ~Mamifero();
 
     void setCorPelagem(string cor_da_pelagem);

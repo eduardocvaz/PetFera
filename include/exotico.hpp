@@ -1,52 +1,19 @@
 #pragma once
+#include <string>
+using std::string;
 
-#include "animal.hpp"
-#include "string"
-#include "anfibio.hpp"
-#include "ave.hpp"
-#include "mamifero.hpp"
-#include "reptil.hpp"
-
-class exotico
+class Exotico
 {
 private:
     string pais_origem;
 public:
-    exotico(string pais_origem);
-    ~exotico();
+    Exotico(string pais_origem);
+    ~Exotico();
     string getPais_origem() const;
 };
 
-class anfibioExotico : public anfibio, public exotico
-{
-private:
-public:
-    anfibioExotico(/* args */);
-    ~anfibioExotico();
-};
 
-class aveExotico : public ave, public exotico
-{
-private:
-public:
-    aveExotico(/* args */);
-    ~aveExotico();
-};
 
-class mamiferoExotico : public mamifero, public exotico
-{
-private:
-public:
-    mamiferoExotico(/* args */);
-    ~mamiferoExotico();
-};
 
-class reptilExotico : public reptil, public exotico
-{
-private:
-public:
-    reptilExotico(/* args */);
-    ~reptilExotico();
-};
 
 

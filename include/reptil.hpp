@@ -10,7 +10,7 @@ private:
     string tipo_veneno;
 
 public:
-    Reptil(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,bool peconhento,string tipo_veneno);
+    Reptil(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto,bool peconhento,string tipo_veneno);
     ~Reptil();
 
     void setPeconhento(bool peconhento);

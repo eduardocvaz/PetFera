@@ -2,8 +2,8 @@
 #include <iomanip>
 #include <iostream>
 
-Reptil::Reptil(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto, bool peconheto, string tipo_veneno) :
-            Animal(sexo, tamanho, peso, nome, nome_cientifico, alimentacao, extinto),
+Reptil::Reptil(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, bool peconheto, string tipo_veneno) :
+            Animal(nome,idade,sexo,tamanho,peso,valor,reptilDomestico,extinto),
             peconhento(peconhento),
             tipo_veneno(tipo_veneno) {}
 

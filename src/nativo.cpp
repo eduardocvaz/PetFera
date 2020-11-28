@@ -1,9 +1,9 @@
 #include "nativo.hpp"
 
-nativo::nativo(string estado):
+Nativo::Nativo(string estado):
             estado(estado){}
 
-nativo::string getEstado() const;
+string Nativo::getEstado() const
 {
     return this->estado;
 }

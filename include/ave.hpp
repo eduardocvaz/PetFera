@@ -1,7 +1,7 @@
 #pragma once
 
 #include "animal.hpp"
-#include "string"
+#include <string>
 
 class Ave : public Animal //usar public pra ter acesso externo
 {
@@ -10,7 +10,7 @@ private:
     double tamanho_da_envergadura;
 
 public:
-    Ave(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,double tamanho_do_bico,double tamanho_da_envergadura);
+    Ave(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto,double tamanho_do_bico,double tamanho_da_envergadura);
     ~Ave();
 
     void setTamanhoBico(double tamanho_do_bico);
