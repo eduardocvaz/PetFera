@@ -1,7 +1,7 @@
 #include "anfibio.hpp"
 
-Anfibio::Anfibio(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,int mudas_total,string ultima_muda):
-                Animal(sexo,tamanho,peso,nome,nome_cientifico,alimentacao,extinto),
+Anfibio::Anfibio(string nome, string idade, bool sexo, double tamanho, double peso, double valor, tpAnimal tipo, bool extinto, int mudas_total,string ultima_muda):
+        Animal(nome,idade,sexo,tamanho,peso,valor,tipo,extinto),
                 mudas_total(mudas_total),
                 ultima_muda(ultima_muda) {}
 
@@ -14,6 +14,7 @@ void Anfibio::setMudas(int mudas_total){
 int Anfibio::getMudas() const{
     return this->mudas_total;
 }
+
 void Anfibio::setUltimaMuda(string ultima_muda){
     this->ultima_muda = ultima_muda;
 }
