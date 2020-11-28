@@ -10,7 +10,7 @@ protected:
     string ultima_muda;
 
 public:
-    Anfibio(string nome, string idade, bool sexo, double tamanho, double peso, double valor, tpAnimal tipo, bool extinto, int mudas_total, string ultima_muda);
+    Anfibio(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, int mudas_total, string ultima_muda);
     virtual ~Anfibio();
 
     void setMudas(int mudas_total);
