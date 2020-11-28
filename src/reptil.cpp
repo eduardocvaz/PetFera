@@ -1,4 +1,4 @@
-#include "Reptil.hpp"
+#include "reptil.hpp"
 #include <iomanip>
 #include <iostream>
 

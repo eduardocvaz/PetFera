@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Anfibio.hpp"
-#include "Mamifero.hpp"
-#include "Ave.hpp"
-#include "Reptil.hpp"
-#include "Veterinario.hpp"
-#include "Tratador.hpp"
+#include "anfibio.hpp"
+#include "mamifero.hpp"
+#include "ave.hpp"
+#include "reptil.hpp"
+#include "veterinario.hpp"
+#include "tratador.hpp"
 
 #include <vector>
 #include <string>

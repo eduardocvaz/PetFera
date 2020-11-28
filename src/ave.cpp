@@ -1,4 +1,4 @@
-#include "Ave.hpp"
+#include "ave.hpp"
 
 Ave::Ave(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto,double tamanho_do_bico,double tamanho_da_envergadura):
                 Animal(sexo,tamanho,peso,nome,nome_cientifico,alimentacao,extinto),

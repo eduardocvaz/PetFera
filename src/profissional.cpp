@@ -1,4 +1,4 @@
-#include "Profissional.h"
+#include "profissional.hpp"
 
 Profissional::Profissional(string nome, string idade, string telefone):
                             nome(nome),

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Animal.hpp"
+#include "animal.hpp"
 #include "string"
 
 class Mamifero : public Animal

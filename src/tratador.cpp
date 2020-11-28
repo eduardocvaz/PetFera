@@ -1,4 +1,4 @@
-#include "Tratador.hpp"
+#include "tratador.hpp"
 
 #include <iostream>
 

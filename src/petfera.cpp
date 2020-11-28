@@ -1,4 +1,4 @@
-#include "PetFera.h"
+#include "petfera.hpp"
 
 #include <sstream>
 #include <iostream>

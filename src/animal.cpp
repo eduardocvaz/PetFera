@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "animal.hpp"
 
 //construtor e destrutor
 Animal::Animal(char sexo, double tamanho, double peso, string nome, string nome_cientifico, string alimentacao, bool extinto):

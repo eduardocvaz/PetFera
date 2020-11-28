@@ -1,4 +1,4 @@
-#include "PetFera.h"
+#include "petfera.hpp"
 
 #include <iostream>
 
@@ -83,7 +83,7 @@ void menuPrincipal(PetFera* petfera) {
 		pausar();
 		limpaTela();
 	
-	} while (opcao != 'X' && opcao !='x')
+	} while (opcao != 'X' && opcao !='x');
 }
 
 int main()

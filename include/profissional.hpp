@@ -6,7 +6,7 @@
 #include <ostream>
 #include <vector>
 
-#include "Animal.hpp"
+#include "animal.hpp"
 
 using std::string;
 using std::ostream;

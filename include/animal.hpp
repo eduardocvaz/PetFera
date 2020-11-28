@@ -3,8 +3,8 @@
 #include <string>
 #include <iostream>
 
-#include "Tratador.hpp"
-#include "Veterinario.hpp"
+#include "tratador.hpp"
+#include "veterinario.hpp"
 
 using namespace std;
 
