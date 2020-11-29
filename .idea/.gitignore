@@ -11,3 +11,4 @@
 /.name
 /misc.xml
 /vcs.xml
+*.o
