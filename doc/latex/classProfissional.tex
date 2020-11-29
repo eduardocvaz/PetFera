@@ -1,0 +1,65 @@
+\hypertarget{classProfissional}{}\doxysection{Referência da Classe Profissional}
+\label{classProfissional}\index{Profissional@{Profissional}}
+Diagrama de hierarquia para Profissional\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classProfissional}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classProfissional_a08c7fefc896165099919ab8cf70c9e85}\label{classProfissional_a08c7fefc896165099919ab8cf70c9e85}} 
+{\bfseries Profissional} (string nome, string idade, string telefone)
+\item 
+\mbox{\Hypertarget{classProfissional_ae54304db44a7f59313bb49ba7bd0a74c}\label{classProfissional_ae54304db44a7f59313bb49ba7bd0a74c}} 
+string {\bfseries get\+Nome} () const
+\item 
+\mbox{\Hypertarget{classProfissional_ab4b7091f200fc5f515ce26299a7dc23d}\label{classProfissional_ab4b7091f200fc5f515ce26299a7dc23d}} 
+string {\bfseries get\+Idade} () const
+\item 
+\mbox{\Hypertarget{classProfissional_a15ce12650305c0e1bf8ea5eb83dcc8f2}\label{classProfissional_a15ce12650305c0e1bf8ea5eb83dcc8f2}} 
+string {\bfseries get\+Telefone} () const
+\item 
+\mbox{\Hypertarget{classProfissional_a99217e5829a9a2a8e8ae8afea9deb6f8}\label{classProfissional_a99217e5829a9a2a8e8ae8afea9deb6f8}} 
+vector$<$ \mbox{\hyperlink{classAnimal}{Animal}} $\ast$ $>$ {\bfseries get\+Meus\+Animais} () const
+\item 
+\mbox{\Hypertarget{classProfissional_a95ad7bb1da29e80dcc8bb453cf360907}\label{classProfissional_a95ad7bb1da29e80dcc8bb453cf360907}} 
+void {\bfseries set\+Nome} (string nome)
+\item 
+\mbox{\Hypertarget{classProfissional_a20ac1dff2064c6a058fdcc68024ebfe2}\label{classProfissional_a20ac1dff2064c6a058fdcc68024ebfe2}} 
+void {\bfseries set\+Idade} (string idade)
+\item 
+\mbox{\Hypertarget{classProfissional_a0e500bb0a32b41f240f9740d88bd937f}\label{classProfissional_a0e500bb0a32b41f240f9740d88bd937f}} 
+void {\bfseries set\+Telefone} (string telefone)
+\item 
+\mbox{\Hypertarget{classProfissional_ad6018044755ed3910a56be2259bcc2a3}\label{classProfissional_ad6018044755ed3910a56be2259bcc2a3}} 
+virtual ostream \& {\bfseries imprime\+Dados} (ostream \&o) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classProfissional_ac958308f2d4e7e8f748de0a062e24b22}\label{classProfissional_ac958308f2d4e7e8f748de0a062e24b22}} 
+string {\bfseries nome}
+\item 
+\mbox{\Hypertarget{classProfissional_ac3c578c59da9849713487ff9463d080c}\label{classProfissional_ac3c578c59da9849713487ff9463d080c}} 
+string {\bfseries idade}
+\item 
+\mbox{\Hypertarget{classProfissional_afec78fdd95cf499b9189d6ef65de1635}\label{classProfissional_afec78fdd95cf499b9189d6ef65de1635}} 
+string {\bfseries telefone}
+\item 
+\mbox{\Hypertarget{classProfissional_a83a1486f62b4ddec3ba3179d6b567e84}\label{classProfissional_a83a1486f62b4ddec3ba3179d6b567e84}} 
+vector$<$ \mbox{\hyperlink{classAnimal}{Animal}} $\ast$ $>$ {\bfseries meus\+\_\+animais}
+\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classProfissional_afb67b31614b3dde039e5a8ff22fe514a}\label{classProfissional_afb67b31614b3dde039e5a8ff22fe514a}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classProfissional}{Profissional}} \&p)
+\end{DoxyCompactItemize}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/profissional.\+hpp\item 
+src/profissional.\+cpp\end{DoxyCompactItemize}
