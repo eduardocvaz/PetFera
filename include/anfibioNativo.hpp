@@ -4,7 +4,7 @@
 class AnfibioNativo : public Anfibio, public Nativo
 {
 public:
-    AnfibioNativo(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, int mudas_total, string ultima_muda,string estado);
+    AnfibioNativo(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele,string estado);
     ~AnfibioNativo();
 
     friend ostream& operator<< (ostream& o, AnfibioNativo& animal);

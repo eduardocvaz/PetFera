@@ -27,23 +27,23 @@ void limpaTela()
 #endif
 }
 
-void menuPrincipal(const shared_ptr<PetFera>& petfera) {
+void menuPrincipal(PetFera* petfera) {
     char opcao;
     limpaTela();
 	
 	do {	 
 		cout<< endl << "=======================================";
-		cout<< endl << "1 - Cadastrar animal";
-		cout<< endl << "2 - Remover animal";
-		cout<< endl << "3 - Editar animal";
-		cout<< endl << "4 - Listar animais por classe";
-		cout<< endl << "5 - Listar dados de um animal";
-		cout<< endl << "6 - Listar animais de um profissional";
-		cout<< endl << "7 - Cadastrar profissional";
-		cout<< endl << "8 - Remover profissional";
-        cout<< endl << "9 - Editar profissional";
+		cout<< endl << "(1) Cadastrar animal";
+		cout<< endl << "(2) Remover animal";
+		cout<< endl << "(3) Editar animal";
+		cout<< endl << "(4) Listar animais por classe";
+		cout<< endl << "(5) Listar dados de um animal";
+		cout<< endl << "(6) Listar animais de um profissional";
+		cout<< endl << "(7) Cadastrar profissional";
+		cout<< endl << "(8) Remover profissional";
+        cout<< endl << "(9) Editar profissional";
 		cout<< endl << "---------------------------------------";
-		cout<< endl << "X - Encerrar.";
+		cout<< endl << "(X) Encerrar.";
 
 		cout<< endl << endl << "Selecione uma opção: ";
 		cin >> opcao;
@@ -55,20 +55,20 @@ void menuPrincipal(const shared_ptr<PetFera>& petfera) {
 			break;
 			case '2' :{ petfera->removerAnimal();}
 			break;
-			case '3' :{ petfera->alterarAnimal();}
-			break;
-			case '4' :{ petfera->listarClasseAnimal();}
-			break;
-			case '5' :{ petfera->listarDadosAnimal();}
-			break;
-			case '6' :{ petfera->listarAnimaisProfissional();}
-			break;
+//			case '3' :{ petfera->alterarAnimal();}
+//			break;
+//			case '4' :{ petfera->listarClasseAnimal();}
+//			break;
+//			case '5' :{ petfera->listarDadosAnimal();}
+//			break;
+//			case '6' :{ petfera->listarAnimaisProfissional();}
+//			break;
 			case '7' :{ petfera->cadastrarProfissional();}
 			break;
 			case '8' :{ petfera->removerProfissional();}
 			break;
-			case '9' :{ petfera->alterarProfissional();}
-			break;
+//			case '9' :{ petfera->alterarProfissional();}
+//			break;
 			case 'X' :
 			case 'x' :{ return;}
 			default : cout << endl << "Opção inválida!";
@@ -83,10 +83,11 @@ void menuPrincipal(const shared_ptr<PetFera>& petfera) {
 
 int main()
 {
-    shared_ptr<PetFera> petfera(new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Acrelândia - AC"));
+    PetFera* petfera(new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Acrelândia - AC"));
 
     menuPrincipal(petfera);
 
-    //delete petfera;
+    delete petfera;
+
     return 0;
 }

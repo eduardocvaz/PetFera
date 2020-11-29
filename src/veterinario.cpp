@@ -1,9 +1,7 @@
 #include "veterinario.hpp"
 
-#include <iostream>
-
 Veterinario::Veterinario(string nome, string idade, string telefone, string cod_CRMV):
-                        Profissional(nome, idade, telefone),
+                        Profissional(nome, idade, telefone, tipoVeterinario),
                         cod_CRMV(cod_CRMV) {}
 
 Veterinario::~Veterinario() {}

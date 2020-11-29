@@ -1,9 +1,7 @@
 #include "tratador.hpp"
 
-#include <iostream>
-
 Tratador::Tratador(string nome, string idade, string telefone, nivelSeguranca nivel):
-                    Profissional(nome, idade, telefone),
+                    Profissional(nome, idade, telefone, tipoTratador),
                     nivel(nivel) {}
 
 Tratador::~Tratador() {}
@@ -15,7 +13,6 @@ void Tratador::setNivel(nivelSeguranca nivel){
 nivelSeguranca Tratador::getNivel() const{
     return this->nivel;
 }
-
 
 ostream& Tratador::imprimeDados(ostream& o) const{
     //implementar

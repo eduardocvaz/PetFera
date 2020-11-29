@@ -26,44 +26,45 @@ using std::vector;
 using std::string;
 
 class PetFera {
+private:
+    string telefone;
+    string endereco;
+    vector<Animal*> animais;
+    vector<Profissional*> profissionais;
+
+    /** Métodos internos */
+    Animal* findAnimal(string nome);
+    Profissional* findProfissional(string nome);
+    void printTitulo(string titulo, int largura);
+    bool validaVetTrat();
+
 public:
     PetFera(string telefone, string endereco);
     ~PetFera();
 
-    vector<shared_ptr<Animal>> getAnimais() const;
-    vector<shared_ptr<Profissional>> getProfissionais() const;
+    vector<Animal*> getAnimais() const;
+    vector<Profissional*> getProfissionais() const;
 
     /** Métodos de interação com o usuário */
     void cadastrarAnimal();
     void removerAnimal();
-    void alterarAnimal();
-    void listarClasseAnimal();
-    void listarDadosAnimal();
-    void listarAnimaisProfissional();
+//    void alterarAnimal();
+//    void listarClasseAnimal();
+//    void listarDadosAnimal();
+//    void listarAnimaisProfissional();
     void cadastrarProfissional();
     void removerProfissional();
-    void alterarProfissional();
+//    void alterarProfissional();
 
 
     /** Métodos internos para realizar as operações. */
-    bool adicionaAnimal(shared_ptr<Animal> novo); // conferir upcast make_shared
-    shared_ptr<Animal> removeAnimal(string nome); // conferir upcast make_shared
-    bool alteraAnimal();
-    void listaClasseAnimal();
-    void listaDadosAnimal(string nome_animal);
-    void listaAnimaisProfissional(string nome_profissional);
-    bool adicionaProfissional(shared_ptr<Profissional> novo);
-    shared_ptr<Profissional> removeProfissional(string nome);
-    bool alteraProfissional();
-
-private:
-    string telefone;
-    string endereco;
-    vector<shared_ptr<Animal>> animais;
-    vector<shared_ptr<Profissional>> profissionais;
-
-    /** Métodos internos */
-    shared_ptr<Animal> findAnimal(string nome);
-    shared_ptr<Profissional> findProfissional(string nome);
-    void printTitulo(string titulo, int largura);
+   bool adicionaAnimal(Animal* novo);
+   Animal* removeAnimal(string nome);
+//    bool alteraAnimal();
+//    void listaClasseAnimal();
+//    void listaDadosAnimal(string nome_animal);
+//    void listaAnimaisProfissional(string nome_profissional);
+    bool adicionaProfissional(Profissional* novo);
+    Profissional* removeProfissional(string nome);
+//    bool alteraProfissional();
 };

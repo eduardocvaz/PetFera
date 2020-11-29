@@ -1,26 +1,17 @@
 #include "anfibio.hpp"
 
-Anfibio::Anfibio(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, int mudas_total,string ultima_muda):
-        Animal(nome,idade,sexo,tamanho,peso,valor,anfibioDomestico,extinto),
-                mudas_total(mudas_total),
-                ultima_muda(ultima_muda) {}
+Anfibio::Anfibio(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador,string tipo_pele):
+        Animal(nome,idade,sexo,tamanho,peso,valor, veterinario, tratador, anfibioDomestico),
+                tipo_pele(tipo_pele) {}
 
 Anfibio::~Anfibio() {}
 
-void Anfibio::setMudas(int mudas_total){
-    this->mudas_total = mudas_total;
+void Anfibio::setTipoPele(string tipo_pele){
+    this->tipo_pele = tipo_pele;
 }
 
-int Anfibio::getMudas() const{
-    return this->mudas_total;
-}
-
-void Anfibio::setUltimaMuda(string ultima_muda){
-    this->ultima_muda = ultima_muda;
-}
-
-string Anfibio::getUltimaMuda() const{
-    return this->ultima_muda;
+string Anfibio::getTipoPele() const{
+    return this->tipo_pele;
 }
 
 ostream& Anfibio::imprimeDados(ostream& o) const{

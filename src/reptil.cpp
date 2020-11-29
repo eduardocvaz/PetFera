@@ -1,19 +1,10 @@
 #include "reptil.hpp"
 
-Reptil::Reptil(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, bool peconheto, string tipo_veneno) :
-            Animal(nome,idade,sexo,tamanho,peso,valor,reptilDomestico,extinto),
-            peconhento(peconheto),
+Reptil::Reptil(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_veneno) :
+            Animal(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,reptilDomestico),
             tipo_veneno(tipo_veneno) {}
 
 Reptil::~Reptil() {}
-
-void Reptil::setPeconhento(bool peconhento){
-    this->peconhento = peconhento;
-}
-
-bool Reptil::getPeconhento() const{
-    return this->peconhento;
-}
 
 void Reptil::setTipoVeneno(string tipo_veneno){
     this->tipo_veneno = tipo_veneno;

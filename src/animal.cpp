@@ -1,14 +1,15 @@
 #include "animal.hpp"
 
-Animal::Animal(string nome, string idade, bool sexo, double tamanho, double peso, double valor, tpAnimal tipo, bool extinto):
+Animal::Animal(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, tpAnimal tipo):
                 nome(nome),
                 idade(idade),
                 sexo(sexo),
                 tamanho(tamanho),
                 peso(peso),
                 valor(valor),
-                tipo(tipo),
-                extinto(extinto)
+                veterinario(veterinario),
+                tratador(tratador),
+                tipo(tipo)
                 {}
 
 Animal::~Animal() {}
@@ -37,7 +38,7 @@ bool Animal::getSexo() const{
     return this->sexo;
 }
 
-void Animal::setSexo(bool sexo){
+void Animal::setSexo(char sexo){
     this->sexo = sexo;
 }
 
@@ -73,14 +74,21 @@ void Animal::setTipo(tpAnimal tipo){
     this->tipo = tipo;
 }
 
-bool Animal::getExtinto() const {
-    return this->extinto;
-}
-void Animal::setExtinto(bool extinto) {
-    this->extinto = extinto;
+Veterinario* Animal::getVeterinario() const{
+    return this->veterinario;
 }
 
+void Animal::setVeterinario(Veterinario* veterinario){
+    this->veterinario = veterinario;
+}
 
+Tratador* Animal::getTratador() const{
+    return this->tratador;
+}
+
+void Animal::setTratador(Tratador* tratador){
+    this->tratador = tratador;
+}
 
 
 

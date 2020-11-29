@@ -1,7 +1,7 @@
 #include "ave.hpp"
 
-Ave::Ave(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto,double tamanho_do_bico,double tamanho_da_envergadura):
-                Animal(nome,idade,sexo,tamanho,peso,valor,aveDomestico,extinto),
+Ave::Ave(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico,double tamanho_da_envergadura):
+                Animal(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,aveDomestico),
                 tamanho_do_bico(tamanho_do_bico),
                 tamanho_da_envergadura(tamanho_da_envergadura) {}
 

@@ -10,7 +10,6 @@ using std::string;
 class Veterinario : public Profissional {
 private:
     string cod_CRMV;
-
 public:
     Veterinario(string nome, string idade, string telefone, string cod_CRMV);
     ~Veterinario();
@@ -18,6 +17,6 @@ public:
     void setCRMV(string cod_CRMV);
     string getCRMV() const;
 
-    friend ostream& operator<< (ostream& o, Veterinario& vet);
+    friend ostream& operator<< (ostream& o, Veterinario& p);
     ostream& imprimeDados(ostream& o) const;
 };

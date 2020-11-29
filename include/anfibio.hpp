@@ -5,17 +5,14 @@
 class Anfibio : public Animal
 {
 protected:
-    int mudas_total;
-    string ultima_muda;
+    string tipo_pele;
 
 public:
-    Anfibio(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, int mudas_total, string ultima_muda);
+    Anfibio(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele);
     virtual ~Anfibio();
 
-    void setMudas(int mudas_total);
-    int getMudas() const;
-    void setUltimaMuda(string ultima_muda);
-    string getUltimaMuda() const;
+    void setTipoPele(string tipo_pele);
+    string getTipoPele() const;
 
     friend ostream& operator<< (ostream& o, Anfibio& animal);
     virtual ostream& imprimeDados(ostream& o) const;

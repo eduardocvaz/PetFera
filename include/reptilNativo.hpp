@@ -4,7 +4,7 @@
 
 class ReptilNativo : public Reptil, public Nativo {
 public:
-    ReptilNativo(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto,bool peconhento,string tipo_veneno,string estado);
+    ReptilNativo(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador,string tipo_veneno,string estado);
     ~ReptilNativo();
 
     friend ostream& operator<< (ostream& o, ReptilNativo& animal);

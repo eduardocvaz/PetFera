@@ -5,28 +5,34 @@
 #include <iomanip>
 #include <ostream>
 #include <vector>
-
-#include "animal.hpp"
+#include <memory>
 
 using std::string;
 using std::ostream;
+using std::vector;
+using std::shared_ptr;
+
+enum tipoProfissional
+{
+    tipoVeterinario,
+    tipoTratador
+};
 
 class Profissional {
 protected:
     string nome;
     string idade;
     string telefone;
-    vector<Animal*> meus_animais;
+    tipoProfissional tipo;
 
 public:
-    Profissional(string nome, string idade, string telefone);
+    Profissional(string nome, string idade, string telefone, tipoProfissional tipo);
     virtual ~Profissional();
 
     string getNome() const;
     string getIdade() const;
     string getTelefone() const;
-    vector<Animal*> getMeusAnimais() const;
-
+    tipoProfissional getTipo() const;
     void setNome(string nome);
     void setIdade(string idade);
     void setTelefone(string telefone);
