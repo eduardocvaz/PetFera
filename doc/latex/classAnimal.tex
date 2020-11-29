@@ -9,60 +9,50 @@ Diagrama de hierarquia para Animal\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAnimal_a7ba0299c78f6650de943a7fdb5d3af6c}\label{classAnimal_a7ba0299c78f6650de943a7fdb5d3af6c}} 
-{\bfseries Animal} (string nome, string idade, bool sexo, double tamanho, double peso, double valor, tp\+Animal tipo, bool extinto)
-\item 
+\mbox{\hyperlink{classAnimal_a497d76302dfe715c76b030791cbf2cfd}{Animal}} (string nome, string idade, char sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, tp\+Animal tipo)
+\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classAnimal}{Animal}}\+:\+: \mbox{\hyperlink{classAnimal}{Animal}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnimal_a476af25adde5f0dfa688129c8f86fa5c}\label{classAnimal_a476af25adde5f0dfa688129c8f86fa5c}} 
+virtual \mbox{\hyperlink{classAnimal_a476af25adde5f0dfa688129c8f86fa5c}{$\sim$\+Animal}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classAnimal}{Animal}}\+:\+: \mbox{\hyperlink{classAnimal}{Animal}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAnimal_ad331a21e632b752d522f9dc6b384c212}\label{classAnimal_ad331a21e632b752d522f9dc6b384c212}} 
 virtual ostream \& {\bfseries imprime\+Dados} (ostream \&o) const =0
 \item 
-\mbox{\Hypertarget{classAnimal_a16dab693b54ccdb94ead24d703f6d5a6}\label{classAnimal_a16dab693b54ccdb94ead24d703f6d5a6}} 
-string {\bfseries get\+Nome} () const
-\item 
-\mbox{\Hypertarget{classAnimal_ac76a85ef6166bb04f0a10a05ee38f692}\label{classAnimal_ac76a85ef6166bb04f0a10a05ee38f692}} 
-void {\bfseries set\+Nome} (string nome)
-\item 
-\mbox{\Hypertarget{classAnimal_a5b00023583b569b311eb782db9280a73}\label{classAnimal_a5b00023583b569b311eb782db9280a73}} 
-string {\bfseries get\+Idade} () const
-\item 
-\mbox{\Hypertarget{classAnimal_af4ee89706da7d481dc1cf7045abd4b48}\label{classAnimal_af4ee89706da7d481dc1cf7045abd4b48}} 
-void {\bfseries set\+Idade} (string idade)
-\item 
-\mbox{\Hypertarget{classAnimal_a68204fd25eca204c20194eff96697b27}\label{classAnimal_a68204fd25eca204c20194eff96697b27}} 
-bool {\bfseries get\+Sexo} () const
-\item 
-\mbox{\Hypertarget{classAnimal_ac2e3b610c683c6e70b9dbbd19c252235}\label{classAnimal_ac2e3b610c683c6e70b9dbbd19c252235}} 
-void {\bfseries set\+Sexo} (bool sexo)
-\item 
-\mbox{\Hypertarget{classAnimal_a2911321c229a6819f93381fb634aebc6}\label{classAnimal_a2911321c229a6819f93381fb634aebc6}} 
-double {\bfseries get\+Tamanho} () const
-\item 
-\mbox{\Hypertarget{classAnimal_a53daf7711c6b6430c723647b2cec7c36}\label{classAnimal_a53daf7711c6b6430c723647b2cec7c36}} 
-void {\bfseries set\+Tamanho} (double tamanho)
-\item 
-\mbox{\Hypertarget{classAnimal_a7bc699bcbc38859ed831fa33e17f3617}\label{classAnimal_a7bc699bcbc38859ed831fa33e17f3617}} 
-double {\bfseries get\+Peso} () const
-\item 
-\mbox{\Hypertarget{classAnimal_a3f389b06015c99fca54e4e60d48edfd6}\label{classAnimal_a3f389b06015c99fca54e4e60d48edfd6}} 
-void {\bfseries set\+Peso} (double peso)
-\item 
-\mbox{\Hypertarget{classAnimal_a11b9979c59a5c90ec8838c0ef7e49514}\label{classAnimal_a11b9979c59a5c90ec8838c0ef7e49514}} 
-double {\bfseries get\+Valor} () const
-\item 
-\mbox{\Hypertarget{classAnimal_a3f83f0596093a61b5bb223c8afa61fee}\label{classAnimal_a3f83f0596093a61b5bb223c8afa61fee}} 
-void {\bfseries set\+Valor} (double valor)
-\item 
-\mbox{\Hypertarget{classAnimal_a63f620e0a279012a608b10f695b61096}\label{classAnimal_a63f620e0a279012a608b10f695b61096}} 
-tp\+Animal {\bfseries get\+Tipo} () const
-\item 
-\mbox{\Hypertarget{classAnimal_a6316882e68212fcc7a6baa5098e7e8ab}\label{classAnimal_a6316882e68212fcc7a6baa5098e7e8ab}} 
-void {\bfseries set\+Tipo} (tp\+Animal tipo)
-\item 
-\mbox{\Hypertarget{classAnimal_a5393351ac47de4f98fdd4e50f4d92000}\label{classAnimal_a5393351ac47de4f98fdd4e50f4d92000}} 
-bool {\bfseries get\+Extinto} () const
-\item 
-\mbox{\Hypertarget{classAnimal_ac016f4a71acc3331f7739c05e26a481b}\label{classAnimal_ac016f4a71acc3331f7739c05e26a481b}} 
-void {\bfseries set\+Extinto} (bool extinto)
-\end{DoxyCompactItemize}
+string \mbox{\hyperlink{classAnimal_a16dab693b54ccdb94ead24d703f6d5a6}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o nome do animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_ac76a85ef6166bb04f0a10a05ee38f692}{set\+Nome}} (string nome)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir nome do animal. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAnimal_a5b00023583b569b311eb782db9280a73}{get\+Idade}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter a idade do animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_af4ee89706da7d481dc1cf7045abd4b48}{set\+Idade}} (string idade)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir a idade do animal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAnimal_a68204fd25eca204c20194eff96697b27}{get\+Sexo}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o sexo do animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_aab32d5ad6689a4e19cfd43a303c939af}{set\+Sexo}} (char sexo)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir o sexo do animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_a2911321c229a6819f93381fb634aebc6}{get\+Tamanho}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o tamanho do animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_a53daf7711c6b6430c723647b2cec7c36}{set\+Tamanho}} (double tamanho)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir o tamanho do animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_a7bc699bcbc38859ed831fa33e17f3617}{get\+Peso}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o peso do animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_a3f389b06015c99fca54e4e60d48edfd6}{set\+Peso}} (double peso)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir o peso do animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_a11b9979c59a5c90ec8838c0ef7e49514}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o preço do animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_a3f83f0596093a61b5bb223c8afa61fee}{set\+Valor}} (double valor)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir o preço do animal. \end{DoxyCompactList}\item 
+tp\+Animal \mbox{\hyperlink{classAnimal_a63f620e0a279012a608b10f695b61096}{get\+Tipo}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter a espécie do animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_a6316882e68212fcc7a6baa5098e7e8ab}{set\+Tipo}} (tp\+Animal tipo)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir a espécie do animal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$ \mbox{\hyperlink{classAnimal_a6cf8db8b318c0c867ebeea9b663f9202}{get\+Veterinario}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o veterinario responsavel pelo animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_ace9b58ea47057261292ce42a4edd2870}{set\+Veterinario}} (\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir o veterinario responsavel pelo animal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTratador}{Tratador}} $\ast$ \mbox{\hyperlink{classAnimal_a3e79335eac6fa21cb49220a9f22a49d0}{get\+Tratador}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o tratador responsavel pelo animal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimal_aec8cd2eec7a0c833074e303f389c8f9f}{set\+Tratador}} (\mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir o tratador responsavel pelo animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
@@ -72,8 +62,8 @@ string {\bfseries nome}
 \mbox{\Hypertarget{classAnimal_aaede813215dae7552a4667cba5a9df09}\label{classAnimal_aaede813215dae7552a4667cba5a9df09}} 
 string {\bfseries idade}
 \item 
-\mbox{\Hypertarget{classAnimal_a44070597ed0476d809f094cd2179a10c}\label{classAnimal_a44070597ed0476d809f094cd2179a10c}} 
-bool {\bfseries sexo}
+\mbox{\Hypertarget{classAnimal_a1fed4a4c287d4a9507e718692eb2837a}\label{classAnimal_a1fed4a4c287d4a9507e718692eb2837a}} 
+char {\bfseries sexo}
 \item 
 \mbox{\Hypertarget{classAnimal_abdbc6c152134067dfa020a75c30ee638}\label{classAnimal_abdbc6c152134067dfa020a75c30ee638}} 
 double {\bfseries tamanho}
@@ -87,15 +77,326 @@ double {\bfseries valor}
 \mbox{\Hypertarget{classAnimal_a2faa15a3b82f6dfe61dcedf218a9bf2b}\label{classAnimal_a2faa15a3b82f6dfe61dcedf218a9bf2b}} 
 tp\+Animal {\bfseries tipo}
 \item 
-\mbox{\Hypertarget{classAnimal_ad533d2aba1712290e7c3602457408774}\label{classAnimal_ad533d2aba1712290e7c3602457408774}} 
-bool {\bfseries extinto}
+\mbox{\Hypertarget{classAnimal_a34da951233f954bd669b177a2c21b8e8}\label{classAnimal_a34da951233f954bd669b177a2c21b8e8}} 
+\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$ {\bfseries veterinario}
+\item 
+\mbox{\Hypertarget{classAnimal_a29dc7509921466a5013b8d08e4a65a91}\label{classAnimal_a29dc7509921466a5013b8d08e4a65a91}} 
+\mbox{\hyperlink{classTratador}{Tratador}} $\ast$ {\bfseries tratador}
 \end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
+ostream \& \mbox{\hyperlink{classAnimal_a1aed7c2a1b547eedc3da9eaf85f1f2a2}{operator$<$$<$}} (ostream \&o, \mbox{\hyperlink{classAnimal}{Animal}} \&animal)
+\begin{DoxyCompactList}\small\item\em Operador para imprimir dados do animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classAnimal_a497d76302dfe715c76b030791cbf2cfd}\label{classAnimal_a497d76302dfe715c76b030791cbf2cfd}} 
+\index{Animal@{Animal}!Animal@{Animal}}
+\index{Animal@{Animal}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{Animal()}{Animal()}}
+{\footnotesize\ttfamily Animal\+::\+Animal (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{idade,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{double}]{peso,  }\item[{double}]{valor,  }\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario,  }\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador,  }\item[{tp\+Animal}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Constroi um novo objeto \mbox{\hyperlink{classAnimal}{Animal}}\+:\+: \mbox{\hyperlink{classAnimal}{Animal}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do animal \\
+\hline
+{\em idade} & Idade do animal \\
+\hline
+{\em sexo} & Sexo do animal \\
+\hline
+{\em tamanho} & Tamanho do animal \\
+\hline
+{\em peso} & Peso do animal \\
+\hline
+{\em valor} & Preço do animal \\
+\hline
+{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo animal \\
+\hline
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo animal \\
+\hline
+{\em tipo} & Espécie do animal \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAnimal_a5b00023583b569b311eb782db9280a73}\label{classAnimal_a5b00023583b569b311eb782db9280a73}} 
+\index{Animal@{Animal}!getIdade@{getIdade}}
+\index{getIdade@{getIdade}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getIdade()}{getIdade()}}
+{\footnotesize\ttfamily string Animal\+::get\+Idade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter a idade do animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a idade do animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a16dab693b54ccdb94ead24d703f6d5a6}\label{classAnimal_a16dab693b54ccdb94ead24d703f6d5a6}} 
+\index{Animal@{Animal}!getNome@{getNome}}
+\index{getNome@{getNome}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily string Animal\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o nome do animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna o nome do animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a7bc699bcbc38859ed831fa33e17f3617}\label{classAnimal_a7bc699bcbc38859ed831fa33e17f3617}} 
+\index{Animal@{Animal}!getPeso@{getPeso}}
+\index{getPeso@{getPeso}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getPeso()}{getPeso()}}
+{\footnotesize\ttfamily double Animal\+::get\+Peso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o peso do animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna o peso do animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a68204fd25eca204c20194eff96697b27}\label{classAnimal_a68204fd25eca204c20194eff96697b27}} 
+\index{Animal@{Animal}!getSexo@{getSexo}}
+\index{getSexo@{getSexo}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getSexo()}{getSexo()}}
+{\footnotesize\ttfamily bool Animal\+::get\+Sexo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o sexo do animal. 
+
+\begin{DoxyReturn}{Retorna}
+Macho ou Fêmea 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a2911321c229a6819f93381fb634aebc6}\label{classAnimal_a2911321c229a6819f93381fb634aebc6}} 
+\index{Animal@{Animal}!getTamanho@{getTamanho}}
+\index{getTamanho@{getTamanho}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getTamanho()}{getTamanho()}}
+{\footnotesize\ttfamily double Animal\+::get\+Tamanho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o tamanho do animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna o tamanho do animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a63f620e0a279012a608b10f695b61096}\label{classAnimal_a63f620e0a279012a608b10f695b61096}} 
+\index{Animal@{Animal}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily tp\+Animal Animal\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter a espécie do animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a espécie do animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a3e79335eac6fa21cb49220a9f22a49d0}\label{classAnimal_a3e79335eac6fa21cb49220a9f22a49d0}} 
+\index{Animal@{Animal}!getTratador@{getTratador}}
+\index{getTratador@{getTratador}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getTratador()}{getTratador()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTratador}{Tratador}} $\ast$ Animal\+::get\+Tratador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o tratador responsavel pelo animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna o tratador responsavel pelo animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a11b9979c59a5c90ec8838c0ef7e49514}\label{classAnimal_a11b9979c59a5c90ec8838c0ef7e49514}} 
+\index{Animal@{Animal}!getValor@{getValor}}
+\index{getValor@{getValor}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily double Animal\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o preço do animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorno o preço do animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a6cf8db8b318c0c867ebeea9b663f9202}\label{classAnimal_a6cf8db8b318c0c867ebeea9b663f9202}} 
+\index{Animal@{Animal}!getVeterinario@{getVeterinario}}
+\index{getVeterinario@{getVeterinario}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{getVeterinario()}{getVeterinario()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$ Animal\+::get\+Veterinario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o veterinario responsavel pelo animal. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna o veterinario responsavel pelo animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_af4ee89706da7d481dc1cf7045abd4b48}\label{classAnimal_af4ee89706da7d481dc1cf7045abd4b48}} 
+\index{Animal@{Animal}!setIdade@{setIdade}}
+\index{setIdade@{setIdade}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setIdade()}{setIdade()}}
+{\footnotesize\ttfamily void Animal\+::set\+Idade (\begin{DoxyParamCaption}\item[{string}]{idade }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir a idade do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Define a idade do animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_ac76a85ef6166bb04f0a10a05ee38f692}\label{classAnimal_ac76a85ef6166bb04f0a10a05ee38f692}} 
+\index{Animal@{Animal}!setNome@{setNome}}
+\index{setNome@{setNome}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Animal\+::set\+Nome (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir nome do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Define o nome do animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_a3f389b06015c99fca54e4e60d48edfd6}\label{classAnimal_a3f389b06015c99fca54e4e60d48edfd6}} 
+\index{Animal@{Animal}!setPeso@{setPeso}}
+\index{setPeso@{setPeso}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setPeso()}{setPeso()}}
+{\footnotesize\ttfamily void Animal\+::set\+Peso (\begin{DoxyParamCaption}\item[{double}]{peso }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir o peso do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em peso} & Define o peso do animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_aab32d5ad6689a4e19cfd43a303c939af}\label{classAnimal_aab32d5ad6689a4e19cfd43a303c939af}} 
+\index{Animal@{Animal}!setSexo@{setSexo}}
+\index{setSexo@{setSexo}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setSexo()}{setSexo()}}
+{\footnotesize\ttfamily void Animal\+::set\+Sexo (\begin{DoxyParamCaption}\item[{char}]{sexo }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir o sexo do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sexo} & Define o sexo do animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_a53daf7711c6b6430c723647b2cec7c36}\label{classAnimal_a53daf7711c6b6430c723647b2cec7c36}} 
+\index{Animal@{Animal}!setTamanho@{setTamanho}}
+\index{setTamanho@{setTamanho}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setTamanho()}{setTamanho()}}
+{\footnotesize\ttfamily void Animal\+::set\+Tamanho (\begin{DoxyParamCaption}\item[{double}]{tamanho }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir o tamanho do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tamanho} & Define o tamanho do animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_a6316882e68212fcc7a6baa5098e7e8ab}\label{classAnimal_a6316882e68212fcc7a6baa5098e7e8ab}} 
+\index{Animal@{Animal}!setTipo@{setTipo}}
+\index{setTipo@{setTipo}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setTipo()}{setTipo()}}
+{\footnotesize\ttfamily void Animal\+::set\+Tipo (\begin{DoxyParamCaption}\item[{tp\+Animal}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir a espécie do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tipo} & Define a espécie do animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_aec8cd2eec7a0c833074e303f389c8f9f}\label{classAnimal_aec8cd2eec7a0c833074e303f389c8f9f}} 
+\index{Animal@{Animal}!setTratador@{setTratador}}
+\index{setTratador@{setTratador}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setTratador()}{setTratador()}}
+{\footnotesize\ttfamily void Animal\+::set\+Tratador (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir o tratador responsavel pelo animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tratador} & Define o tratador responsavel pelo animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_a3f83f0596093a61b5bb223c8afa61fee}\label{classAnimal_a3f83f0596093a61b5bb223c8afa61fee}} 
+\index{Animal@{Animal}!setValor@{setValor}}
+\index{setValor@{setValor}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Animal\+::set\+Valor (\begin{DoxyParamCaption}\item[{double}]{valor }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir o preço do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Define o preço do animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAnimal_ace9b58ea47057261292ce42a4edd2870}\label{classAnimal_ace9b58ea47057261292ce42a4edd2870}} 
+\index{Animal@{Animal}!setVeterinario@{setVeterinario}}
+\index{setVeterinario@{setVeterinario}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{setVeterinario()}{setVeterinario()}}
+{\footnotesize\ttfamily void Animal\+::set\+Veterinario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir o veterinario responsavel pelo animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em veterinario} & Define o veterinario responsavel pelo animal \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
 \mbox{\Hypertarget{classAnimal_a1aed7c2a1b547eedc3da9eaf85f1f2a2}\label{classAnimal_a1aed7c2a1b547eedc3da9eaf85f1f2a2}} 
-ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classAnimal}{Animal}} \&animal)
-\end{DoxyCompactItemize}
+\index{Animal@{Animal}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{o,  }\item[{\mbox{\hyperlink{classAnimal}{Animal}} \&}]{animal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador para imprimir dados do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em o} & Varivel para guardar impressão \\
+\hline
+{\em animal} & Especificação do animal \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

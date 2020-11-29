@@ -39,6 +39,7 @@ protected:
     Tratador* tratador;
 
 public:
+    
     Animal(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, tpAnimal tipo);
     virtual ~Animal();
 

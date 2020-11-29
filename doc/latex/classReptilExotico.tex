@@ -9,12 +9,13 @@ Diagrama de hierarquia para Reptil\+Exotico\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classReptilExotico_abbd47a150cbbe64e5fd418eb05ffc75e}\label{classReptilExotico_abbd47a150cbbe64e5fd418eb05ffc75e}} 
-{\bfseries Reptil\+Exotico} (string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, bool peconhento, string tipo\+\_\+veneno, string pais\+\_\+origem)
-\item 
-\mbox{\Hypertarget{classReptilExotico_a5a3c7df84aff27738f33170d9779eb88}\label{classReptilExotico_a5a3c7df84aff27738f33170d9779eb88}} 
-ostream \& {\bfseries imprime\+Dados} (ostream \&o) const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classReptilExotico_a25df9def270f34d9b48c811556f22d3e}{Reptil\+Exotico}} (string nome, string idade, char sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, string tipo\+\_\+veneno, string pais\+\_\+origem)
+\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classExotico}{Exotico}}\+:\+: \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classExotico}{Exotico}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReptilExotico_abddaff7d11fd31ce5fcd4a2c1b4ee6f1}\label{classReptilExotico_abddaff7d11fd31ce5fcd4a2c1b4ee6f1}} 
+\mbox{\hyperlink{classReptilExotico_abddaff7d11fd31ce5fcd4a2c1b4ee6f1}{$\sim$\+Reptil\+Exotico}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classExotico}{Exotico}}\+:\+: \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classExotico}{Exotico}}. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{classReptilExotico_a5a3c7df84aff27738f33170d9779eb88}{imprime\+Dados}} (ostream \&o) const
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,6 +23,67 @@ ostream \& {\bfseries imprime\+Dados} (ostream \&o) const
 ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classReptilExotico}{Reptil\+Exotico}} \&animal)
 \end{DoxyCompactItemize}
 \doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classReptilExotico_a25df9def270f34d9b48c811556f22d3e}\label{classReptilExotico_a25df9def270f34d9b48c811556f22d3e}} 
+\index{ReptilExotico@{ReptilExotico}!ReptilExotico@{ReptilExotico}}
+\index{ReptilExotico@{ReptilExotico}!ReptilExotico@{ReptilExotico}}
+\doxysubsubsection{\texorpdfstring{ReptilExotico()}{ReptilExotico()}}
+{\footnotesize\ttfamily Reptil\+Exotico\+::\+Reptil\+Exotico (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{idade,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{double}]{peso,  }\item[{double}]{valor,  }\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario,  }\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador,  }\item[{string}]{tipo\+\_\+veneno,  }\item[{string}]{pais\+\_\+origem }\end{DoxyParamCaption})}
+
+
+
+Constroi um novo objeto \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classExotico}{Exotico}}\+:\+: \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classExotico}{Exotico}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do animal \\
+\hline
+{\em idade} & Idade do animal \\
+\hline
+{\em sexo} & Sexo do animal \\
+\hline
+{\em tamanho} & Tamanho do animal \\
+\hline
+{\em peso} & Peso do animal \\
+\hline
+{\em valor} & Preço do animal \\
+\hline
+{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo animal \\
+\hline
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo animal \\
+\hline
+{\em tipo\+\_\+veneno} & Tipo de veneno do Réptil \\
+\hline
+{\em pais\+\_\+origem} & Pais de origem do animal \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classReptilExotico_a5a3c7df84aff27738f33170d9779eb88}\label{classReptilExotico_a5a3c7df84aff27738f33170d9779eb88}} 
+\index{ReptilExotico@{ReptilExotico}!imprimeDados@{imprimeDados}}
+\index{imprimeDados@{imprimeDados}!ReptilExotico@{ReptilExotico}}
+\doxysubsubsection{\texorpdfstring{imprimeDados()}{imprimeDados()}}
+{\footnotesize\ttfamily ostream \& Reptil\+Exotico\+::imprime\+Dados (\begin{DoxyParamCaption}\item[{ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo para imprimir os dados do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em o} & Varivel para guardar impressão \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a impressão 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classReptil_aa39c3646bfbcc9013ad5ab45d4a56a12}{Reptil}}.
+
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

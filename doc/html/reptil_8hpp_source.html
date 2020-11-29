@@ -77,24 +77,28 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classReptil.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classReptil.html">Reptil</a> : <span class="keyword">public</span> <a class="code" href="classAnimal.html">Animal</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">bool</span> peconhento;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">string</span> tipo_veneno;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classReptil.html">Reptil</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> idade, <span class="keywordtype">bool</span> sexo, <span class="keywordtype">double</span> tamanho, <span class="keywordtype">double</span> peso, <span class="keywordtype">double</span> valor, <span class="keywordtype">bool</span> extinto, <span class="keywordtype">bool</span> peconhento, <span class="keywordtype">string</span> tipo_veneno);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ~<a class="code" href="classReptil.html">Reptil</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setPeconhento(<span class="keywordtype">bool</span> peconhento);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">bool</span> getPeconhento() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> setTipoVeneno(<span class="keywordtype">string</span> tipo_veneno);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> getTipoVeneno() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; (ostream&amp; o, <a class="code" href="classReptil.html">Reptil</a>&amp; <a class="code" href="classReptil.html">Reptil</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> ostream&amp; imprimeDados(ostream&amp; o) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="ttc" id="aclassAnimal_html"><div class="ttname"><a href="classAnimal.html">Animal</a></div><div class="ttdef"><b>Definition:</b> animal.hpp:27</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">string</span> tipo_veneno;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classReptil.html#a4cfeb9441e7bbe1c168545dd3b8ae40c">Reptil</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> idade, <span class="keywordtype">char</span> sexo, <span class="keywordtype">double</span> tamanho, <span class="keywordtype">double</span> peso, <span class="keywordtype">double</span> valor, <a class="code" href="classVeterinario.html">Veterinario</a>* veterinario, <a class="code" href="classTratador.html">Tratador</a>* tratador, <span class="keywordtype">string</span> tipo_veneno);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classReptil.html#a826ed679cc45f74fefecef7d4d40b409">~Reptil</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classReptil.html#aef279d9a2ead02d8ccfe3aa6ea09446a">setTipoVeneno</a>(<span class="keywordtype">string</span> tipo_veneno);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classReptil.html#a1bd340495e2a6e6d9a6100484022311a">getTipoVeneno</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; (ostream&amp; o, <a class="code" href="classReptil.html">Reptil</a>&amp; <a class="code" href="classReptil.html">Reptil</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> ostream&amp; <a class="code" href="classReptil.html#aa39c3646bfbcc9013ad5ab45d4a56a12">imprimeDados</a>(ostream&amp; o) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="ttc" id="aclassAnimal_html"><div class="ttname"><a href="classAnimal.html">Animal</a></div><div class="ttdef"><b>Definition:</b> animal.hpp:29</div></div>
 <div class="ttc" id="aclassReptil_html"><div class="ttname"><a href="classReptil.html">Reptil</a></div><div class="ttdef"><b>Definition:</b> reptil.hpp:6</div></div>
+<div class="ttc" id="aclassReptil_html_a1bd340495e2a6e6d9a6100484022311a"><div class="ttname"><a href="classReptil.html#a1bd340495e2a6e6d9a6100484022311a">Reptil::getTipoVeneno</a></div><div class="ttdeci">string getTipoVeneno() const</div><div class="ttdoc">Metodo get para obter o tipo de veneno do réptil.</div><div class="ttdef"><b>Definition:</b> reptil.cpp:36</div></div>
+<div class="ttc" id="aclassReptil_html_a4cfeb9441e7bbe1c168545dd3b8ae40c"><div class="ttname"><a href="classReptil.html#a4cfeb9441e7bbe1c168545dd3b8ae40c">Reptil::Reptil</a></div><div class="ttdeci">Reptil(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario *veterinario, Tratador *tratador, string tipo_veneno)</div><div class="ttdoc">Constroi um novo objeto Reptil:: Reptil.</div><div class="ttdef"><b>Definition:</b> reptil.cpp:15</div></div>
+<div class="ttc" id="aclassReptil_html_a826ed679cc45f74fefecef7d4d40b409"><div class="ttname"><a href="classReptil.html#a826ed679cc45f74fefecef7d4d40b409">Reptil::~Reptil</a></div><div class="ttdeci">~Reptil()</div><div class="ttdoc">Destroi o objeto Reptil:: Reptil.</div><div class="ttdef"><b>Definition:</b> reptil.cpp:22</div></div>
+<div class="ttc" id="aclassReptil_html_aa39c3646bfbcc9013ad5ab45d4a56a12"><div class="ttname"><a href="classReptil.html#aa39c3646bfbcc9013ad5ab45d4a56a12">Reptil::imprimeDados</a></div><div class="ttdeci">virtual ostream &amp; imprimeDados(ostream &amp;o) const</div><div class="ttdoc">Metodo para imprimir os dados do animal.</div><div class="ttdef"><b>Definition:</b> reptil.cpp:45</div></div>
+<div class="ttc" id="aclassReptil_html_aef279d9a2ead02d8ccfe3aa6ea09446a"><div class="ttname"><a href="classReptil.html#aef279d9a2ead02d8ccfe3aa6ea09446a">Reptil::setTipoVeneno</a></div><div class="ttdeci">void setTipoVeneno(string tipo_veneno)</div><div class="ttdoc">Metodo set para definir o tipo de veneno do réptil.</div><div class="ttdef"><b>Definition:</b> reptil.cpp:28</div></div>
+<div class="ttc" id="aclassTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdef"><b>Definition:</b> tratador.hpp:17</div></div>
+<div class="ttc" id="aclassVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdef"><b>Definition:</b> veterinario.hpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -81,27 +81,31 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">enum</span> nivelSeguranca</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    nivelVerde,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    nivelAmarelo,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    nivelVermelho</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    nivelVerde = 1,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    nivelAmarelo = 2,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    nivelVermelho = 3</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classTratador.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTratador.html">Tratador</a> : <span class="keyword">public</span> <a class="code" href="classProfissional.html">Profissional</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    nivelSeguranca nivel;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classTratador.html">Tratador</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> idade, <span class="keywordtype">string</span> telefone, nivelSeguranca nivel);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ~<a class="code" href="classTratador.html">Tratador</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> setNivel(nivelSeguranca nivel);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    nivelSeguranca getNivel() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; (ostream&amp; o, <a class="code" href="classTratador.html">Tratador</a>&amp; vet);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ostream&amp; imprimeDados(ostream&amp; o) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="ttc" id="aclassProfissional_html"><div class="ttname"><a href="classProfissional.html">Profissional</a></div><div class="ttdef"><b>Definition:</b> profissional.hpp:14</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classTratador.html#a83d7938c474514ab6d62caa2e6fc56d3">Tratador</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> idade, <span class="keywordtype">string</span> telefone, nivelSeguranca nivel);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classTratador.html#a8750ed6960e786da5d6f87e05b491093">~Tratador</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTratador.html#a0aab79e65b00e8e8c727376206954b15">setNivel</a>(nivelSeguranca nivel);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    nivelSeguranca <a class="code" href="classTratador.html#a57caf7715dfc19fb4fbfead52270a3cb">getNivel</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; (ostream&amp; o, <a class="code" href="classTratador.html">Tratador</a>&amp; p);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ostream&amp; <a class="code" href="classTratador.html#ab0beb613b33c9e0d4472730010c24186">imprimeDados</a>(ostream&amp; o) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="ttc" id="aclassProfissional_html"><div class="ttname"><a href="classProfissional.html">Profissional</a></div><div class="ttdef"><b>Definition:</b> profissional.hpp:21</div></div>
 <div class="ttc" id="aclassTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdef"><b>Definition:</b> tratador.hpp:17</div></div>
+<div class="ttc" id="aclassTratador_html_a0aab79e65b00e8e8c727376206954b15"><div class="ttname"><a href="classTratador.html#a0aab79e65b00e8e8c727376206954b15">Tratador::setNivel</a></div><div class="ttdeci">void setNivel(nivelSeguranca nivel)</div><div class="ttdoc">Metodo set para definir o nivel de seguranção que o tratador tem.</div><div class="ttdef"><b>Definition:</b> tratador.cpp:23</div></div>
+<div class="ttc" id="aclassTratador_html_a57caf7715dfc19fb4fbfead52270a3cb"><div class="ttname"><a href="classTratador.html#a57caf7715dfc19fb4fbfead52270a3cb">Tratador::getNivel</a></div><div class="ttdeci">nivelSeguranca getNivel() const</div><div class="ttdoc">Metodo set para definir o nivel de seguranção que o tratador tem.</div><div class="ttdef"><b>Definition:</b> tratador.cpp:31</div></div>
+<div class="ttc" id="aclassTratador_html_a83d7938c474514ab6d62caa2e6fc56d3"><div class="ttname"><a href="classTratador.html#a83d7938c474514ab6d62caa2e6fc56d3">Tratador::Tratador</a></div><div class="ttdeci">Tratador(string nome, string idade, string telefone, nivelSeguranca nivel)</div><div class="ttdoc">Constroi um novo objeto Tratador:: Tratador.</div><div class="ttdef"><b>Definition:</b> tratador.cpp:10</div></div>
+<div class="ttc" id="aclassTratador_html_a8750ed6960e786da5d6f87e05b491093"><div class="ttname"><a href="classTratador.html#a8750ed6960e786da5d6f87e05b491093">Tratador::~Tratador</a></div><div class="ttdeci">~Tratador()</div><div class="ttdoc">Destroi o objeto Tratador:: Tratador.</div><div class="ttdef"><b>Definition:</b> tratador.cpp:17</div></div>
+<div class="ttc" id="aclassTratador_html_ab0beb613b33c9e0d4472730010c24186"><div class="ttname"><a href="classTratador.html#ab0beb613b33c9e0d4472730010c24186">Tratador::imprimeDados</a></div><div class="ttdeci">ostream &amp; imprimeDados(ostream &amp;o) const</div><div class="ttdoc">Metodo para imprimir os dados do animal.</div><div class="ttdef"><b>Definition:</b> tratador.cpp:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

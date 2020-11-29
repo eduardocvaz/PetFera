@@ -9,32 +9,22 @@ Diagrama de hierarquia para Anfibio\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAnfibio_a396ef898a8864c8573de19d9f9911988}\label{classAnfibio_a396ef898a8864c8573de19d9f9911988}} 
-{\bfseries Anfibio} (string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, int mudas\+\_\+total, string ultima\+\_\+muda)
-\item 
-\mbox{\Hypertarget{classAnfibio_a855601696b7803ce1ad0e129af37d6ee}\label{classAnfibio_a855601696b7803ce1ad0e129af37d6ee}} 
-void {\bfseries set\+Mudas} (int mudas\+\_\+total)
-\item 
-\mbox{\Hypertarget{classAnfibio_a0c59dc8163777a4ed3b0935a845d62b7}\label{classAnfibio_a0c59dc8163777a4ed3b0935a845d62b7}} 
-int {\bfseries get\+Mudas} () const
-\item 
-\mbox{\Hypertarget{classAnfibio_a925346679e5c8a65d4d7585feedfdc94}\label{classAnfibio_a925346679e5c8a65d4d7585feedfdc94}} 
-void {\bfseries set\+Ultima\+Muda} (string ultima\+\_\+muda)
-\item 
-\mbox{\Hypertarget{classAnfibio_a952ff9678cdd258c4b5c0a6d13b19a92}\label{classAnfibio_a952ff9678cdd258c4b5c0a6d13b19a92}} 
-string {\bfseries get\+Ultima\+Muda} () const
-\item 
-\mbox{\Hypertarget{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}\label{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}} 
-virtual ostream \& {\bfseries imprime\+Dados} (ostream \&o) const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classAnfibio_afc3d1274eb7196ac900f60405f5fa36e}{Anfibio}} (string nome, string idade, char sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, string tipo\+\_\+pele)
+\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}\label{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}} 
+virtual \mbox{\hyperlink{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}{$\sim$\+Anfibio}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classAnfibio}{Anfibio}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnfibio_a555c68f13d07f5b6bf5a8d14a7dc6d7e}{set\+Tipo\+Pele}} (string tipo\+\_\+pele)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir o tipo de pele do anfibio. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAnfibio_ae925bd8e5b9ef25d03a3fa5cb2dbb9a2}{get\+Tipo\+Pele}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter o tipo de pele do anfibio. \end{DoxyCompactList}\item 
+virtual ostream \& \mbox{\hyperlink{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}{imprime\+Dados}} (ostream \&o) const
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAnfibio_a56c0435241258afc200011bd2a58732e}\label{classAnfibio_a56c0435241258afc200011bd2a58732e}} 
-int {\bfseries mudas\+\_\+total}
-\item 
-\mbox{\Hypertarget{classAnfibio_a1aad121d75a27621d2dc8be39cf14123}\label{classAnfibio_a1aad121d75a27621d2dc8be39cf14123}} 
-string {\bfseries ultima\+\_\+muda}
+\mbox{\Hypertarget{classAnfibio_ab111b214894af8fc90e8de2a9c6a38c7}\label{classAnfibio_ab111b214894af8fc90e8de2a9c6a38c7}} 
+string {\bfseries tipo\+\_\+pele}
 \end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
@@ -42,6 +32,97 @@ string {\bfseries ultima\+\_\+muda}
 \mbox{\Hypertarget{classAnfibio_a3b6164726557073c51182160c71c3651}\label{classAnfibio_a3b6164726557073c51182160c71c3651}} 
 ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classAnfibio}{Anfibio}} \&animal)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classAnfibio_afc3d1274eb7196ac900f60405f5fa36e}\label{classAnfibio_afc3d1274eb7196ac900f60405f5fa36e}} 
+\index{Anfibio@{Anfibio}!Anfibio@{Anfibio}}
+\index{Anfibio@{Anfibio}!Anfibio@{Anfibio}}
+\doxysubsubsection{\texorpdfstring{Anfibio()}{Anfibio()}}
+{\footnotesize\ttfamily Anfibio\+::\+Anfibio (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{idade,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{double}]{peso,  }\item[{double}]{valor,  }\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario,  }\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador,  }\item[{string}]{tipo\+\_\+pele }\end{DoxyParamCaption})}
+
+
+
+Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do animal \\
+\hline
+{\em idade} & Idade do animal \\
+\hline
+{\em sexo} & Sexo do animal \\
+\hline
+{\em tamanho} & Tamanho do animal \\
+\hline
+{\em peso} & Peso do animal \\
+\hline
+{\em valor} & Preço do animal \\
+\hline
+{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo animal \\
+\hline
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo animal \\
+\hline
+{\em tipo\+\_\+pele} & Tipo de pele do anfibio \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAnfibio_ae925bd8e5b9ef25d03a3fa5cb2dbb9a2}\label{classAnfibio_ae925bd8e5b9ef25d03a3fa5cb2dbb9a2}} 
+\index{Anfibio@{Anfibio}!getTipoPele@{getTipoPele}}
+\index{getTipoPele@{getTipoPele}!Anfibio@{Anfibio}}
+\doxysubsubsection{\texorpdfstring{getTipoPele()}{getTipoPele()}}
+{\footnotesize\ttfamily string Anfibio\+::get\+Tipo\+Pele (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter o tipo de pele do anfibio. 
+
+\begin{DoxyReturn}{Retorna}
+retorna o tipo de pele do animal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}\label{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}} 
+\index{Anfibio@{Anfibio}!imprimeDados@{imprimeDados}}
+\index{imprimeDados@{imprimeDados}!Anfibio@{Anfibio}}
+\doxysubsubsection{\texorpdfstring{imprimeDados()}{imprimeDados()}}
+{\footnotesize\ttfamily ostream \& Anfibio\+::imprime\+Dados (\begin{DoxyParamCaption}\item[{ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo para imprimir os dados do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em o} & Varivel para guardar impressão \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a impressão 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classAnimal}{Animal}}.
+
+
+
+Reimplementado por \mbox{\hyperlink{classAnfibioNativo_a932b7e408188abeabf9cbef8dc194bfb}{Anfibio\+Nativo}} e \mbox{\hyperlink{classAnfibioExotico_a3d87f9a07566579019e7776763d66f27}{Anfibio\+Exotico}}.
+
+\mbox{\Hypertarget{classAnfibio_a555c68f13d07f5b6bf5a8d14a7dc6d7e}\label{classAnfibio_a555c68f13d07f5b6bf5a8d14a7dc6d7e}} 
+\index{Anfibio@{Anfibio}!setTipoPele@{setTipoPele}}
+\index{setTipoPele@{setTipoPele}!Anfibio@{Anfibio}}
+\doxysubsubsection{\texorpdfstring{setTipoPele()}{setTipoPele()}}
+{\footnotesize\ttfamily void Anfibio\+::set\+Tipo\+Pele (\begin{DoxyParamCaption}\item[{string}]{tipo\+\_\+pele }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir o tipo de pele do anfibio. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tipo\+\_\+pele} & Define o tipo de pele do anfibio \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

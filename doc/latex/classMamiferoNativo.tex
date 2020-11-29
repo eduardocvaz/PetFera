@@ -9,12 +9,13 @@ Diagrama de hierarquia para Mamifero\+Nativo\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMamiferoNativo_a9c54215cb65e496db5f8183122454641}\label{classMamiferoNativo_a9c54215cb65e496db5f8183122454641}} 
-{\bfseries Mamifero\+Nativo} (string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, string cor\+\_\+da\+\_\+pelagem, string estado)
-\item 
-\mbox{\Hypertarget{classMamiferoNativo_a47a775f9deef48c05b0cd8e28ab2d0e5}\label{classMamiferoNativo_a47a775f9deef48c05b0cd8e28ab2d0e5}} 
-ostream \& {\bfseries imprime\+Dados} (ostream \&o) const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMamiferoNativo_a17c7aac6f4e244695cc6bdfbad941c59}{Mamifero\+Nativo}} (string nome, string idade, char sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, string cor\+\_\+da\+\_\+pelagem, string estado)
+\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classMamifero}{Mamifero}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classMamifero}{Mamifero}} \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMamiferoNativo_aa08f523498d6713873a29747024e5717}\label{classMamiferoNativo_aa08f523498d6713873a29747024e5717}} 
+\mbox{\hyperlink{classMamiferoNativo_aa08f523498d6713873a29747024e5717}{$\sim$\+Mamifero\+Nativo}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classMamifero}{Mamifero}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classMamifero}{Mamifero}} \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{classMamiferoNativo_a47a775f9deef48c05b0cd8e28ab2d0e5}{imprime\+Dados}} (ostream \&o) const
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,6 +23,67 @@ ostream \& {\bfseries imprime\+Dados} (ostream \&o) const
 ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classMamiferoNativo}{Mamifero\+Nativo}} \&animal)
 \end{DoxyCompactItemize}
 \doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classMamiferoNativo_a17c7aac6f4e244695cc6bdfbad941c59}\label{classMamiferoNativo_a17c7aac6f4e244695cc6bdfbad941c59}} 
+\index{MamiferoNativo@{MamiferoNativo}!MamiferoNativo@{MamiferoNativo}}
+\index{MamiferoNativo@{MamiferoNativo}!MamiferoNativo@{MamiferoNativo}}
+\doxysubsubsection{\texorpdfstring{MamiferoNativo()}{MamiferoNativo()}}
+{\footnotesize\ttfamily Mamifero\+Nativo\+::\+Mamifero\+Nativo (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{idade,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{double}]{peso,  }\item[{double}]{valor,  }\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario,  }\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador,  }\item[{string}]{cor\+\_\+da\+\_\+pelagem,  }\item[{string}]{estado }\end{DoxyParamCaption})}
+
+
+
+Constroi um novo objeto \mbox{\hyperlink{classMamifero}{Mamifero}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classMamifero}{Mamifero}} \mbox{\hyperlink{classNativo}{Nativo}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do animal \\
+\hline
+{\em idade} & Idade do animal \\
+\hline
+{\em sexo} & Sexo do animal \\
+\hline
+{\em tamanho} & Tamanho do animal \\
+\hline
+{\em peso} & Peso do animal \\
+\hline
+{\em valor} & Preço do animal \\
+\hline
+{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo animal \\
+\hline
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo animal \\
+\hline
+{\em cor\+\_\+da\+\_\+pelagem} & Cor da pelagem do mamifero \\
+\hline
+{\em estado} & Estado do animal \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMamiferoNativo_a47a775f9deef48c05b0cd8e28ab2d0e5}\label{classMamiferoNativo_a47a775f9deef48c05b0cd8e28ab2d0e5}} 
+\index{MamiferoNativo@{MamiferoNativo}!imprimeDados@{imprimeDados}}
+\index{imprimeDados@{imprimeDados}!MamiferoNativo@{MamiferoNativo}}
+\doxysubsubsection{\texorpdfstring{imprimeDados()}{imprimeDados()}}
+{\footnotesize\ttfamily ostream \& Mamifero\+Nativo\+::imprime\+Dados (\begin{DoxyParamCaption}\item[{ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo para imprimir os dados do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em o} & Varivel para guardar impressão \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a impressão 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classMamifero_a4db718403960a11b484453d1c38d3c13}{Mamifero}}.
+
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

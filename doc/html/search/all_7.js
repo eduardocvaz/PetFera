@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tratador_19',['Tratador',['../classTratador.html',1,'']]]
+  ['operator_3c_3c_32',['operator&lt;&lt;',['../classAnimal.html#a1aed7c2a1b547eedc3da9eaf85f1f2a2',1,'Animal']]]
 ];

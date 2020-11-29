@@ -9,12 +9,13 @@ Diagrama de hierarquia para Ave\+Exotico\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAveExotico_ab78365263cc6fdfcb1d444a6ba22b4ed}\label{classAveExotico_ab78365263cc6fdfcb1d444a6ba22b4ed}} 
-{\bfseries Ave\+Exotico} (string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, double tamanho\+\_\+do\+\_\+bico, double tamanho\+\_\+da\+\_\+envergadura, string pais\+\_\+origem)
-\item 
-\mbox{\Hypertarget{classAveExotico_ad462a7cff1b152761ee00eb0fd0b3ede}\label{classAveExotico_ad462a7cff1b152761ee00eb0fd0b3ede}} 
-ostream \& {\bfseries imprime\+Dados} (ostream \&o) const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classAveExotico_a94102a210dece8036b8fc3fcbf09402b}{Ave\+Exotico}} (string nome, string idade, char sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, double tamanho\+\_\+do\+\_\+bico, double tamanho\+\_\+da\+\_\+envergadura, string pais\+\_\+origem)
+\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classAve}{Ave}} \mbox{\hyperlink{classExotico}{Exotico}}\+:\+: \mbox{\hyperlink{classAve}{Ave}} \mbox{\hyperlink{classExotico}{Exotico}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAveExotico_a5fe9190a5ec320d8d05bab3dc3cc2b5c}\label{classAveExotico_a5fe9190a5ec320d8d05bab3dc3cc2b5c}} 
+\mbox{\hyperlink{classAveExotico_a5fe9190a5ec320d8d05bab3dc3cc2b5c}{$\sim$\+Ave\+Exotico}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classAve}{Ave}} \mbox{\hyperlink{classExotico}{Exotico}}\+:\+: \mbox{\hyperlink{classAve}{Ave}} \mbox{\hyperlink{classExotico}{Exotico}}. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{classAveExotico_ad462a7cff1b152761ee00eb0fd0b3ede}{imprime\+Dados}} (ostream \&o) const
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,6 +23,69 @@ ostream \& {\bfseries imprime\+Dados} (ostream \&o) const
 ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classAveExotico}{Ave\+Exotico}} \&animal)
 \end{DoxyCompactItemize}
 \doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classAveExotico_a94102a210dece8036b8fc3fcbf09402b}\label{classAveExotico_a94102a210dece8036b8fc3fcbf09402b}} 
+\index{AveExotico@{AveExotico}!AveExotico@{AveExotico}}
+\index{AveExotico@{AveExotico}!AveExotico@{AveExotico}}
+\doxysubsubsection{\texorpdfstring{AveExotico()}{AveExotico()}}
+{\footnotesize\ttfamily Ave\+Exotico\+::\+Ave\+Exotico (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{idade,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{double}]{peso,  }\item[{double}]{valor,  }\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario,  }\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador,  }\item[{double}]{tamanho\+\_\+do\+\_\+bico,  }\item[{double}]{tamanho\+\_\+da\+\_\+envergadura,  }\item[{string}]{pais\+\_\+origem }\end{DoxyParamCaption})}
+
+
+
+Constroi um novo objeto \mbox{\hyperlink{classAve}{Ave}} \mbox{\hyperlink{classExotico}{Exotico}}\+:\+: \mbox{\hyperlink{classAve}{Ave}} \mbox{\hyperlink{classExotico}{Exotico}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do animal \\
+\hline
+{\em idade} & Idade do animal \\
+\hline
+{\em sexo} & Sexo do animal \\
+\hline
+{\em tamanho} & Tamanho do animal \\
+\hline
+{\em peso} & Peso do animal \\
+\hline
+{\em valor} & Preço do animal \\
+\hline
+{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo animal \\
+\hline
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo animal \\
+\hline
+{\em tamanho\+\_\+do\+\_\+bico} & Tamanho do pico da ave \\
+\hline
+{\em tamanho\+\_\+da\+\_\+envergadura} & Envergadura das asas da ave \\
+\hline
+{\em pais\+\_\+origem} & Pais de origem do animal \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAveExotico_ad462a7cff1b152761ee00eb0fd0b3ede}\label{classAveExotico_ad462a7cff1b152761ee00eb0fd0b3ede}} 
+\index{AveExotico@{AveExotico}!imprimeDados@{imprimeDados}}
+\index{imprimeDados@{imprimeDados}!AveExotico@{AveExotico}}
+\doxysubsubsection{\texorpdfstring{imprimeDados()}{imprimeDados()}}
+{\footnotesize\ttfamily ostream \& Ave\+Exotico\+::imprime\+Dados (\begin{DoxyParamCaption}\item[{ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo para imprimir os dados do animal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em o} & Varivel para guardar impressão \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a impressão 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classAve_ad9db8d0f8dbdf58b65ea482d936c4e03}{Ave}}.
+
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

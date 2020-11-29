@@ -98,47 +98,50 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">using</span> std::string;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classPetFera.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPetFera.html">PetFera</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classPetFera.html">PetFera</a>(<span class="keywordtype">string</span> telefone, <span class="keywordtype">string</span> endereco);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ~<a class="code" href="classPetFera.html">PetFera</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    vector&lt;shared_ptr&lt;Animal&gt;&gt; getAnimais() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    vector&lt;shared_ptr&lt;Profissional&gt;&gt; getProfissionais() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPetFera.html#ac0322a43f511b1d386cc702b12345e72">cadastrarAnimal</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> removerAnimal();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> alterarAnimal();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> listarClasseAnimal();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> listarDadosAnimal();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> listarAnimaisProfissional();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> cadastrarProfissional();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> removerProfissional();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> alterarProfissional();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">string</span> telefone;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">string</span> endereco;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    vector&lt;Animal*&gt; animais;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    vector&lt;Profissional*&gt; profissionais;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classAnimal.html">Animal</a>* findAnimal(<span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classProfissional.html">Profissional</a>* findProfissional(<span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> printTitulo(<span class="keywordtype">string</span> titulo, <span class="keywordtype">int</span> largura);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> validaVetTrat();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classPetFera.html">PetFera</a>(<span class="keywordtype">string</span> telefone, <span class="keywordtype">string</span> endereco);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ~<a class="code" href="classPetFera.html">PetFera</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    vector&lt;Animal*&gt; getAnimais() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    vector&lt;Profissional*&gt; getProfissionais() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPetFera.html#a33f9b5460de9d49839bc11eee2279625">adicionaAnimal</a>(shared_ptr&lt;Animal&gt; novo); <span class="comment">// conferir upcast make_shared</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    shared_ptr&lt;Animal&gt; removeAnimal(<span class="keywordtype">string</span> nome); <span class="comment">// conferir upcast make_shared</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> alteraAnimal();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> listaClasseAnimal();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> listaDadosAnimal(<span class="keywordtype">string</span> nome_animal);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> listaAnimaisProfissional(<span class="keywordtype">string</span> nome_profissional);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> adicionaProfissional(shared_ptr&lt;Profissional&gt; novo);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    shared_ptr&lt;Profissional&gt; removeProfissional(<span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> alteraProfissional();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPetFera.html#ac0322a43f511b1d386cc702b12345e72">cadastrarAnimal</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> removerAnimal();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//    void alterarAnimal();</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//    void listarClasseAnimal();</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//    void listarDadosAnimal();</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//    void listarAnimaisProfissional();</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> cadastrarProfissional();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> removerProfissional();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//    void alterarProfissional();</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">string</span> telefone;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">string</span> endereco;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    vector&lt;shared_ptr&lt;Animal&gt;&gt; animais;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    vector&lt;shared_ptr&lt;Profissional&gt;&gt; profissionais;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    shared_ptr&lt;Animal&gt; findAnimal(<span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    shared_ptr&lt;Profissional&gt; findProfissional(<span class="keywordtype">string</span> nome);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> printTitulo(<span class="keywordtype">string</span> titulo, <span class="keywordtype">int</span> largura);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPetFera.html#a26231d36976f76c68952c9fcc8bd7093">adicionaAnimal</a>(<a class="code" href="classAnimal.html">Animal</a>* novo);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <a class="code" href="classAnimal.html">Animal</a>* removeAnimal(<span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//    bool alteraAnimal();</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//    void listaClasseAnimal();</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//    void listaDadosAnimal(string nome_animal);</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//    void listaAnimaisProfissional(string nome_profissional);</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> adicionaProfissional(<a class="code" href="classProfissional.html">Profissional</a>* novo);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classProfissional.html">Profissional</a>* removeProfissional(<span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//    bool alteraProfissional();</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="ttc" id="aclassAnimal_html"><div class="ttname"><a href="classAnimal.html">Animal</a></div><div class="ttdef"><b>Definition:</b> animal.hpp:29</div></div>
 <div class="ttc" id="aclassPetFera_html"><div class="ttname"><a href="classPetFera.html">PetFera</a></div><div class="ttdef"><b>Definition:</b> petfera.hpp:28</div></div>
-<div class="ttc" id="aclassPetFera_html_a33f9b5460de9d49839bc11eee2279625"><div class="ttname"><a href="classPetFera.html#a33f9b5460de9d49839bc11eee2279625">PetFera::adicionaAnimal</a></div><div class="ttdeci">bool adicionaAnimal(shared_ptr&lt; Animal &gt; novo)</div><div class="ttdef"><b>Definition:</b> petfera.cpp:158</div></div>
-<div class="ttc" id="aclassPetFera_html_ac0322a43f511b1d386cc702b12345e72"><div class="ttname"><a href="classPetFera.html#ac0322a43f511b1d386cc702b12345e72">PetFera::cadastrarAnimal</a></div><div class="ttdeci">void cadastrarAnimal()</div><div class="ttdef"><b>Definition:</b> petfera.cpp:47</div></div>
+<div class="ttc" id="aclassPetFera_html_a26231d36976f76c68952c9fcc8bd7093"><div class="ttname"><a href="classPetFera.html#a26231d36976f76c68952c9fcc8bd7093">PetFera::adicionaAnimal</a></div><div class="ttdeci">bool adicionaAnimal(Animal *novo)</div><div class="ttdef"><b>Definition:</b> petfera.cpp:363</div></div>
+<div class="ttc" id="aclassPetFera_html_ac0322a43f511b1d386cc702b12345e72"><div class="ttname"><a href="classPetFera.html#ac0322a43f511b1d386cc702b12345e72">PetFera::cadastrarAnimal</a></div><div class="ttdeci">void cadastrarAnimal()</div><div class="ttdef"><b>Definition:</b> petfera.cpp:44</div></div>
+<div class="ttc" id="aclassProfissional_html"><div class="ttname"><a href="classProfissional.html">Profissional</a></div><div class="ttdef"><b>Definition:</b> profissional.hpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

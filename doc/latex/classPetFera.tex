@@ -6,28 +6,16 @@
 \mbox{\Hypertarget{classPetFera_a266206180e5c5c7c3dc7fee2f7c64192}\label{classPetFera_a266206180e5c5c7c3dc7fee2f7c64192}} 
 {\bfseries Pet\+Fera} (string telefone, string endereco)
 \item 
-\mbox{\Hypertarget{classPetFera_a3341859b7727aeed401c5c6b1ed75733}\label{classPetFera_a3341859b7727aeed401c5c6b1ed75733}} 
-vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ $>$ {\bfseries get\+Animais} () const
+\mbox{\Hypertarget{classPetFera_aa8006d436b431ca9c0745fd85280f6a2}\label{classPetFera_aa8006d436b431ca9c0745fd85280f6a2}} 
+vector$<$ \mbox{\hyperlink{classAnimal}{Animal}} $\ast$ $>$ {\bfseries get\+Animais} () const
 \item 
-\mbox{\Hypertarget{classPetFera_a7ab842d8c3121b7098cf9c55275ab02f}\label{classPetFera_a7ab842d8c3121b7098cf9c55275ab02f}} 
-vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ $>$ {\bfseries get\+Profissionais} () const
+\mbox{\Hypertarget{classPetFera_aff0dacec48aca2cac709a7084be7d899}\label{classPetFera_aff0dacec48aca2cac709a7084be7d899}} 
+vector$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $\ast$ $>$ {\bfseries get\+Profissionais} () const
 \item 
 void \mbox{\hyperlink{classPetFera_ac0322a43f511b1d386cc702b12345e72}{cadastrar\+Animal}} ()
 \item 
 \mbox{\Hypertarget{classPetFera_a375daf65998e3b54f94529466ef97809}\label{classPetFera_a375daf65998e3b54f94529466ef97809}} 
 void {\bfseries remover\+Animal} ()
-\item 
-\mbox{\Hypertarget{classPetFera_a8caf4e95118b133f348439192b42d277}\label{classPetFera_a8caf4e95118b133f348439192b42d277}} 
-void {\bfseries alterar\+Animal} ()
-\item 
-\mbox{\Hypertarget{classPetFera_a2c2b5d2d59731ee7c9960c2419461b2a}\label{classPetFera_a2c2b5d2d59731ee7c9960c2419461b2a}} 
-void {\bfseries listar\+Classe\+Animal} ()
-\item 
-\mbox{\Hypertarget{classPetFera_a463a5f50a4bf484a105f979dde26a085}\label{classPetFera_a463a5f50a4bf484a105f979dde26a085}} 
-void {\bfseries listar\+Dados\+Animal} ()
-\item 
-\mbox{\Hypertarget{classPetFera_a47ab5b925f291dd3a119f309fa6554dd}\label{classPetFera_a47ab5b925f291dd3a119f309fa6554dd}} 
-void {\bfseries listar\+Animais\+Profissional} ()
 \item 
 \mbox{\Hypertarget{classPetFera_a2523311c113e87b18d9ab0d6492de953}\label{classPetFera_a2523311c113e87b18d9ab0d6492de953}} 
 void {\bfseries cadastrar\+Profissional} ()
@@ -35,43 +23,25 @@ void {\bfseries cadastrar\+Profissional} ()
 \mbox{\Hypertarget{classPetFera_ae8e1ca7dbc09f88615ef34b4e4d8d9d5}\label{classPetFera_ae8e1ca7dbc09f88615ef34b4e4d8d9d5}} 
 void {\bfseries remover\+Profissional} ()
 \item 
-\mbox{\Hypertarget{classPetFera_aaa769901b8b151d7cc8481d355d4c18f}\label{classPetFera_aaa769901b8b151d7cc8481d355d4c18f}} 
-void {\bfseries alterar\+Profissional} ()
+bool \mbox{\hyperlink{classPetFera_a26231d36976f76c68952c9fcc8bd7093}{adiciona\+Animal}} (\mbox{\hyperlink{classAnimal}{Animal}} $\ast$novo)
 \item 
-bool \mbox{\hyperlink{classPetFera_a33f9b5460de9d49839bc11eee2279625}{adiciona\+Animal}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ novo)
+\mbox{\Hypertarget{classPetFera_ab9616f5095bbdfeba9215498c4023933}\label{classPetFera_ab9616f5095bbdfeba9215498c4023933}} 
+\mbox{\hyperlink{classAnimal}{Animal}} $\ast$ {\bfseries remove\+Animal} (string nome)
 \item 
-\mbox{\Hypertarget{classPetFera_ac17387896384643fe6df651b2adf4625}\label{classPetFera_ac17387896384643fe6df651b2adf4625}} 
-shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ {\bfseries remove\+Animal} (string nome)
+\mbox{\Hypertarget{classPetFera_aa3ca7e6ae726aef7b4e231592d35656d}\label{classPetFera_aa3ca7e6ae726aef7b4e231592d35656d}} 
+bool {\bfseries adiciona\+Profissional} (\mbox{\hyperlink{classProfissional}{Profissional}} $\ast$novo)
 \item 
-\mbox{\Hypertarget{classPetFera_a6aa35e1ebf76c39c6504a1f691f0d1d6}\label{classPetFera_a6aa35e1ebf76c39c6504a1f691f0d1d6}} 
-bool {\bfseries altera\+Animal} ()
-\item 
-\mbox{\Hypertarget{classPetFera_ab942ee441dbb1c4c73e3ac20106c3875}\label{classPetFera_ab942ee441dbb1c4c73e3ac20106c3875}} 
-void {\bfseries lista\+Classe\+Animal} ()
-\item 
-\mbox{\Hypertarget{classPetFera_ad645fde3bd5cdc609d9f29a1adcd3ccb}\label{classPetFera_ad645fde3bd5cdc609d9f29a1adcd3ccb}} 
-void {\bfseries lista\+Dados\+Animal} (string nome\+\_\+animal)
-\item 
-\mbox{\Hypertarget{classPetFera_a13b7723c874b8b007c01865ed792916f}\label{classPetFera_a13b7723c874b8b007c01865ed792916f}} 
-void {\bfseries lista\+Animais\+Profissional} (string nome\+\_\+profissional)
-\item 
-\mbox{\Hypertarget{classPetFera_af2bea2074a7d7752f1a1d87e5d8d3dc8}\label{classPetFera_af2bea2074a7d7752f1a1d87e5d8d3dc8}} 
-bool {\bfseries adiciona\+Profissional} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ novo)
-\item 
-\mbox{\Hypertarget{classPetFera_adffc679e8e288645ea53f64d0a81f823}\label{classPetFera_adffc679e8e288645ea53f64d0a81f823}} 
-shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ {\bfseries remove\+Profissional} (string nome)
-\item 
-\mbox{\Hypertarget{classPetFera_a5d2ff8a88d11366c4b6621337388b89f}\label{classPetFera_a5d2ff8a88d11366c4b6621337388b89f}} 
-bool {\bfseries altera\+Profissional} ()
+\mbox{\Hypertarget{classPetFera_ab5bf429f09cb38c0193f5c340bd9a521}\label{classPetFera_ab5bf429f09cb38c0193f5c340bd9a521}} 
+\mbox{\hyperlink{classProfissional}{Profissional}} $\ast$ {\bfseries remove\+Profissional} (string nome)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Funções membros}
-\mbox{\Hypertarget{classPetFera_a33f9b5460de9d49839bc11eee2279625}\label{classPetFera_a33f9b5460de9d49839bc11eee2279625}} 
+\mbox{\Hypertarget{classPetFera_a26231d36976f76c68952c9fcc8bd7093}\label{classPetFera_a26231d36976f76c68952c9fcc8bd7093}} 
 \index{PetFera@{PetFera}!adicionaAnimal@{adicionaAnimal}}
 \index{adicionaAnimal@{adicionaAnimal}!PetFera@{PetFera}}
 \doxysubsubsection{\texorpdfstring{adicionaAnimal()}{adicionaAnimal()}}
-{\footnotesize\ttfamily bool Pet\+Fera\+::adiciona\+Animal (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$}]{novo }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Pet\+Fera\+::adiciona\+Animal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAnimal}{Animal}} $\ast$}]{novo }\end{DoxyParamCaption})}
 
 Métodos internos para realizar as operações. \mbox{\Hypertarget{classPetFera_ac0322a43f511b1d386cc702b12345e72}\label{classPetFera_ac0322a43f511b1d386cc702b12345e72}} 
 \index{PetFera@{PetFera}!cadastrarAnimal@{cadastrarAnimal}}
