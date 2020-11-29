@@ -2,4 +2,14 @@
 
 ReptilExotico::ReptilExotico(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, bool peconheto, string tipo_veneno,string pais_origem):
                 Reptil(nome,idade,sexo,tamanho,peso,valor,extinto,peconheto,tipo_veneno),
-                Exotico(pais_origem) {}
+                Exotico(pais_origem) {
+    setTipo(reptilExotico);
+}
+
+ReptilExotico::~ReptilExotico() {}
+
+ostream& ReptilExotico::imprimeDados(ostream& o) const{
+
+    //implementar
+    return o;
+}
