@@ -10,7 +10,7 @@ using std::string;
 enum nivelSeguranca
 {
     nivelVerde = 1,
-    nivelAmarelo = 2,
+    nivelAzul = 2,
     nivelVermelho = 3
 };
 

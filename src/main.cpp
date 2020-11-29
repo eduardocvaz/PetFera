@@ -36,7 +36,7 @@ void menuPrincipal(PetFera* petfera) {
 		cout<< endl << "(1) Cadastrar animal";
 		cout<< endl << "(2) Remover animal";
 		cout<< endl << "(3) Editar animal";
-		cout<< endl << "(4) Listar animais por classe";
+		cout<< endl << "(4) Listar classe de animais";
 		cout<< endl << "(5) Listar dados de um animal";
 		cout<< endl << "(6) Listar animais de um profissional";
 		cout<< endl << "(7) Cadastrar profissional";
@@ -57,8 +57,8 @@ void menuPrincipal(PetFera* petfera) {
 			break;
 //			case '3' :{ petfera->alterarAnimal();}
 //			break;
-//			case '4' :{ petfera->listarClasseAnimal();}
-//			break;
+			case '4' :{ petfera->listarClasseAnimal();}
+			break;
 //			case '5' :{ petfera->listarDadosAnimal();}
 //			break;
 //			case '6' :{ petfera->listarAnimaisProfissional();}
