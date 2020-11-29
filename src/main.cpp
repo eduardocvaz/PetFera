@@ -29,7 +29,6 @@ void limpaTela()
 
 void menuPrincipal(PetFera* petfera) {
     char opcao;
-    limpaTela();
 	
 	do {	 
 		cout<< endl << "=======================================";
@@ -47,7 +46,7 @@ void menuPrincipal(PetFera* petfera) {
 
 		cout<< endl << endl << "Selecione uma opção: ";
 		cin >> opcao;
-
+        pausar();
 		limpaTela();
 		switch(opcao)
 		{
@@ -74,9 +73,6 @@ void menuPrincipal(PetFera* petfera) {
 			default : cout << endl << "Opção inválida!";
 		}
 		cout << endl;
-
-		pausar();
-		limpaTela();
 	
 	} while (opcao != 'X' && opcao !='x');
 }

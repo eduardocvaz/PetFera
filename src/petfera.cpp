@@ -19,7 +19,7 @@ using std::cin;
 
 PetFera::PetFera(string telefone, string endereco):
                 telefone(telefone), endereco(endereco) {
-    string titulo = "Loja de Animais PetFera - ";
+    string titulo = "🐆 Loja de Animais PetFera - ";
     titulo.append(this->telefone);
     this->printTitulo(titulo,60);
 }
@@ -274,6 +274,10 @@ void PetFera::cadastrarAnimal(){
 
 void PetFera::removerAnimal(){
     this->printTitulo("Remover Animal",60);
+    if(this->animais.empty()){
+        cout << "Nenhum animal cadastrado" << endl;
+        return;
+    }
     string nome;
     do {
         cout << "Nome: ";
@@ -493,6 +497,12 @@ void PetFera::cadastrarProfissional(){
 void PetFera::removerProfissional(){
 
     this->printTitulo("Remover Profissional",60);
+
+    if(this->animais.empty()){
+        cout << "Nenhum profissional cadastrado" << endl;
+        return;
+    }
+
     string nome;
     do {
         cout << "Nome: ";
