@@ -6,7 +6,6 @@ AveExotico::AveExotico(string nome, string idade, bool sexo, double tamanho, dou
     setTipo(aveExotico);
 }
 
-
 AveExotico::~AveExotico() {}
 
 ostream& AveExotico::imprimeDados(ostream& o) const{
