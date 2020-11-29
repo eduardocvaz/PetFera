@@ -1,4 +1,4 @@
-#Makefile for "imd0030" C++ application
+#Makefile for "PetFera" C++ application
 
 BIN = ./bin
 SRC = ./src
@@ -6,7 +6,7 @@ INC = ./include
 
 PROG = $(BIN)/programa
 CC = g++
-CPPFLAGS = -Wall -std=c++11 -I./include
+CPPFLAGS = -Wall -std=c++14 -I./include
 
 OBJS = $(BIN)/animal.o $(BIN)/anfibio.o $(BIN)/ave.o $(BIN)/mamifero.o $(BIN)/reptil.o $(BIN)/profissional.o $(BIN)/tratador.o $(BIN)/veterinario.o $(BIN)/petfera.o $(BIN)/main.o
 
