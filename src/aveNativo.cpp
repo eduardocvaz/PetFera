@@ -6,7 +6,6 @@ AveNativo::AveNativo(string nome, string idade, bool sexo, double tamanho, doubl
     setTipo(aveNativo);
 }
 
-
 AveNativo::~AveNativo() {}
 
 ostream& AveNativo::imprimeDados(ostream& o) const{

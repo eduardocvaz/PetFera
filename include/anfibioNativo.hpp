@@ -1,8 +1,6 @@
 #include "anfibio.hpp"
 #include "nativo.hpp"
 
-
-
 class AnfibioNativo : public Anfibio, public Nativo
 {
 public:

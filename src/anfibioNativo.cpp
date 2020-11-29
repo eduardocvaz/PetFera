@@ -6,8 +6,6 @@ AnfibioNativo::AnfibioNativo(string nome, string idade, bool sexo, double tamanh
     setTipo(anfibioNativo);
 }
 
-
-
 AnfibioNativo::~AnfibioNativo() {}
 
 ostream& AnfibioNativo::imprimeDados(ostream& o) const{
