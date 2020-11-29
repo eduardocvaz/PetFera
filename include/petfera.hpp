@@ -1,14 +1,26 @@
 #pragma once
 
+#include "animal.hpp"
 #include "anfibio.hpp"
+#include "anfibioNativo.hpp"
+#include "anfibioExotico.hpp"
 #include "mamifero.hpp"
+#include "mamiferoNativo.hpp"
+#include "mamiferoExotico.hpp"
 #include "ave.hpp"
+#include "aveNativo.hpp"
+#include "aveExotico.hpp"
 #include "reptil.hpp"
+#include "reptilNativo.hpp"
+#include "reptilExotico.hpp"
+
+#include "profissional.hpp"
 #include "veterinario.hpp"
 #include "tratador.hpp"
 
 #include <vector>
 #include <string>
+#include <memory>
 
 using std::vector;
 using std::string;
@@ -17,10 +29,9 @@ class PetFera {
 public:
     PetFera(string telefone, string endereco);
     ~PetFera();
-    string getTelefone() const;
-    string getEndereco() const;
-    vector<Animal*> getAnimais() const;
-    vector<Profissional*> getProfissionais() const;
+
+    vector<shared_ptr<Animal>> getAnimais() const;
+    vector<shared_ptr<Profissional>> getProfissionais() const;
 
     /** Métodos de interação com o usuário */
     void cadastrarAnimal();
@@ -35,25 +46,24 @@ public:
 
 
     /** Métodos internos para realizar as operações. */
-    bool adicionaAnimal(Animal* novo);
-    Animal* removeAnimal(string nome);
+    bool adicionaAnimal(shared_ptr<Animal> novo); // conferir upcast make_shared
+    shared_ptr<Animal> removeAnimal(string nome); // conferir upcast make_shared
     bool alteraAnimal();
     void listaClasseAnimal();
     void listaDadosAnimal(string nome_animal);
     void listaAnimaisProfissional(string nome_profissional);
-    bool adicionaProfissional(Profissional* novo);
-    Profissional* removeProfissional(string nome);
+    bool adicionaProfissional(shared_ptr<Profissional> novo);
+    shared_ptr<Profissional> removeProfissional(string nome);
     bool alteraProfissional();
 
 private:
-
     string telefone;
     string endereco;
-    vector<Animal*> animais;
-    vector<Profissional*> profissionais;
+    vector<shared_ptr<Animal>> animais;
+    vector<shared_ptr<Profissional>> profissionais;
 
     /** Métodos internos */
-    Animal* findAnimal(string nome);
-    Profissional* findProfissional(string nome);
-    void printTitle(string title, int largura);
+    shared_ptr<Animal> findAnimal(string nome);
+    shared_ptr<Profissional> findProfissional(string nome);
+    void printTitulo(string titulo, int largura);
 };

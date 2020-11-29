@@ -27,32 +27,28 @@ void limpaTela()
 #endif
 }
 
-void menuPrincipal(PetFera* petfera) {
+void menuPrincipal(const shared_ptr<PetFera>& petfera) {
     char opcao;
     limpaTela();
 	
 	do {	 
-		cout<< endl << "Opções: ";
-		cout<< endl << "========";
+		cout<< endl << "=======================================";
 		cout<< endl << "1 - Cadastrar animal";
-		cout<< endl << "2 - Remover animal.";
-		cout<< endl << "3 - Alterar dados de um animal.";
-		cout<< endl << "4 - Listar animais de uma determinada espécie.";
-		cout<< endl << "5 - Listar dados de um determinada animal.";
-		cout<< endl << "6 - Listar animais sob a resposabilidade de um profissional.";
-		cout<< endl << "7 - Cadastrar profissional.";
-		cout<< endl << "8 - Remover profissional.";
-        cout<< endl << "9 - Alterar dados de um profissional.";
-		cout<< endl << "---------";
-		cout<< endl << "---------";
-		cout<< endl << endl << "X - Encerrar.";
+		cout<< endl << "2 - Remover animal";
+		cout<< endl << "3 - Editar animal";
+		cout<< endl << "4 - Listar animais por classe";
+		cout<< endl << "5 - Listar dados de um animal";
+		cout<< endl << "6 - Listar animais de um profissional";
+		cout<< endl << "7 - Cadastrar profissional";
+		cout<< endl << "8 - Remover profissional";
+        cout<< endl << "9 - Editar profissional";
+		cout<< endl << "---------------------------------------";
+		cout<< endl << "X - Encerrar.";
 
-		cout<< endl << endl << "Selecione a opção: ";
-
+		cout<< endl << endl << "Selecione uma opção: ";
 		cin >> opcao;
 
 		limpaTela();
-		 
 		switch(opcao)
 		{
 			case '1' :{ petfera->cadastrarAnimal();}
@@ -75,7 +71,6 @@ void menuPrincipal(PetFera* petfera) {
 			break;
 			case 'X' :
 			case 'x' :{ return;}
-			break;
 			default : cout << endl << "Opção inválida!";
 		}
 		cout << endl;
@@ -88,11 +83,10 @@ void menuPrincipal(PetFera* petfera) {
 
 int main()
 {
-    PetFera* petfera = new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Acrelândia - AC");
+    shared_ptr<PetFera> petfera(new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Acrelândia - AC"));
 
     menuPrincipal(petfera);
 
-    delete petfera;
-
+    //delete petfera;
     return 0;
 }

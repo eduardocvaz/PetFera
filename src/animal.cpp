@@ -11,7 +11,7 @@ Animal::Animal(string nome, string idade, bool sexo, double tamanho, double peso
                 extinto(extinto)
                 {}
 
-Animal::~Animal() = default;
+Animal::~Animal() {}
 
 ostream& operator<< (ostream& o, Animal& animal) {
     return animal.imprimeDados(o);
@@ -67,6 +67,10 @@ void Animal::setValor(double valor) {
 
 tpAnimal Animal::getTipo() const {
     return this->tipo;
+}
+
+void Animal::setTipo(tpAnimal tipo){
+    this->tipo = tipo;
 }
 
 bool Animal::getExtinto() const {

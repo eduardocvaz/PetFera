@@ -36,7 +36,6 @@ protected:
     bool extinto;
 
 public:
-    //construtores
     Animal(string nome, string idade, bool sexo, double tamanho, double peso, double valor, tpAnimal tipo, bool extinto);
     virtual ~Animal();
 
@@ -56,6 +55,7 @@ public:
     double getValor() const;
     void setValor(double valor);
     tpAnimal getTipo() const;
+    void setTipo(tpAnimal tipo);
     bool getExtinto() const;
     void setExtinto(bool extinto);
 };

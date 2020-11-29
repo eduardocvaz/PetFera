@@ -1,7 +1,6 @@
 #pragma once
 
 #include "animal.hpp"
-#include "string"
 
 class Anfibio : public Animal
 {

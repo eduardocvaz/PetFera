@@ -1,10 +1,8 @@
 #include "reptil.hpp"
-#include <iomanip>
-#include <iostream>
 
 Reptil::Reptil(string nome, string idade, bool sexo, double tamanho, double peso, double valor, bool extinto, bool peconheto, string tipo_veneno) :
             Animal(nome,idade,sexo,tamanho,peso,valor,reptilDomestico,extinto),
-            peconhento(peconhento),
+            peconhento(peconheto),
             tipo_veneno(tipo_veneno) {}
 
 Reptil::~Reptil() {}
@@ -27,6 +25,6 @@ string Reptil::getTipoVeneno() const{
 
 ostream &Reptil::imprimeDados(ostream &o) const
 {
-
+    //implementar
     return o;
 }
