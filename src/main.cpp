@@ -34,13 +34,13 @@ void menuPrincipal(PetFera* petfera) {
 		cout<< endl << "=======================================";
 		cout<< endl << "(1) Cadastrar animal";
 		cout<< endl << "(2) Remover animal";
-		cout<< endl << "(3) Editar animal";
+//		cout<< endl << "(3) Editar animal";
 		cout<< endl << "(4) Listar classe de animais";
-		cout<< endl << "(5) Listar dados de um animal";
-		cout<< endl << "(6) Listar animais de um profissional";
+//		cout<< endl << "(5) Listar dados de um animal";
+		cout<< endl << "(6) Listar animais por profissional";
 		cout<< endl << "(7) Cadastrar profissional";
 		cout<< endl << "(8) Remover profissional";
-        cout<< endl << "(9) Editar profissional";
+//        cout<< endl << "(9) Editar profissional";
 		cout<< endl << "---------------------------------------";
 		cout<< endl << "(X) Encerrar.";
 
@@ -60,8 +60,8 @@ void menuPrincipal(PetFera* petfera) {
 			break;
 //			case '5' :{ petfera->listarDadosAnimal();}
 //			break;
-//			case '6' :{ petfera->listarAnimaisProfissional();}
-//			break;
+			case '6' :{ petfera->listarAnimaisProfissional();}
+			break;
 			case '7' :{ petfera->cadastrarProfissional();}
 			break;
 			case '8' :{ petfera->removerProfissional();}

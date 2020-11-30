@@ -428,10 +428,32 @@ void PetFera::listarClasseAnimal(){
 //void PetFera::listarDadosAnimal(){
 //    //implementar
 //}
-//
-//void PetFera::listarAnimaisProfissional(){
-//    //implementar
-//}
+
+void PetFera::listarAnimaisProfissional(){
+
+    this->printTitulo("Listar animais por profissional",60);
+
+    string nome;
+    vector<Animal*> lista;
+    do {
+        cout << "Digite o nome do profissional: ";
+        cin >> nome;
+        if (this->findProfissional(nome)==nullptr) {
+            cout << "Profissional não encontrado" << endl;
+        }
+    } while (this->findProfissional(nome)!=nullptr);
+
+    if (this->findProfissional(nome)->getTipo()==tipoVeterinario) {
+        lista = listaAnimaisProfissional(nome,true);
+    } else {
+        lista = listaAnimaisProfissional(nome,false);
+    }
+
+    for (auto& animal : lista)
+    {
+        cout << animal;
+    }
+}
 
 void PetFera::cadastrarProfissional(){
     string nome;
@@ -568,19 +590,26 @@ void PetFera::listaDadosAnimal(string nome_animal){
         cout << animal << endl;
     }
 }
-
-void PetFera::listaAnimaisProfissional(string nome_profissional){
-    shared_ptr<Profissional> profissional = this->findProfissional(nome_profissional);
-    if (profissional!=nullptr) {
-        vector<shared_ptr<Animal>> meus_animais = profissional->getMeusAnimais();
-        for (auto& animal : meus_animais)
-        {
-            cout << animal << endl;
-        }
-
-    }
-}
 */
+
+vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool is_vet){
+
+    vector<Animal*> lista;
+    for (auto& animal : this->animais)
+    {
+        if(is_vet) {
+            if (animal->getVeterinario()->getNome() == nome_profissional) {
+                lista.push_back(animal);
+            }
+        } else {
+            if (animal->getTratador()->getNome() == nome_profissional) {
+                lista.push_back(animal);
+            }
+        }
+    }
+    return lista;
+}
+
 bool PetFera::adicionaProfissional(Profissional* novo){
     this->profissionais.push_back(novo);
     return true;
