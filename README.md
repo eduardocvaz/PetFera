@@ -25,8 +25,9 @@ Apos a instalação execute o programa, ao executar vai ser exibido um menu, com
 Clone o repositório, e execute o make:
 
 > git clone https://github.com/eduardocvaz/Projeto-PARTE-I \
-> make \
-> Mova ../bin/programa para a pasta que preferir
+> make 
+
+Mova ../bin/programa para a pasta que preferir
 
 ## Uso
 
