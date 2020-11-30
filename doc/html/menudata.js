@@ -37,6 +37,7 @@ var menudata={children:[
 {text:"i",url:"functions.html#index_i"},
 {text:"m",url:"functions.html#index_m"},
 {text:"o",url:"functions.html#index_o"},
+{text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
@@ -49,6 +50,7 @@ var menudata={children:[
 {text:"g",url:"functions_func.html#index_g"},
 {text:"i",url:"functions_func.html#index_i"},
 {text:"m",url:"functions_func.html#index_m"},
+{text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
 {text:"t",url:"functions_func.html#index_t"},
@@ -56,4 +58,7 @@ var menudata={children:[
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"Funções Relacionadas",url:"functions_rela.html"}]}]},
 {text:"Arquivos",url:"files.html",children:[
-{text:"Lista de Arquivos",url:"files.html"}]}]}
+{text:"Lista de Arquivos",url:"files.html"},
+{text:"Membros dos Arquivos",url:"globals.html",children:[
+{text:"Todos",url:"globals.html"},
+{text:"Funções",url:"globals_func.html"}]}]}]}
