@@ -68,5 +68,4 @@ public:
     bool adicionaProfissional(Profissional* novo);
     Profissional* removeProfissional(string nome);
 //    bool alteraProfissional();
-    void listarDadosAnimal();
 };

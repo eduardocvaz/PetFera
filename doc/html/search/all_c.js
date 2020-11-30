@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['veterinario_56',['Veterinario',['../classVeterinario.html',1,'Veterinario'],['../classVeterinario.html#acfea06795cecaa8b800923a2ddd0714a',1,'Veterinario::Veterinario()']]]
+  ['tratador_62',['Tratador',['../classTratador.html',1,'Tratador'],['../classTratador.html#a83d7938c474514ab6d62caa2e6fc56d3',1,'Tratador::Tratador()']]]
 ];

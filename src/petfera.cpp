@@ -16,14 +16,22 @@ using std::cin;
 //using std::left;
 //using std::right;
 //using std::getline;
-
+/**
+ * @brief Constroi um novo objeto Pet Fera:: Pet Fera
+ *
+ * @param telefone Telefone da Loja
+ * @param endereco Endereço da loja
+ */
 PetFera::PetFera(string telefone, string endereco):
                 telefone(telefone), endereco(endereco) {
     string titulo = "🐆 Loja de Animais PetFera - ";
     titulo.append(this->telefone);
     this->printTitulo(titulo,60);
 }
-
+/**
+ * @brief Destroi o objeto Pet Fera:: Pet Fera
+ *
+ */
 PetFera::~PetFera() {
     for (auto& animal : this->animais) {
         delete animal;
@@ -32,15 +40,26 @@ PetFera::~PetFera() {
         delete profissional;
     }
 }
-
+/**
+ * @brief Metodo get para obter o vetor de animais da loja
+ *
+ * @return Retorna o vetor de animais
+ */
 vector<Animal*> PetFera::getAnimais() const{
     return this->animais;
 }
-
+/**
+ * @brief Metodo get para obter o vetor de profissionais que trabalham na loja
+ *
+ * @return Retorna o vetor de profissionais que trabalham na loja
+ */
 vector<Profissional*> PetFera::getProfissionais() const{
     return this->profissionais;
 }
-
+/**
+ * @brief Metodo para cadastrar um animal na loja
+ *
+ */
 void PetFera::cadastrarAnimal(){
 
     int tipo;
@@ -271,7 +290,10 @@ void PetFera::cadastrarAnimal(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
-
+/**
+ * @brief Metodo para remover um animal ja cadastrado da loja
+ *
+ */
 void PetFera::removerAnimal(){
     this->printTitulo("Remover Animal",60);
     if(this->animais.empty()){
@@ -293,11 +315,17 @@ void PetFera::removerAnimal(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
-
+/**
+ * @brief Metodo para alterar os dados cadastrados de um animal
+ *
+ */
 //void PetFera::alterarAnimal(){
 //    //implementar
 //}
-
+/**
+ * @brief Metodo para listar os animais de uma determinada classe
+ *
+ */
 void PetFera::listarClasseAnimal(){
 
     int classe;
@@ -424,10 +452,21 @@ void PetFera::listarClasseAnimal(){
         }
     } else cout << "Erro no sistema" << endl;
 }
-
+/**
+ * @brief Metodo para listar os dados de uma determinado animal
+ *
+ */
 //void PetFera::listarDadosAnimal(){
 //    //implementar
 //}
+//
+//void PetFera::listarAnimaisProfissional(){
+//    //implementar
+//}
+/**
+ * @brief Metodo para cadastra um novo profissional na loja
+ *
+ */
 
 void PetFera::listarAnimaisProfissional(){
 
@@ -515,7 +554,10 @@ void PetFera::cadastrarProfissional(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
-
+/**
+ * @brief Metodo para remover um determinado profissional da loja
+ *
+ */
 void PetFera::removerProfissional(){
 
     this->printTitulo("Remover Profissional",60);
@@ -540,17 +582,30 @@ void PetFera::removerProfissional(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
-
+/**
+ * @brief Metodo para alterar os dados de um determinado profissional da loja
+ *
+ */
 //void PetFera::alterarProfissional(){
 //    //implementar
 //}
-
+/**
+ * @brief (ADICIONAR)
+ *
+ * @param novo
+ * @return true
+ * @return false
+ */
 bool PetFera::adicionaAnimal(Animal* novo){
     this->animais.push_back(novo);
     return true;
 }
 
-
+/**
+ * @brief Metodo para Remover um animal da loja
+ *
+ * @param nome Nome do animal
+ */
 Animal* PetFera::removeAnimal(string nome){
     int index = 0;
     for (auto& animal : this->animais)
@@ -565,11 +620,19 @@ Animal* PetFera::removeAnimal(string nome){
     }
     return nullptr;
 }
-
+/**
+ * @brief (ADICIONAR)
+ *
+ */
 //bool PetFera::alteraAnimal(){
 //    //implementar
 //}
-
+/**
+ * @brief Adicionar
+ *
+ * @param tipo
+ * @return vector<Animal*>
+ */
 vector<Animal*> PetFera::listaClasseAnimal(tpAnimal tipo){
 
     vector<Animal*> classe;
@@ -583,6 +646,10 @@ vector<Animal*> PetFera::listaClasseAnimal(tpAnimal tipo){
     return classe;
 }
 
+/**
+ * @brief
+ *
+ */
 /*
 void PetFera::listaDadosAnimal(string nome_animal){
     shared_ptr<Animal> animal = this->findAnimal(nome_animal);
@@ -590,6 +657,20 @@ void PetFera::listaDadosAnimal(string nome_animal){
         cout << animal << endl;
     }
 }
+/**
+ * @brief (ADICIONAR)
+ *
+ * @param nome_profissional
+ */
+/*
+void PetFera::listaAnimaisProfissional(string nome_profissional){
+    shared_ptr<Profissional> profissional = this->findProfissional(nome_profissional);
+    if (profissional!=nullptr) {
+        vector<shared_ptr<Animal>> meus_animais = profissional->getMeusAnimais();
+        for (auto& animal : meus_animais)
+        {
+            cout << animal << endl;
+        }
 */
 
 vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool is_vet){
@@ -609,12 +690,25 @@ vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool 
     }
     return lista;
 }
+*/
+
+/**
+ * @brief (ADICIONAR)
+ *
+ * @param novo
+ * @return true
+ * @return false
+ */
 
 bool PetFera::adicionaProfissional(Profissional* novo){
     this->profissionais.push_back(novo);
     return true;
 }
-
+/**
+ * @brief Metodo para remover profissional
+ *
+ * @param nome Nome do profissional
+ */
 Profissional* PetFera::removeProfissional(string nome){
     int index = 0;
     for (auto& profissional : this->profissionais)
@@ -629,7 +723,10 @@ Profissional* PetFera::removeProfissional(string nome){
     }
     return nullptr;
 }
-
+/**
+ * @brief (ADICIONAR)
+ *
+ */
 /*
 bool PetFera::alteraProfissional(){
     //implementar
@@ -638,6 +735,12 @@ bool PetFera::alteraProfissional(){
 }
 */
 
+/**
+ * @brief (ADICIONAR)
+ *
+ * @param nome
+ * @return Animal*
+ */
 Animal* PetFera::findAnimal(string nome) {
     for (auto& animal : this->animais)
     {
@@ -648,7 +751,12 @@ Animal* PetFera::findAnimal(string nome) {
     }
     return nullptr;
 }
-
+/**
+ * @brief (ADICIONAR)
+ *
+ * @param nome
+ * @return Profissional*
+ */
 Profissional* PetFera::findProfissional(string nome) {
     for (auto& profissional : this->profissionais)
     {
@@ -659,7 +767,12 @@ Profissional* PetFera::findProfissional(string nome) {
     }
     return nullptr;
 }
-
+/**
+ * @brief (ADICIONAR)
+ *
+ * @param titulo
+ * @param largura
+ */
 void PetFera::printTitulo(string titulo, int largura){
     int spaceOnLeft = (largura-titulo.length())/2;
     int spaceExtra = titulo.length()%2;
@@ -671,7 +784,12 @@ void PetFera::printTitulo(string titulo, int largura){
          << "###" << endl;
     cout << setfill('-') << setw(largura) << "" << endl;
 }
-
+/**
+ * @brief (ADICIONAR)
+ *
+ * @return true
+ * @return false
+ */
 bool PetFera::validaVetTrat() {
 
     int vet=0;
@@ -690,7 +808,12 @@ bool PetFera::validaVetTrat() {
 
     return false;
 }
-
+/**
+ * @brief (ADICIONAR)
+ *
+ * @return true
+ * @return false
+ */
 bool PetFera::validaNaoPerigosoVenenoso() {
     char op;
     do {
