@@ -1,6 +1,6 @@
 # Projeto-PARTE-I
-Projeto da turma de linguagem de programação 1 \
-Cadastro de animais de uma loja de animais em geral.
+Projeto da turma 02 de Linguagem de Programação 1 \
+Sistema de cadastro de animais e profissionais de uma loja de animais.
 
 ## Grupo:
 Silvestre Estalonge
@@ -10,25 +10,29 @@ Silvestre Estalonge
 > Leandro Silva Ferreira Junior
 
 ## Resumo
-Nesta versão 1.0 temos as seguintes funcionalidades\
-> Cadastro de um novo animal a ser comercializado \
-> Remoção de um animal da lista de disponíveis após a sua comercialização \
-> Alteração dos dados cadastrais de um animal \
-> Listagem dos dados cadastrais de um determinado animal ou de uma classe de animais \
-> Listagem de animais sob a responsabilidade de um determinado Veterinário ou Tratador \
-> Todas as atividades relacionadas ao cadastro (Inserção, Alteração, Remoção e Consulta) de Veterinários e Tratadores 
+Nesta versão 1.0 temos as seguintes funcionalidades implementadas:\
+> Cadastro de um novo animal a ser comercializado. \
+> Remoção de um animal da lista de disponíveis após a sua comercialização. \
+> Alteração dos dados cadastrais de um animal. \
+> Listagem dos dados cadastrais de um determinado animal ou de uma classe de animais. \
+> Listagem de animais sob a responsabilidade de um determinado veterinário ou tratador. \
+> Todas as atividades relacionadas ao cadastro (Inserção, Alteração, Remoção e Consulta) de veterinários e tratadores. 
 
-Apos a instalação execute o programa, ao executar vai ser exibido um menu, com as funcionalidade descritas acima
+## Vídeo Explicativo
+link do vídeo
 
-## Instalação
+## Instruções
+Apos a instalação, execute o programa. Ao executá-lo, o menu principal será exibido contendo as funcionalidade descritas acima.
 
+## Instalação e Compilação
 Clone o repositório, e execute o make:
 
 > git clone https://github.com/eduardocvaz/Projeto-PARTE-I \
 > make 
 
-Mova ../bin/programa para a pasta que preferir
+Mova ../bin/programa para a pasta que preferir. \
+Ou acesse a pasta/bin.
 
-## Uso
+## Execução
 
 > ./programa
