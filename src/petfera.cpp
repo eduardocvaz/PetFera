@@ -19,7 +19,7 @@ using std::cin;
 
 PetFera::PetFera(string telefone, string endereco):
                 telefone(telefone), endereco(endereco) {
-    string titulo = "Loja de Animais PetFera - ";
+    string titulo = "🐆 Loja de Animais PetFera - ";
     titulo.append(this->telefone);
     this->printTitulo(titulo,60);
 }
@@ -124,22 +124,53 @@ void PetFera::cadastrarAnimal(){
     cout << "Valor (R$): ";
     cin >> valor;
 
+    bool flag;
     do {
+        flag = true;
         cout << "Veterinário Responsável: ";
         cin >> vet;
         if (this->findProfissional(vet)==nullptr || this->findProfissional(vet)->getTipo()!=tipoVeterinario) {
             cout << "Veterinário não encontrado." << endl;
+            flag = false;
+        } else if (this->findProfissional(vet)->getTipo()!=tipoVeterinario){
+            cout << "Este profissional não é um veterinário. Tente novamente." << endl;
+            flag = false;
         }
-    } while (this->findProfissional(vet)==nullptr || this->findProfissional(vet)->getTipo()!=tipoVeterinario);
+    } while (!flag);
     veterinario = dynamic_cast<Veterinario *>(findProfissional(vet));
 
     do {
+        flag = true;
         cout << "Tratador Responsável: ";
         cin >> trat;
-        if (this->findProfissional(trat)==nullptr || this->findProfissional(trat)->getTipo()!=tipoTratador) {
-            cout << "Tratador não encontrado." << endl;
+        if (this->findProfissional(trat)==nullptr){
+            cout << "Tratador não encontrado. Tente novamente." << endl;
+            flag = false;
+        } else if (this->findProfissional(trat)->getTipo()!=tipoTratador){
+            cout << "Este profissional não é um tratador. Tente novamente." << endl;
+            flag = false;
+        } else if((dynamic_cast<Tratador *>(findProfissional(trat))->getNivel())==nivelVerde) {
+
+            flag = validaNaoPerigosoVenenoso();
+            if(!flag){
+                cout << "Este tratador não pode manipular animais venenosos ou perigosos. Tente Novamente" << endl;
+
+            }else if (tipo!=2){
+                cout << "Este tratador só pode manipular aves. Tente novamente." << endl;
+                flag = false;
+            }
+        } else if ((dynamic_cast<Tratador *>(findProfissional(trat))->getNivel())==nivelAzul){
+
+            flag = validaNaoPerigosoVenenoso();
+            if(!flag){
+                cout << "Este tratador não pode manipular animais venenosos ou perigosos. Tente Novamente" << endl;
+
+            }else if (tipo==1){
+                cout << "Este tratador não pode tratar um anfíbio. Tente novamente." << endl;
+                flag = false;
+            }
         }
-    } while (this->findProfissional(trat)==nullptr || this->findProfissional(trat)->getTipo()!=tipoTratador);
+    } while (!flag);
     tratador = dynamic_cast<Tratador *>(findProfissional(trat));
 
 
@@ -241,9 +272,12 @@ void PetFera::cadastrarAnimal(){
     }
 }
 
-
 void PetFera::removerAnimal(){
     this->printTitulo("Remover Animal",60);
+    if(this->animais.empty()){
+        cout << "Nenhum animal cadastrado" << endl;
+        return;
+    }
     string nome;
     do {
         cout << "Nome: ";
@@ -259,23 +293,146 @@ void PetFera::removerAnimal(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
-/*
-void PetFera::alterarAnimal(){
-    //implementar
-}
+
+//void PetFera::alterarAnimal(){
+//    //implementar
+//}
 
 void PetFera::listarClasseAnimal(){
-    //implementar
+
+    int classe;
+    int tipo;
+
+    this->printTitulo("Listar classe de animais",60);
+
+    do {
+        cout << "(1) Anfibio" << endl
+             << "(2) Ave" << endl
+             << "(3) Mamífero" << endl
+             << "(4) Reptil" << endl;
+        cin >> classe;
+        if (classe!=1 && classe!=2 && classe!=3 && classe!=4) {
+            cout << "Opção inválida! Tente novamente." << endl << endl;
+        }
+    } while (classe!=1 && classe!=2 && classe!=3 && classe!=4);
+
+    do {
+        cout << endl << "(1) Doméstico" << endl
+             << "(2) Silvestre Nativo" << endl
+             << "(3) Silvestre Exótico" << endl;
+        cin >> tipo;
+        if (tipo!=1 && tipo!=2 && tipo!=3) {
+            cout << "Opção inválida! Tente novamente." << endl << endl;
+        }
+    } while (tipo!=1 && tipo!=2 && tipo!=3);
+
+    if (classe==1 && tipo==1){
+
+        auto lista = listaClasseAnimal(anfibioDomestico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==1 && tipo==2){
+
+        auto lista = listaClasseAnimal(anfibioNativo);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==1 && tipo==3){
+
+        auto lista = listaClasseAnimal(anfibioExotico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==2 && tipo==1){
+
+        auto lista = listaClasseAnimal(aveDomestico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==2 && tipo==2){
+
+        auto lista = listaClasseAnimal(aveNativo);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==2 && tipo==3){
+
+        auto lista = listaClasseAnimal(aveExotico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==3 && tipo==1){
+
+        auto lista = listaClasseAnimal(mamiferoDomestico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==3 && tipo==2){
+
+        auto lista = listaClasseAnimal(mamiferoNativo);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==3 && tipo==3){
+
+        auto lista = listaClasseAnimal(mamiferoExotico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==4 && tipo==1){
+
+        auto lista = listaClasseAnimal(reptilDomestico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==4 && tipo==2){
+
+        auto lista = listaClasseAnimal(reptilNativo);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else if (classe==4 && tipo==3){
+
+        auto lista = listaClasseAnimal(reptilExotico);
+
+        for (auto& animal : lista)
+        {
+            cout << animal;
+        }
+    } else cout << "Erro no sistema" << endl;
 }
 
-void PetFera::listarDadosAnimal(){
-    //implementar
-}
+//void PetFera::listarDadosAnimal(){
+//    //implementar
+//}
+//
+//void PetFera::listarAnimaisProfissional(){
+//    //implementar
+//}
 
-void PetFera::listarAnimaisProfissional(){
-    //implementar
-}
-*/
 void PetFera::cadastrarProfissional(){
     string nome;
     string idade;
@@ -315,11 +472,11 @@ void PetFera::cadastrarProfissional(){
         cin >> crmv;
         criado = new Veterinario(nome, idade, telefone, crmv);
 
-    } else {                                //incluir lógica de permissão dos tratadores
+    } else {
         do {
             cout << "Nível de Segurança:" << endl
                  << "(1) Verde" << endl
-                 << "(2) Amarelo" << endl
+                 << "(2) Azul" << endl
                  << "(3) Vermelho" << endl;
             cin >> nivel;
             if (nivel!=1 && nivel!=2 && nivel!=3) {
@@ -340,6 +497,12 @@ void PetFera::cadastrarProfissional(){
 void PetFera::removerProfissional(){
 
     this->printTitulo("Remover Profissional",60);
+
+    if(this->animais.empty()){
+        cout << "Nenhum profissional cadastrado" << endl;
+        return;
+    }
+
     string nome;
     do {
         cout << "Nome: ";
@@ -380,15 +543,25 @@ Animal* PetFera::removeAnimal(string nome){
     }
     return nullptr;
 }
+
+//bool PetFera::alteraAnimal(){
+//    //implementar
+//}
+
+vector<Animal*> PetFera::listaClasseAnimal(tpAnimal tipo){
+
+    vector<Animal*> classe;
+    for (auto& animal : this->animais)
+    {
+        if (animal->getTipo()==tipo)
+        {
+            classe.push_back(animal);
+        }
+    }
+    return classe;
+}
+
 /*
-bool PetFera::alteraAnimal(){
-    //implementar
-}
-
-void PetFera::listaClasseAnimal(){
-    //implementar
-}
-
 void PetFera::listaDadosAnimal(string nome_animal){
     shared_ptr<Animal> animal = this->findAnimal(nome_animal);
     if (animal!=nullptr) {
@@ -487,4 +660,18 @@ bool PetFera::validaVetTrat() {
     if (vet>=1 && trat>=1) return true;
 
     return false;
+}
+
+bool PetFera::validaNaoPerigosoVenenoso() {
+    char op;
+    do {
+        cout << "O animal é perigoso ou venenoso? (S|N)";
+        cin >> op;
+        if (op != 's' && op != 'S' && op != 'n' && op != 'N') {
+            cout << "Opção inválida! Tente novamente." << endl;
+        }
+    } while (op != 's' && op != 'S' && op != 'n' && op != 'N');
+    if (op == 's' || op == 'S') {
+        return false;
+    } else return true;
 }

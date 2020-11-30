@@ -37,6 +37,7 @@ private:
     Profissional* findProfissional(string nome);
     void printTitulo(string titulo, int largura);
     bool validaVetTrat();
+    bool validaNaoPerigosoVenenoso();
 
 public:
     PetFera(string telefone, string endereco);
@@ -49,7 +50,7 @@ public:
     void cadastrarAnimal();
     void removerAnimal();
 //    void alterarAnimal();
-//    void listarClasseAnimal();
+    void listarClasseAnimal();
 //    void listarDadosAnimal();
 //    void listarAnimaisProfissional();
     void cadastrarProfissional();
@@ -61,7 +62,7 @@ public:
    bool adicionaAnimal(Animal* novo);
    Animal* removeAnimal(string nome);
 //    bool alteraAnimal();
-//    void listaClasseAnimal();
+    vector<Animal*> listaClasseAnimal(tpAnimal tipo);
 //    void listaDadosAnimal(string nome_animal);
 //    void listaAnimaisProfissional(string nome_profissional);
     bool adicionaProfissional(Profissional* novo);
