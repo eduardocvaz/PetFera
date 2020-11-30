@@ -6,11 +6,11 @@ Sistema de cadastro de animais e profissionais de uma loja de animais.
 Silvestre Estalonge
 
 ## Alunos:
-> Dawerton Eduardo Carlos Vaz \
-> Leandro Silva Ferreira Junior
+Dawerton Eduardo Carlos Vaz \
+Leandro Silva Ferreira Junior
 
 ## Resumo
-Nesta versão 1.0 temos as seguintes funcionalidades implementadas:\
+Nesta versão 1.0 temos as seguintes funcionalidades implementadas:
 > Cadastro de um novo animal a ser comercializado. \
 > Remoção de um animal da lista de disponíveis após a sua comercialização. \
 > Alteração dos dados cadastrais de um animal. \
