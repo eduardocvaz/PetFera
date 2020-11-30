@@ -51,11 +51,12 @@ public:
     void removerAnimal();
 //    void alterarAnimal();
     void listarClasseAnimal();
-//    void listarDadosAnimal();
+    void listarDadosAnimal();
     void listarAnimaisProfissional();
     void cadastrarProfissional();
     void removerProfissional();
-//    void alterarProfissional();
+    void alterarProfissional();
+    void consultarProfissional();
 
 
     /** Métodos internos para realizar as operações. */
@@ -63,9 +64,8 @@ public:
    Animal* removeAnimal(string nome);
 //    bool alteraAnimal();
     vector<Animal*> listaClasseAnimal(tpAnimal tipo);
-//    void listaDadosAnimal(string nome_animal);
     vector<Animal*> listaAnimaisProfissional(string nome_profissional,bool is_vet);
     bool adicionaProfissional(Profissional* novo);
     Profissional* removeProfissional(string nome);
-//    bool alteraProfissional();
+    Profissional* alteraProfissional(Profissional* alterado, char op);
 };

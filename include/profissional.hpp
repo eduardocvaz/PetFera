@@ -36,6 +36,7 @@ public:
     void setNome(string nome);
     void setIdade(string idade);
     void setTelefone(string telefone);
+    void setTipo(tipoProfissional tipo);
 
     virtual ostream& imprimeDados(ostream& o) const = 0;
     friend ostream& operator<<(ostream& o, Profissional& p);

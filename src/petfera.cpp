@@ -28,6 +28,7 @@ PetFera::PetFera(string telefone, string endereco):
     titulo.append(this->telefone);
     this->printTitulo(titulo,60);
 }
+
 /**
  * @brief Destroi o objeto Pet Fera:: Pet Fera
  *
@@ -40,6 +41,7 @@ PetFera::~PetFera() {
         delete profissional;
     }
 }
+
 /**
  * @brief Metodo get para obter o vetor de animais da loja
  *
@@ -48,6 +50,7 @@ PetFera::~PetFera() {
 vector<Animal*> PetFera::getAnimais() const{
     return this->animais;
 }
+
 /**
  * @brief Metodo get para obter o vetor de profissionais que trabalham na loja
  *
@@ -56,6 +59,7 @@ vector<Animal*> PetFera::getAnimais() const{
 vector<Profissional*> PetFera::getProfissionais() const{
     return this->profissionais;
 }
+
 /**
  * @brief Metodo para cadastrar um animal na loja
  *
@@ -201,87 +205,106 @@ void PetFera::cadastrarAnimal(){
     string cor_pelo;
     string veneno;
 
-    if (tipo==1 && silvestre==1) {
-        cout << "Tipo de pele: ";
-        cin >> tipo_pele;
-        criado = new Anfibio(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele);
+    switch (tipo) {
+        case 1: {
+            if (silvestre == 1) {
+                cout << "Tipo de pele: ";
+                cin >> tipo_pele;
+                criado = new Anfibio(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele);
+            }
+            else if (silvestre == 2) {
+                cout << "Tipo de pele: ";
+                cin >> tipo_pele;
+                cout << "Estado nativo: ";
+                cin >> estado;
+                criado = new AnfibioNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele,estado);
+            }
+            else if (silvestre == 3) {
+                cout << "Tipo de pele: ";
+                cin >> tipo_pele;
+                cout << "País de origem: ";
+                cin >> pais_origem;
+                criado = new AnfibioExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele,pais_origem);
+            }
+        }
+            break;
 
-    } else if (tipo==1 && silvestre==2) {
-        cout << "Tipo de pele: ";
-        cin >> tipo_pele;
-        cout << "Estado nativo: ";
-        cin >> estado;
-        criado = new AnfibioNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele,estado);
+        case 2: {
+            if (silvestre == 1) {
+                cout << "Tamanho do bico (cm): ";
+                cin >> tamanho_bico;
+                cout << "Envergadura (cm): ";
+                cin >> tamanho_envergadura;
+                criado = new Ave(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_bico,tamanho_envergadura);
+            }
+            else if (silvestre == 2) {
+                cout << "Tamanho do bico (cm): ";
+                cin >> tamanho_bico;
+                cout << "Envergadura (cm): ";
+                cin >> tamanho_envergadura;
+                cout << "Estado nativo: ";
+                cin >> estado;
+                criado = new AveNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_bico,tamanho_envergadura,estado);
+            }
+            else if (silvestre == 3) {
+                cout << "Tamanho do bico (cm): ";
+                cin >> tamanho_bico;
+                cout << "Envergadura (cm): ";
+                cin >> tamanho_envergadura;
+                cout << "País de origem: ";
+                cin >> pais_origem;
+                criado = new AveExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_bico,tamanho_envergadura,pais_origem);
+            }
+        }
+            break;
 
-    } else if (tipo==1 && silvestre==3) {
-        cout << "Tipo de pele: ";
-        cin >> tipo_pele;
-        cout << "País de origem: ";
-        cin >> pais_origem;
-        criado = new AnfibioExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele,pais_origem);
+        case 3: {
+            if (silvestre == 1) {
+                cout << "Cor da pelagem: ";
+                cin >> cor_pelo;
+                criado = new Mamifero(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,cor_pelo);
+            }
+            else if (silvestre == 2) {
+                cout << "Cor da pelagem: ";
+                cin >> cor_pelo;
+                cout << "Estado nativo: ";
+                cin >> estado;
+                criado = new MamiferoNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,cor_pelo,estado);
+            }
+            else if (silvestre == 3) {
+                cout << "Cor da pelagem: ";
+                cin >> cor_pelo;
+                cout << "País de origem: ";
+                cin >> pais_origem;
+                criado = new MamiferoExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,cor_pelo,pais_origem);
+            }
+        }
+            break;
 
-    } else if (tipo==2 && silvestre==1) {
-        cout << "Tamanho do bico (cm): ";
-        cin >> tamanho_bico;
-        cout << "Envergadura (cm): ";
-        cin >> tamanho_envergadura;
-        criado = new Ave(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_bico,tamanho_envergadura);
+        case 4: {
+            if (silvestre == 1) {
+                cout << "Veneno: ";
+                cin >> veneno;
+                criado = new Reptil(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,veneno);
+            }
+            else if (silvestre == 2) {
+                cout << "Veneno: ";
+                cin >> veneno;
+                cout << "Estado nativo: ";
+                cin >> estado;
+                criado = new ReptilNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,veneno,estado);
+            }
+            else if (silvestre == 3) {
+                cout << "Veneno: ";
+                cin >> veneno;
+                cout << "País de origem: ";
+                cin >> pais_origem;
+                criado = new ReptilExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,veneno,pais_origem);
+            }
+        }
+            break;
 
-    } else if (tipo==2 && silvestre==2) {
-        cout << "Tamanho do bico (cm): ";
-        cin >> tamanho_bico;
-        cout << "Envergadura (cm): ";
-        cin >> tamanho_envergadura;
-        cout << "Estado nativo: ";
-        cin >> estado;
-        criado = new AveNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_bico,tamanho_envergadura,estado);
-
-    } else if (tipo==2 && silvestre==3) {
-        cout << "Tamanho do bico (cm): ";
-        cin >> tamanho_bico;
-        cout << "Envergadura (cm): ";
-        cin >> tamanho_envergadura;
-        cout << "País de origem: ";
-        cin >> pais_origem;
-        criado = new AveExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_bico,tamanho_envergadura,pais_origem);
-
-    } else if (tipo==3 && silvestre==1) {
-        cout << "Cor da pelagem: ";
-        cin >> cor_pelo;
-        criado = new Mamifero(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,cor_pelo);
-
-    } else if (tipo==3 && silvestre==2) {
-        cout << "Cor da pelagem: ";
-        cin >> cor_pelo;
-        cout << "Estado nativo: ";
-        cin >> estado;
-        criado = new MamiferoNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,cor_pelo,estado);
-
-    } else if (tipo==3 && silvestre==3) {
-        cout << "Cor da pelagem: ";
-        cin >> cor_pelo;
-        cout << "País de origem: ";
-        cin >> pais_origem;
-        criado = new MamiferoExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,cor_pelo,pais_origem);
-
-    } else if (tipo==4 && silvestre==1) {
-        cout << "Veneno: ";
-        cin >> veneno;
-        criado = new Reptil(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,veneno);
-
-    } else if (tipo==4 && silvestre==2) {
-        cout << "Veneno: ";
-        cin >> veneno;
-        cout << "Estado nativo: ";
-        cin >> estado;
-        criado = new ReptilNativo(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,veneno,estado);
-
-    } else if (tipo==4 && silvestre==3) {
-        cout << "Veneno: ";
-        cin >> veneno;
-        cout << "País de origem: ";
-        cin >> pais_origem;
-        criado = new ReptilExotico(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,veneno,pais_origem);
+        default : cout << endl << "Erro Interno!";
     }
 
     if (this->adicionaAnimal(criado)) {
@@ -290,6 +313,7 @@ void PetFera::cadastrarAnimal(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
+
 /**
  * @brief Metodo para remover um animal ja cadastrado da loja
  *
@@ -315,6 +339,7 @@ void PetFera::removerAnimal(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
+
 /**
  * @brief Metodo para alterar os dados cadastrados de um animal
  *
@@ -322,6 +347,7 @@ void PetFera::removerAnimal(){
 //void PetFera::alterarAnimal(){
 //    //implementar
 //}
+
 /**
  * @brief Metodo para listar os animais de uma determinada classe
  *
@@ -354,152 +380,92 @@ void PetFera::listarClasseAnimal(){
         }
     } while (tipo!=1 && tipo!=2 && tipo!=3);
 
-    if (classe==1 && tipo==1){
-
-        auto lista = listaClasseAnimal(anfibioDomestico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
+    switch (classe) {
+        case 1: {
+            if (tipo == 1) { auto lista = listaClasseAnimal(anfibioDomestico); }
+            else if (tipo == 2) { auto lista = listaClasseAnimal(anfibioNativo); }
+            else if (tipo == 3) { auto lista = listaClasseAnimal(anfibioExotico); }
         }
-    } else if (classe==1 && tipo==2){
+            break;
 
-        auto lista = listaClasseAnimal(anfibioNativo);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
+        case 2: {
+            if (tipo == 1) { auto lista = listaClasseAnimal(aveDomestico); }
+            else if (tipo == 2) { auto lista = listaClasseAnimal(aveNativo); }
+            else if (tipo == 3) { auto lista = listaClasseAnimal(aveExotico); }
         }
-    } else if (classe==1 && tipo==3){
+            break;
 
-        auto lista = listaClasseAnimal(anfibioExotico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
+        case 3: {
+            if (tipo == 1) { auto lista = listaClasseAnimal(mamiferoDomestico); }
+            else if (tipo == 2) { auto lista = listaClasseAnimal(mamiferoNativo); }
+            else if (tipo == 3) { auto lista = listaClasseAnimal(mamiferoExotico); }
         }
-    } else if (classe==2 && tipo==1){
+            break;
 
-        auto lista = listaClasseAnimal(aveDomestico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
+        case 4: {
+            if (tipo == 1) { auto lista = listaClasseAnimal(reptilDomestico); }
+            else if (tipo == 2) { auto lista = listaClasseAnimal(reptilNativo); }
+            else if (tipo == 3) { auto lista = listaClasseAnimal(reptilExotico); }
         }
-    } else if (classe==2 && tipo==2){
+            break;
 
-        auto lista = listaClasseAnimal(aveNativo);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else if (classe==2 && tipo==3){
-
-        auto lista = listaClasseAnimal(aveExotico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else if (classe==3 && tipo==1){
-
-        auto lista = listaClasseAnimal(mamiferoDomestico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else if (classe==3 && tipo==2){
-
-        auto lista = listaClasseAnimal(mamiferoNativo);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else if (classe==3 && tipo==3){
-
-        auto lista = listaClasseAnimal(mamiferoExotico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else if (classe==4 && tipo==1){
-
-        auto lista = listaClasseAnimal(reptilDomestico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else if (classe==4 && tipo==2){
-
-        auto lista = listaClasseAnimal(reptilNativo);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else if (classe==4 && tipo==3){
-
-        auto lista = listaClasseAnimal(reptilExotico);
-
-        for (auto& animal : lista)
-        {
-            cout << animal;
-        }
-    } else cout << "Erro no sistema" << endl;
+        default : cout << endl << "Erro Interno!";
+    }
 }
+
 /**
  * @brief Metodo para listar os dados de uma determinado animal
  *
  */
-//void PetFera::listarDadosAnimal(){
-//    //implementar
-//}
-//
-//void PetFera::listarAnimaisProfissional(){
-//    //implementar
-//}
+void PetFera::listarDadosAnimal(){
+    this->printTitulo("Listar dados de animal",60);
+
+    string nome;
+    do {
+        cout << "Digite o nome do animal: ";
+        cin >> nome;
+        if (this->findAnimal(nome)==nullptr) {
+            cout << "Profissional não encontrado" << endl;
+        }
+    } while (this->findAnimal(nome)==nullptr);
+
+    cout << this->findAnimal(nome);
+}
+
 /**
- * @brief Metodo para cadastra um novo profissional na loja
+ * @brief
  *
  */
-
 void PetFera::listarAnimaisProfissional(){
 
     this->printTitulo("Listar animais por profissional",60);
 
     string nome;
-    vector<Animal*> lista;
     do {
         cout << "Digite o nome do profissional: ";
         cin >> nome;
         if (this->findProfissional(nome)==nullptr) {
             cout << "Profissional não encontrado" << endl;
         }
-    } while (this->findProfissional(nome)!=nullptr);
+    } while (this->findProfissional(nome)==nullptr);
 
     if (this->findProfissional(nome)->getTipo()==tipoVeterinario) {
-        lista = listaAnimaisProfissional(nome,true);
+        listaAnimaisProfissional(nome,true);
     } else {
-        lista = listaAnimaisProfissional(nome,false);
-    }
-
-    for (auto& animal : lista)
-    {
-        cout << animal;
+        listaAnimaisProfissional(nome,false);
     }
 }
 
+/**
+ * @brief
+ *
+ */
 void PetFera::cadastrarProfissional(){
     string nome;
     string idade;
-    string telefone;
-    int op;
-    int nivel;
+    string fone;
+    char op;
+    char nivel;
     string crmv;
     Profissional* criado = nullptr;
 
@@ -517,21 +483,21 @@ void PetFera::cadastrarProfissional(){
     cin >> idade;
 
     cout << "Telefone: ";
-    cin >> telefone;
+    cin >> fone;
 
     do {
         cout << "(1) Veterinário | (2) Tratador: ";
         cin >> op;
-        if (op!=1 && op!=2) {
+        if (op!='1' && op!='2') {
             cout << "Opção inválida! Tente novamente." << endl;
         }
-    } while (op!=1 && op!=2);
+    } while (op!='1' && op!='2');
 
-    if (op==1) {
+    if (op=='1') {
 
         cout << "Registro CRMV: ";
         cin >> crmv;
-        criado = new Veterinario(nome, idade, telefone, crmv);
+        criado = new Veterinario(nome, idade, fone, crmv);
 
     } else {
         do {
@@ -540,12 +506,12 @@ void PetFera::cadastrarProfissional(){
                  << "(2) Azul" << endl
                  << "(3) Vermelho" << endl;
             cin >> nivel;
-            if (nivel!=1 && nivel!=2 && nivel!=3) {
+            if (nivel!='1' && nivel!='2' && nivel!='3') {
                 cout << "Opção inválida! Tente novamente." << endl;
             }
-        } while (nivel!=1 && nivel!=2 && nivel!=3);
+        } while (nivel!='1' && nivel!='2' && nivel!='3');
 
-        criado = new Tratador(nome, idade, telefone, static_cast<nivelSeguranca>(nivel));
+        criado = new Tratador(nome, idade, fone, static_cast<nivelSeguranca>(nivel));
     }
 
     if (this->adicionaProfissional(criado)) {
@@ -554,6 +520,7 @@ void PetFera::cadastrarProfissional(){
         cout << "Erro!! Operação cancelada." << endl;
     }
 }
+
 /**
  * @brief Metodo para remover um determinado profissional da loja
  *
@@ -572,7 +539,7 @@ void PetFera::removerProfissional(){
         cout << "Nome: ";
         cin >> nome;
         if (this->findProfissional(nome)==nullptr) {
-            cout << "Nome não encontrado! Tente novamente." << endl;
+            cout << "Profissional não encontrado! Tente novamente." << endl;
         }
     } while (this->findProfissional(nome)==nullptr);
 
@@ -583,12 +550,65 @@ void PetFera::removerProfissional(){
     }
 }
 /**
- * @brief Metodo para alterar os dados de um determinado profissional da loja
+ * @brief Metodo para alterar os dados de um profissional
  *
  */
-//void PetFera::alterarProfissional(){
-//    //implementar
-//}
+void PetFera::alterarProfissional(){
+    this->printTitulo("Alterar cadastro de profissional",60);
+
+    string nome;
+    char op;
+    do {
+        cout << "Nome: ";
+        cin >> nome;
+        if (this->findProfissional(nome)==nullptr) {
+            cout << "Profissional não encontrado! Tente novamente." << endl;
+        }
+    } while (this->findProfissional(nome)==nullptr);
+
+    do {
+        cout << endl << "Selecione o campo que deseja alterar:" << endl
+             << "(1) Nome" << endl
+             << "(2) Idade" << endl
+             << "(3) Telefone" << endl;
+
+        if (this->findProfissional(nome)->getTipo() == tipoVeterinario) {
+            cout << "(4) Registro CRMV" << endl;
+        } else {
+            cout << "(4) Nível de Segurança" << endl;
+        }
+        cin >> op;
+        if (op!='1' && op!='2' && op!='3' && op!='4') {
+            cout << "Opção inválida! Tente novamente." << endl;
+        }
+    } while (op!='1' && op!='2' && op!='3' && op!='4');
+
+    if (this->alteraProfissional(this->findProfissional(nome), op)) {
+        cout << "Operação realizada com sucesso." << endl;
+    } else {
+        cout << "Erro!! Operação cancelada." << endl;
+    }
+}
+
+/**
+ * @brief
+ *
+ */
+void PetFera::consultarProfissional(){
+    this->printTitulo("Consultar profissional",60);
+
+    string nome;
+    do {
+        cout << "Digite o nome do profissional: ";
+        cin >> nome;
+        if (this->findAnimal(nome)==nullptr) {
+            cout << "Profissional não encontrado" << endl;
+        }
+    } while (this->findAnimal(nome)==nullptr);
+
+    cout << this->findProfissional(nome);
+}
+
 /**
  * @brief (ADICIONAR)
  *
@@ -643,36 +663,20 @@ vector<Animal*> PetFera::listaClasseAnimal(tpAnimal tipo){
             classe.push_back(animal);
         }
     }
+
+    for (auto& animal : classe)
+    {
+        cout << animal;
+    }
+
     return classe;
 }
 
-/**
- * @brief
- *
- */
-/*
-void PetFera::listaDadosAnimal(string nome_animal){
-    shared_ptr<Animal> animal = this->findAnimal(nome_animal);
-    if (animal!=nullptr) {
-        cout << animal << endl;
-    }
-}
 /**
  * @brief (ADICIONAR)
  *
  * @param nome_profissional
  */
-/*
-void PetFera::listaAnimaisProfissional(string nome_profissional){
-    shared_ptr<Profissional> profissional = this->findProfissional(nome_profissional);
-    if (profissional!=nullptr) {
-        vector<shared_ptr<Animal>> meus_animais = profissional->getMeusAnimais();
-        for (auto& animal : meus_animais)
-        {
-            cout << animal << endl;
-        }
-*/
-
 vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool is_vet){
 
     vector<Animal*> lista;
@@ -688,9 +692,14 @@ vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool 
             }
         }
     }
+    cout << endl << endl;
+    for (auto& animal : lista)
+    {
+        cout << animal;
+    }
+
     return lista;
 }
-*/
 
 /**
  * @brief (ADICIONAR)
@@ -699,11 +708,11 @@ vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool 
  * @return true
  * @return false
  */
-
 bool PetFera::adicionaProfissional(Profissional* novo){
     this->profissionais.push_back(novo);
     return true;
 }
+
 /**
  * @brief Metodo para remover profissional
  *
@@ -723,17 +732,62 @@ Profissional* PetFera::removeProfissional(string nome){
     }
     return nullptr;
 }
+
 /**
  * @brief (ADICIONAR)
  *
  */
-/*
-bool PetFera::alteraProfissional(){
-    //implementar
+Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
 
+    string aux;
+    char nivel;
+    switch(op){
+        case '1':{
+            cout << endl << "Digite o novo nome: ";
+            cin >> aux;
+            alterado->setNome(aux);
+        }
+        break;
 
+        case '2':{
+            cout << endl << "Digite a nova idade: ";
+            cin >> aux;
+            alterado->setIdade(aux);
+        }
+        break;
+
+        case '3':{
+            cout << endl << "Digite o novo telefone: ";
+            cin >> aux;
+            alterado->setTelefone(aux);
+        }
+        break;
+
+        case '4':{
+            if (alterado->getTipo()==tipoVeterinario) {
+                cout << endl << "Digite o novo CRMV: ";
+                cin >> aux;
+                Veterinario* alterado = dynamic_cast<Veterinario*>(alterado);
+                alterado->setCRMV(aux);
+            } else {
+                Tratador* alterado = dynamic_cast<Tratador*>(alterado);
+                do {
+                    cout << "Novo nível de Segurança:" << endl
+                         << "(1) Verde" << endl
+                         << "(2) Azul" << endl
+                         << "(3) Vermelho" << endl;
+                    cin >> nivel;
+                    if (nivel!='1' && nivel!='2' && nivel!='3') {
+                        cout << "Opção inválida! Tente novamente." << endl;
+                    }
+                } while (nivel!='1' && nivel!='2' && nivel!='3');
+                alterado->setNivel(static_cast<nivelSeguranca>(nivel));
+            }
+        }
+        break;
+    }
+    return alterado;
 }
-*/
 
 /**
  * @brief (ADICIONAR)
@@ -751,6 +805,7 @@ Animal* PetFera::findAnimal(string nome) {
     }
     return nullptr;
 }
+
 /**
  * @brief (ADICIONAR)
  *
@@ -767,6 +822,7 @@ Profissional* PetFera::findProfissional(string nome) {
     }
     return nullptr;
 }
+
 /**
  * @brief (ADICIONAR)
  *
@@ -784,6 +840,7 @@ void PetFera::printTitulo(string titulo, int largura){
          << "###" << endl;
     cout << setfill('-') << setw(largura) << "" << endl;
 }
+
 /**
  * @brief (ADICIONAR)
  *
@@ -808,6 +865,7 @@ bool PetFera::validaVetTrat() {
 
     return false;
 }
+
 /**
  * @brief (ADICIONAR)
  *

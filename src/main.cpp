@@ -34,9 +34,10 @@
 using std::cout;
 using std::cin;
 using std::endl;
+
 /**
  * @brief Função para pausar a tela no terminal
- * 
+ * @return void
  */
 void pausar() {
 #if defined _WIN32
@@ -47,9 +48,11 @@ void pausar() {
     system("read -n 1 -s -p \"Pressione qualquer tecla para continuar...\"");
 #endif
 }
+
 /**
  * @brief Função para limpar a tela no terminal
- * 
+ * @details
+ * @return void
  */
 void limpaTela()
 {
@@ -61,52 +64,56 @@ void limpaTela()
     system("clear");
 #endif
 }
+
 /**
- * @brief Função para gerar o menu principal para a escolha das opção disponiveis
- * 
+ * @brief Função para gerar o menu principal para as ações disponíveis
+ * @details
  * @param petfera Loja passada por parâmetro 
  */
 void menuPrincipal(PetFera* petfera) {
     char opcao;
 	
-	do {	//Gerando um menu com as opção disponiveis 
+	do {
 		cout<< endl << "=======================================";
-		cout<< endl << "(1) Cadastrar animal";
-		cout<< endl << "(2) Remover animal";
-//		cout<< endl << "(3) Editar animal";
-		cout<< endl << "(4) Listar classe de animais";
-//		cout<< endl << "(5) Listar dados de um animal";
-		cout<< endl << "(6) Listar animais por profissional";
-		cout<< endl << "(7) Cadastrar profissional";
-		cout<< endl << "(8) Remover profissional";
-//        cout<< endl << "(9) Editar profissional";
+		cout<< endl << "(0) Cadastrar animal";
+		cout<< endl << "(1) Remover animal";
+//		cout<< endl << "(2) Editar animal";
+		cout<< endl << "(3) Listar classe de animais";
+		cout<< endl << "(4) Listar dados de um animal";
+		cout<< endl << "(5) Listar animais por profissional";
+		cout<< endl << "(6) Cadastrar profissional";
+		cout<< endl << "(7) Remover profissional";
+        cout<< endl << "(8) Editar profissional";
+        cout<< endl << "(9) Consultar profissional";
 		cout<< endl << "---------------------------------------";
 		cout<< endl << "(X) Encerrar.";
 
 		cout<< endl << endl << "Selecione uma opção: ";
 		cin >> opcao;
 
-		limpaTela();//Limpando tela
-		switch(opcao)//chamando o metodo correspondente a opção escolhida
+		limpaTela();
+		switch(opcao)
 		{
-			case '1' :{ petfera->cadastrarAnimal();}
+			case '0' :{ petfera->cadastrarAnimal();}
 			break;
-			case '2' :{ petfera->removerAnimal();}
+			case '1' :{ petfera->removerAnimal();}
 			break;
-//			case '3' :{ petfera->alterarAnimal();}
+//			case '2' :{ petfera->alterarAnimal();}
 //			break;
-			case '4' :{ petfera->listarClasseAnimal();}
+			case '3' :{ petfera->listarClasseAnimal();}
 			break;
-//			case '5' :{ petfera->listarDadosAnimal();}
-//			break;
-			case '6' :{ petfera->listarAnimaisProfissional();}
+			case '4' :{ petfera->listarDadosAnimal();}
 			break;
-			case '7' :{ petfera->cadastrarProfissional();}
+			case '5' :{ petfera->listarAnimaisProfissional();}
 			break;
-			case '8' :{ petfera->removerProfissional();}
+			case '6' :{ petfera->cadastrarProfissional();}
 			break;
-//			case '9' :{ petfera->alterarProfissional();}
-//			break;
+			case '7' :{ petfera->removerProfissional();}
+			break;
+			case '8' :{ petfera->alterarProfissional();}
+			break;
+			case '9' :{ petfera->consultarProfissional();}
+			break;
 			case 'X' :
 			case 'x' :{ return;}
 			default : cout << endl << "Opção inválida!";

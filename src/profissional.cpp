@@ -74,6 +74,16 @@ void Profissional::setIdade(string idade){
 void Profissional::setTelefone(string telefone){
     this->telefone = telefone;
 }
+
+/**
+ * @brief
+ *
+ * @param
+ */
+void Profissional::setTipo(tipoProfissional tipo){
+    this->tipo = tipo;
+}
+
 /**
  * @brief Metodo para imprimir os dados do animal
  * 
