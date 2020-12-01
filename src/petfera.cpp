@@ -89,10 +89,10 @@ void PetFera::cadastrarAnimal(){
     }
 
     do {
-        cout << "(1) Anfibio" << endl
-             << "(2) Ave" << endl
-             << "(3) Mamífero" << endl
-             << "(4) Reptil" << endl;
+        cout << "(1)  Anfibio" << endl
+             << "(2)  Ave" << endl
+             << "(3)  Mamífero" << endl
+             << "(4)  Reptil" << endl;
         cin >> tipo;
         if (tipo!=1 && tipo!=2 && tipo!=3 && tipo!=4) {
             cout << "Opção inválida! Tente novamente." << endl;
@@ -100,9 +100,9 @@ void PetFera::cadastrarAnimal(){
     } while (tipo!=1 && tipo!=2 && tipo!=3 && tipo!=4);
 
     do {
-        cout << "(1) Doméstico" << endl
-             << "(2) Silvestre Nativo" << endl
-             << "(3) Silvestre Exótico" << endl;
+        cout << "(1)  Doméstico" << endl
+             << "(2)  Silvestre Nativo" << endl
+             << "(3)  Silvestre Exótico" << endl;
         cin >> silvestre;
         if (silvestre!=1 && silvestre!=2 && silvestre!=3) {
             cout << "Opção inválida! Tente novamente." << endl;
@@ -344,9 +344,110 @@ void PetFera::removerAnimal(){
  * @brief Metodo para alterar os dados cadastrados de um animal
  *
  */
-//void PetFera::alterarAnimal(){
-//    //implementar
-//}
+void PetFera::alterarAnimal(){
+    this->printTitulo("Alterar Animal",60);
+
+    string nome;
+    string op;
+    bool flag;
+
+    do {
+        cout << "Nome do animal: ";
+        cin >> nome;
+        if (this->findAnimal(nome)==nullptr) {
+            cout << "Animal não encontrado! Tente novamente." << endl;
+        }
+    } while (this->findAnimal(nome)==nullptr);
+
+    do {
+        flag=true;
+        cout << endl << "Selecione um campo para alterar:" << endl
+             << "(0)  Nome" << endl
+             << "(1)  Idade" << endl
+             << "(2)  Sexo" << endl
+             << "(3)  Tamanho" << endl
+             << "(4)  Peso" << endl
+             << "(5)  Valor" << endl
+             << "(6)  Veterinário responsável" << endl
+             << "(7)  Tratador responsável" << endl;
+
+        switch(this->findAnimal(nome)->getTipo()) {
+
+            case anfibioDomestico:{
+                cout << "(8)  Tipo de pele" << endl;
+            }
+            break;
+            case anfibioNativo:{
+                cout << "(8)  Tipo de pele" << endl
+                     << "(9)  Estado nativo" << endl;
+            }
+                break;
+            case anfibioExotico:{
+                cout << "(8)  Tipo de pele" << endl
+                     << "(9)  País de origem" << endl;
+            }
+                break;
+            case aveDomestico:{
+                cout << "(8)  Tamanho do bico" << endl
+                     << "(9)  Envergadura" << endl;
+            }
+                break;
+            case aveNativo:{
+                cout << "(8)  Tamanho do bico" << endl
+                     << "(9)  Envergadura" << endl
+                     << "(10) Estado nativo: " << endl;
+            }
+                break;
+            case aveExotico:{
+                cout << "(8)  Tamanho do bico" << endl
+                     << "(9)  Envergadura" << endl
+                     << "(10) País de origem" << endl;
+            }
+                break;
+            case mamiferoDomestico:{
+                cout << "(8)  Cor da pelagem" << endl;
+            }
+                break;
+            case mamiferoNativo:{
+                cout << "(8)  Cor da pelagem" << endl
+                     << "(9)  Estado nativo" << endl;
+            }
+                break;
+            case mamiferoExotico:{
+                cout << "(8)  Cor da pelagem" << endl
+                     << "(9)  País de origem" << endl;
+            }
+                break;
+            case reptilDomestico:{
+                cout << "(8)  Tipo de veneno" << endl;
+            }
+                break;
+            case reptilNativo:{
+                cout << "(8)  Tipo de veneno" << endl
+                     << "(9)  Estado nativo" << endl;
+            }
+                break;
+            case reptilExotico:{
+                cout << "(8)  Tipo de veneno" << endl
+                     << "(9)  País de origem" << endl;
+            }
+                break;
+        }
+
+        cin >> op;
+
+        if (op!="0" && op!="1" && op!="2" && op!="3" && op!="4" && op!="5" && op!="6" && op!="7" && op!="8" && op!="9" && op!="10") {
+            cout << "Opção inválida! Tente novamente." << endl;
+            flag=false;
+        }
+    } while (!flag);
+
+    if (this->alteraAnimal(this->findAnimal(nome), stoi(op))) {
+        cout << "Operação realizada com sucesso." << endl;
+    } else {
+        cout << "Erro!! Operação cancelada." << endl;
+    }
+}
 
 /**
  * @brief Metodo para listar os animais de uma determinada classe
@@ -554,12 +655,12 @@ void PetFera::removerProfissional(){
  *
  */
 void PetFera::alterarProfissional(){
-    this->printTitulo("Alterar cadastro de profissional",60);
+    this->printTitulo("Alterar Profissional",60);
 
     string nome;
     char op;
     do {
-        cout << "Nome: ";
+        cout << "Nome do profissional: ";
         cin >> nome;
         if (this->findProfissional(nome)==nullptr) {
             cout << "Profissional não encontrado! Tente novamente." << endl;
@@ -567,7 +668,7 @@ void PetFera::alterarProfissional(){
     } while (this->findProfissional(nome)==nullptr);
 
     do {
-        cout << endl << "Selecione o campo que deseja alterar:" << endl
+        cout << endl << "Selecione um campo para alterar:" << endl
              << "(1) Nome" << endl
              << "(2) Idade" << endl
              << "(3) Telefone" << endl;
@@ -644,9 +745,192 @@ Animal* PetFera::removeAnimal(string nome){
  * @brief (ADICIONAR)
  *
  */
-//bool PetFera::alteraAnimal(){
-//    //implementar
-//}
+Animal* PetFera::alteraAnimal(Animal* alterado, int op){
+
+    string auxStr;
+    double auxDouble;
+    char sexo;
+
+    switch(op) {
+        case 0:{
+            cout << endl << "Digite o novo nome: ";
+            cin >> auxStr;
+            alterado->setNome(auxStr);
+        }
+            break;
+
+        case 1:{
+            cout << endl << "Digite a nova idade: ";
+            cin >> auxStr;
+            alterado->setIdade(auxStr);
+        }
+            break;
+
+        case 2:{
+            do {
+                cout << "Digite o novo sexo (M|F): ";
+                cin >> sexo;
+                if (sexo!='m' && sexo!='M' && sexo!='f' && sexo!='F') {
+                    cout << "Opção inválida! Tente novamente." << endl << endl;
+                }
+            } while (sexo!='m' && sexo!='M' && sexo!='f' && sexo!='F');
+            alterado->setSexo(sexo);
+        }
+            break;
+
+        case 3:{
+            cout << endl << "Digite o novo tamanho (cm): ";
+            cin >> auxDouble;
+            alterado->setPeso(auxDouble);
+        }
+            break;
+
+        case 4:{
+            cout << endl << "Digite o novo peso (kg): ";
+            cin >> auxDouble;
+            alterado->setPeso(auxDouble);
+        }
+            break;
+
+        case 5:{
+            cout << endl << "Digite o novo valor (R$): ";
+            cin >> auxDouble;
+            alterado->setValor(auxDouble);
+        }
+            break;
+
+        case 6:{
+
+            do {
+                cout << endl << "Digite o nome do novo Veterinário: ";
+                cin >> auxStr;
+                if (this->findProfissional(auxStr)==nullptr || this->findProfissional(auxStr)->getTipo()!=tipoVeterinario) {
+                        cout << "Não encontrado! Tente novamente." << endl;
+                }
+            } while (this->findProfissional(auxStr)==nullptr || this->findProfissional(auxStr)->getTipo()!=tipoVeterinario);
+
+            alterado->setVeterinario(dynamic_cast<Veterinario *>(this->findProfissional(auxStr)));
+        }
+            break;
+
+        case 7:{
+
+            do {
+                cout << endl << "Digite o nome do novo Tratador: ";
+                cin >> auxStr;
+                if (this->findProfissional(auxStr)==nullptr || this->findProfissional(auxStr)->getTipo()!=tipoTratador) {
+                    cout << "Não encontrado! Tente novamente." << endl;
+                }
+            } while (this->findProfissional(auxStr)==nullptr || this->findProfissional(auxStr)->getTipo()!=tipoTratador);
+
+            alterado->setTratador(dynamic_cast<Tratador *>(this->findProfissional(auxStr)));
+        }
+            break;
+
+
+        case 8:{
+
+            auto tipo = alterado->getTipo();
+
+            if (tipo==anfibioNativo || tipo==anfibioDomestico || tipo==anfibioExotico) {
+
+                cout << endl << "Digite o novo tipo de pele: ";
+                cin >> auxStr;
+                dynamic_cast<Anfibio*>(alterado)->setTipoPele(auxStr);
+
+            } else if (tipo==aveNativo || tipo==aveDomestico || tipo==aveExotico){
+
+                cout << endl << "Digite o novo tamanho do bico: ";
+                cin >> auxDouble;
+                dynamic_cast<Ave*>(alterado)->setTamanhoBico(auxDouble);
+
+            } else if (tipo==mamiferoNativo || tipo==mamiferoDomestico || tipo==mamiferoExotico){
+
+                cout << endl << "Digite a nova cor da pelagem: ";
+                cin >> auxStr;
+                dynamic_cast<Mamifero*>(alterado)->setCorPelagem(auxStr);
+            } else if (tipo==reptilNativo || tipo==reptilDomestico || tipo==reptilExotico){
+
+                cout << endl << "Digite o novo tipo de veneno: ";
+                cin >> auxStr;
+                dynamic_cast<Reptil*>(alterado)->setTipoVeneno(auxStr);
+            }
+        }
+            break;
+
+        case 9:{
+
+            auto tipo = alterado->getTipo();
+
+            if (tipo==anfibioNativo) {
+
+                cout << endl << "Digite o novo estado: ";
+                cin >> auxStr;
+                dynamic_cast<AnfibioNativo*>(alterado)->setEstado(auxStr);
+
+            } else if (tipo==anfibioExotico){
+
+                cout << endl << "Digite o novo país: ";
+                cin >> auxStr;
+                dynamic_cast<AnfibioExotico*>(alterado)->setPais_origem(auxStr);
+
+            } else if (tipo==aveNativo || tipo==aveDomestico || tipo==aveExotico){
+
+                cout << endl << "Digite a envergadura (cm): ";
+                cin >> auxDouble;
+                dynamic_cast<Ave*>(alterado)->setTamanhoEnvergadura(auxDouble);
+
+            } else if (tipo==mamiferoNativo){
+
+                cout << endl << "Digite o novo estado: ";
+                cin >> auxStr;
+                dynamic_cast<MamiferoNativo*>(alterado)->setEstado(auxStr);
+
+            } else if (tipo==mamiferoExotico){
+
+                cout << endl << "Digite o novo país: ";
+                cin >> auxStr;
+                dynamic_cast<MamiferoExotico*>(alterado)->setPais_origem(auxStr);
+
+            } else if (tipo==reptilNativo){
+
+                cout << endl << "Digite o novo estado: ";
+                cin >> auxStr;
+                dynamic_cast<ReptilNativo*>(alterado)->setEstado(auxStr);
+
+            } else if (tipo==reptilExotico){
+
+                cout << endl << "Digite o novo país: ";
+                cin >> auxStr;
+                dynamic_cast<ReptilExotico*>(alterado)->setPais_origem(auxStr);
+
+            } else cout << "Erro interno! Opção inválida" << endl;
+        }
+            break;
+
+        case 10:{
+
+            auto tipo = alterado->getTipo();
+
+            if (tipo==aveNativo){
+
+                cout << endl << "Digite o novo estado: ";
+                cin >> auxStr;
+                dynamic_cast<AveNativo*>(alterado)->setEstado(auxStr);
+
+            } else if (tipo==aveExotico){
+
+                cout << endl << "Digite o novo país: ";
+                cin >> auxStr;
+                dynamic_cast<AveExotico*>(alterado)->setPais_origem(auxStr);
+
+            } else cout << "Erro interno! Opção inválida" << endl;
+        }
+            break;
+    }
+    return alterado;
+}
+
 /**
  * @brief Adicionar
  *
@@ -767,10 +1051,8 @@ Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
             if (alterado->getTipo()==tipoVeterinario) {
                 cout << endl << "Digite o novo CRMV: ";
                 cin >> aux;
-                Veterinario* alterado = dynamic_cast<Veterinario*>(alterado);
-                alterado->setCRMV(aux);
+                dynamic_cast<Veterinario*>(alterado)->setCRMV(aux);
             } else {
-                Tratador* alterado = dynamic_cast<Tratador*>(alterado);
                 do {
                     cout << "Novo nível de Segurança:" << endl
                          << "(1) Verde" << endl
@@ -781,10 +1063,11 @@ Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
                         cout << "Opção inválida! Tente novamente." << endl;
                     }
                 } while (nivel!='1' && nivel!='2' && nivel!='3');
-                alterado->setNivel(static_cast<nivelSeguranca>(nivel));
+                dynamic_cast<Tratador*>(alterado)->setNivel(static_cast<nivelSeguranca>(nivel));
             }
         }
         break;
+        default: cout << "Erro interno!"<< endl;
     }
     return alterado;
 }

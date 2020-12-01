@@ -49,7 +49,7 @@ public:
     /** Métodos de interação com o usuário */
     void cadastrarAnimal();
     void removerAnimal();
-//    void alterarAnimal();
+    void alterarAnimal();
     void listarClasseAnimal();
     void listarDadosAnimal();
     void listarAnimaisProfissional();
@@ -60,9 +60,9 @@ public:
 
 
     /** Métodos internos para realizar as operações. */
-   bool adicionaAnimal(Animal* novo);
-   Animal* removeAnimal(string nome);
-//    bool alteraAnimal();
+    bool adicionaAnimal(Animal* novo);
+    Animal* removeAnimal(string nome);
+    Animal* alteraAnimal(Animal* alterado, int op);
     vector<Animal*> listaClasseAnimal(tpAnimal tipo);
     vector<Animal*> listaAnimaisProfissional(string nome_profissional,bool is_vet);
     bool adicionaProfissional(Profissional* novo);
