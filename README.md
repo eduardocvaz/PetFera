@@ -1,4 +1,4 @@
-# Projeto-PARTE-I
+# Projeto - Loja de Animais PetFera
 Projeto da turma 02 de Linguagem de Programação 1 \
 Sistema de cadastro de animais e profissionais responsáveis em uma loja de animais.
 
