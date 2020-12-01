@@ -21,6 +21,9 @@ Nesta versão 1.0 temos as seguintes funcionalidades implementadas:
 ## Vídeo Explicativo
 link do vídeo
 
+## Documentação
+https://eduardocvaz.github.io/PetFera/index.html
+
 ## Instruções
 Apos a instalação, execute o programa. Ao executá-lo, o menu principal será exibido contendo as funcionalidade descritas acima. O comando "x" retorna para o menu principal.
 
