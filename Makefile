@@ -4,7 +4,7 @@ BIN = ./bin
 SRC = ./src
 INC = ./include
 
-PROG = $(BIN)/programa
+PROG = $(BIN)/petfera
 CC = g++
 CPPFLAGS = -Wall -std=c++17 -I./include
 
