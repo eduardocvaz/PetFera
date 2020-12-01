@@ -43,7 +43,22 @@ string Anfibio::getTipoPele() const{
  * @return Retorna a impressão
  */
 ostream& Anfibio::imprimeDados(ostream& o) const{
-    //corpo
+
+    string tipoStr = "Anfíbio Doméstico";
+
+    o << left << setfill(' ') << setw(15) << this->nome
+      << setfill(' ') << setw(7) << right << this->idade << " anos"
+      << setfill(' ') << setw(5) << this->sexo
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(1) << right << this->tamanho << "cm"
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(2) << right << this->peso << "kg"
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(2) << right << "R$" << this->valor
+      << setfill(' ') << setw(15) << right << "Vet.: " << this->veterinario->getNome()
+      << setfill(' ') << setw(15) << right << "Trat.:" << this->tratador->getNome()
+      << setfill(' ') << setw(22) << right << tipoStr
+      << setfill(' ') << setw(15) << right << "Pele: " << this->tipo_pele;
 
     return o;
 }

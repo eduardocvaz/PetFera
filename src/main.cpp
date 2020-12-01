@@ -117,8 +117,8 @@ void menuPrincipal(PetFera* petfera) {
 		}
 		cout << endl;
 
-		pausar();
-		limpaTela();
+//		pausar();
+//		limpaTela();
 	
 	} while (opcao != 'X' && opcao !='x');
 }
