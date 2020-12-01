@@ -63,7 +63,7 @@ vector<Profissional*> PetFera::getProfissionais() const{
 
 /**
  * @brief Metodo para cadastrar um animal na loja
- *
+ *@details Metodo tem varias varieveis temporarios, e basicamente vai perguntando ao usuario o dado, depois valida o dado e usa o metodo para atribuir ao animal
  */
 void PetFera::cadastrarAnimal(){
 
@@ -328,7 +328,7 @@ void PetFera::cadastrarAnimal(){
 
 /**
  * @brief Metodo para remover um animal ja cadastrado da loja
- *
+ * @details Metodo recebe o animal valida se ele existe e depois remove ele 
  */
 void PetFera::removerAnimal(){
 
@@ -486,7 +486,7 @@ void PetFera::alterarAnimal(){
 
 /**
  * @brief Metodo para listar os animais de uma determinada classe
- *
+ * @details Metodo da as opções para o usuario escolher a classe de animais, depois chama o metodo para listar eles
  */
 void PetFera::listarClasseAnimal(){
 
@@ -558,7 +558,7 @@ void PetFera::listarClasseAnimal(){
 
 /**
  * @brief Metodo para listar os dados de uma determinado animal
- *
+ * @details Metodo recebe nome do animal para listar os dados, valida se ele exite depois imprime os dados
  */
 void PetFera::listarDadosAnimal(){
 
@@ -588,8 +588,8 @@ void PetFera::listarDadosAnimal(){
 }
 
 /**
- * @brief
- *
+ * @brief Metodo para listar animais de um determinado profissional(veterinario ou tratador)
+ * @details Metodo recebe o nome do profissional valida se ele existe e caso exista imprime os animais que ele esta responsavel
  */
 void PetFera::listarAnimaisProfissional(){
 
@@ -628,8 +628,8 @@ void PetFera::listarAnimaisProfissional(){
 }
 
 /**
- * @brief
- *
+ * @brief Metodo para cadastrar um novo profissional(veterinario ou tratador)
+ * @details Metodo primeir pede os dados inicias como nome,idade,telefone, e vai atribuindo, depois pergunta o tipo de profissional, dependendo do tipo, ele pede informações referente a cada um.
  */
 void PetFera::cadastrarProfissional(){
     string nome;
@@ -710,7 +710,7 @@ void PetFera::cadastrarProfissional(){
 
 /**
  * @brief Metodo para remover um determinado profissional da loja
- *
+ * @details metodo recebe o nome do profissional valida se ele existe e se for o caso ele remove ele do vetor
  */
 void PetFera::removerProfissional(){
 
@@ -744,7 +744,7 @@ void PetFera::removerProfissional(){
 }
 /**
  * @brief Metodo para alterar os dados de um profissional
- *
+* @details Metodo recebe o nome do profissional valida se ele existe e se for o caso pergunta qual dado vai se alterado, e dependendo do tipo do profissional ele adiciona no menu os dados referente a cada tipo.
  */
 void PetFera::alterarProfissional(){
 
@@ -797,8 +797,8 @@ void PetFera::alterarProfissional(){
 }
 
 /**
- * @brief
- *
+ * @brief Metodo para consultar dados de um profissional ja cadastrador
+ * @details Metodo receebe o nome do profissional valida, e se for o caso imprime os dados do profissional
  */
 void PetFera::consultarProfissional() {
 
@@ -828,7 +828,7 @@ void PetFera::consultarProfissional() {
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo interno para adicionar animal no vetor
  *
  * @param novo
  * @return true
@@ -840,8 +840,8 @@ bool PetFera::adicionaAnimal(Animal* novo){
 }
 
 /**
- * @brief Metodo para Remover um animal da loja
- *
+ * @brief Metodo interno para Remover um animal da loja
+ * @details Metodo recebe nome do animal depois tirar ele do vetor
  * @param nome Nome do animal
  */
 Animal* PetFera::removeAnimal(string nome){
@@ -859,8 +859,8 @@ Animal* PetFera::removeAnimal(string nome){
     return nullptr;
 }
 /**
- * @brief (ADICIONAR)
- *
+ * @brief Metodo interno para alterar o animal
+ *@details metodo recebe os dados a serem alterados, e as alterações e aplica
  */
 Animal* PetFera::alteraAnimal(Animal* alterado, int op){
 
@@ -1050,7 +1050,7 @@ Animal* PetFera::alteraAnimal(Animal* alterado, int op){
 }
 
 /**
- * @brief Adicionar
+ * @brief Metodo interno para listar animais de uma classe
  *
  * @param tipo
  * @return vector<Animal*>
@@ -1075,9 +1075,8 @@ vector<Animal*> PetFera::listaClasseAnimal(tpAnimal tipo){
 }
 
 /**
- * @brief (ADICIONAR)
- *
- * @param nome_profissional
+ * @brief Metodo interno para listar animais de um determinado profissional
+ * @details metodo recebeo nome do profissional e o tipo depois imprime os animais que ele esta responsavel
  */
 vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool is_vet){
 
@@ -1105,7 +1104,8 @@ vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool 
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo interno para adicionar profissional
+ * @details Metodo recebe informações do novo profissional depois adiciona no vetor de profissionais
  *
  * @param novo
  * @return true
@@ -1118,7 +1118,7 @@ bool PetFera::adicionaProfissional(Profissional* novo){
 
 /**
  * @brief Metodo para remover profissional
- *
+ * @details metodo recebe nome do profissional e remove ele 
  * @param nome Nome do profissional
  */
 Profissional* PetFera::removeProfissional(string nome){
@@ -1137,7 +1137,8 @@ Profissional* PetFera::removeProfissional(string nome){
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo interno para alterar dados de um profissional
+ * @details metodo recebe nome do profissional a ser alterado depois vai recebendo os dados e alterando
  *
  */
 Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
@@ -1198,7 +1199,7 @@ Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo interno para procurar um animal no vetor de animais
  *
  * @param nome
  * @return Animal*
@@ -1215,7 +1216,7 @@ Animal* PetFera::findAnimal(string nome) {
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo interno para procurar um profissional no vetor de profissionais
  *
  * @param nome
  * @return Profissional*
@@ -1232,7 +1233,7 @@ Profissional* PetFera::findProfissional(string nome) {
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo para imprimir titulo
  *
  * @param titulo
  * @param largura
@@ -1250,7 +1251,7 @@ void PetFera::printTitulo(string titulo, int largura){
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo para confirmar se o tem funcionarios cadastrados antes de adicionar animal
  *
  * @return true
  * @return false
@@ -1275,7 +1276,7 @@ bool PetFera::validaVetTrat() {
 }
 
 /**
- * @brief (ADICIONAR)
+ * @brief Metodo para verificar se o animal é venenoso para atribuir apenas a tratadores com permissão
  *
  * @return true
  * @return false

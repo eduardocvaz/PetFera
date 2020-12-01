@@ -1,0 +1,92 @@
+\hypertarget{classReptilNativo}{}\doxysection{Referência da Classe Reptil\+Nativo}
+\label{classReptilNativo}\index{ReptilNativo@{ReptilNativo}}
+Diagrama de hierarquia para Reptil\+Nativo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classReptilNativo}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classReptilNativo_adb2c36de32c2aa463502bca61512e20c}{Reptil\+Nativo}} (string nome, string idade, string sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, string tipo\+\_\+veneno, string estado)
+\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReptilNativo_a6de5838fd62a1c61175e690110cd7dc0}\label{classReptilNativo_a6de5838fd62a1c61175e690110cd7dc0}} 
+\mbox{\hyperlink{classReptilNativo_a6de5838fd62a1c61175e690110cd7dc0}{$\sim$\+Reptil\+Nativo}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{classReptilNativo_a4b82d306e98bbe63243d2a5750dfaf5a}{imprime\+Dados}} (ostream \&o) const
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do reptil nativo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReptilNativo_a9afba73a01642689bd251eadffae91e9}\label{classReptilNativo_a9afba73a01642689bd251eadffae91e9}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classReptilNativo}{Reptil\+Nativo}} \&animal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classReptilNativo_adb2c36de32c2aa463502bca61512e20c}\label{classReptilNativo_adb2c36de32c2aa463502bca61512e20c}} 
+\index{ReptilNativo@{ReptilNativo}!ReptilNativo@{ReptilNativo}}
+\index{ReptilNativo@{ReptilNativo}!ReptilNativo@{ReptilNativo}}
+\doxysubsubsection{\texorpdfstring{ReptilNativo()}{ReptilNativo()}}
+{\footnotesize\ttfamily Reptil\+Nativo\+::\+Reptil\+Nativo (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{idade,  }\item[{string}]{sexo,  }\item[{double}]{tamanho,  }\item[{double}]{peso,  }\item[{double}]{valor,  }\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario,  }\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador,  }\item[{string}]{tipo\+\_\+veneno,  }\item[{string}]{estado }\end{DoxyParamCaption})}
+
+
+
+Constroi um novo objeto \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classReptil}{Reptil}} \mbox{\hyperlink{classNativo}{Nativo}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do reptil nativo \\
+\hline
+{\em idade} & Idade do reptil nativo \\
+\hline
+{\em sexo} & Sexo do reptil nativo \\
+\hline
+{\em tamanho} & Tamanho do reptil nativo \\
+\hline
+{\em peso} & Peso do reptil nativo \\
+\hline
+{\em valor} & Preço do reptil nativo \\
+\hline
+{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo reptil nativo \\
+\hline
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo reptil nativo \\
+\hline
+{\em tipo\+\_\+veneno} & Tipo de veneno do Réptil nativo \\
+\hline
+{\em estado} & Estado do reptil nativo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classReptilNativo_a4b82d306e98bbe63243d2a5750dfaf5a}\label{classReptilNativo_a4b82d306e98bbe63243d2a5750dfaf5a}} 
+\index{ReptilNativo@{ReptilNativo}!imprimeDados@{imprimeDados}}
+\index{imprimeDados@{imprimeDados}!ReptilNativo@{ReptilNativo}}
+\doxysubsubsection{\texorpdfstring{imprimeDados()}{imprimeDados()}}
+{\footnotesize\ttfamily ostream \& Reptil\+Nativo\+::imprime\+Dados (\begin{DoxyParamCaption}\item[{ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo para imprimir os dados do reptil nativo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em o} & Varivel para guardar impressão \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a impressão 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classReptil_aa39c3646bfbcc9013ad5ab45d4a56a12}{Reptil}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/reptil\+Nativo.\+hpp\item 
+src/reptil\+Nativo.\+cpp\end{DoxyCompactItemize}

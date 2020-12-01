@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PetFera: Código-Fonte de include/ave.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PetFera
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ave.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;animal.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classAve.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAve.html">Ave</a> : <span class="keyword">public</span> <a class="code" href="classAnimal.html">Animal</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">double</span> tamanho_do_bico;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">double</span> tamanho_da_envergadura;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classAve.html#a2b183b9bd5fe4384ba7fbfd010a2f7e1">Ave</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> idade, <span class="keywordtype">string</span> sexo, <span class="keywordtype">double</span> tamanho, <span class="keywordtype">double</span> peso, <span class="keywordtype">double</span> valor, <a class="code" href="classVeterinario.html">Veterinario</a>* veterinario, <a class="code" href="classTratador.html">Tratador</a>* tratador, <span class="keywordtype">double</span> tamanho_do_bico, <span class="keywordtype">double</span> tamanho_da_envergadura);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classAve.html#ad290be8d6fb95f1cfd24b5f55def7741">~Ave</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAve.html#aa6bd97a510edae1af14c1a7110503636">setTamanhoBico</a>(<span class="keywordtype">double</span> tamanho_do_bico);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classAve.html#ac45d162eb2a8d6a6fc9a837f5e6293ed">getTamanhoBico</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAve.html#ac9c0eee1339a7b90d0bbab365082bb4b">setTamanhoEnvergadura</a>(<span class="keywordtype">double</span> tamanho_da_envergadura);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classAve.html#a5a93e397dc5a5b4e69072d63d2f1f1b4">getTamanhoEnvergadura</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; (ostream&amp; o, <a class="code" href="classAve.html">Ave</a>&amp; animal);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> ostream&amp; <a class="code" href="classAve.html#ad9db8d0f8dbdf58b65ea482d936c4e03">imprimeDados</a>(ostream&amp; o) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="ttc" id="aclassAnimal_html"><div class="ttname"><a href="classAnimal.html">Animal</a></div><div class="ttdef"><b>Definition:</b> animal.hpp:32</div></div>
+<div class="ttc" id="aclassAve_html"><div class="ttname"><a href="classAve.html">Ave</a></div><div class="ttdef"><b>Definition:</b> ave.hpp:6</div></div>
+<div class="ttc" id="aclassAve_html_a2b183b9bd5fe4384ba7fbfd010a2f7e1"><div class="ttname"><a href="classAve.html#a2b183b9bd5fe4384ba7fbfd010a2f7e1">Ave::Ave</a></div><div class="ttdeci">Ave(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario *veterinario, Tratador *tratador, double tamanho_do_bico, double tamanho_da_envergadura)</div><div class="ttdoc">Constroi um novo objeto Ave:: Ave.</div><div class="ttdef"><b>Definition:</b> ave.cpp:16</div></div>
+<div class="ttc" id="aclassAve_html_a5a93e397dc5a5b4e69072d63d2f1f1b4"><div class="ttname"><a href="classAve.html#a5a93e397dc5a5b4e69072d63d2f1f1b4">Ave::getTamanhoEnvergadura</a></div><div class="ttdeci">double getTamanhoEnvergadura() const</div><div class="ttdoc">Metodo get para obter a envergadura das asas da ave.</div><div class="ttdef"><b>Definition:</b> ave.cpp:54</div></div>
+<div class="ttc" id="aclassAve_html_aa6bd97a510edae1af14c1a7110503636"><div class="ttname"><a href="classAve.html#aa6bd97a510edae1af14c1a7110503636">Ave::setTamanhoBico</a></div><div class="ttdeci">void setTamanhoBico(double tamanho_do_bico)</div><div class="ttdoc">Metodo set para definir o tamanho do bico da ave.</div><div class="ttdef"><b>Definition:</b> ave.cpp:30</div></div>
+<div class="ttc" id="aclassAve_html_ac45d162eb2a8d6a6fc9a837f5e6293ed"><div class="ttname"><a href="classAve.html#ac45d162eb2a8d6a6fc9a837f5e6293ed">Ave::getTamanhoBico</a></div><div class="ttdeci">double getTamanhoBico() const</div><div class="ttdoc">Metodo get para obter o tamanho do bico da ave.</div><div class="ttdef"><b>Definition:</b> ave.cpp:38</div></div>
+<div class="ttc" id="aclassAve_html_ac9c0eee1339a7b90d0bbab365082bb4b"><div class="ttname"><a href="classAve.html#ac9c0eee1339a7b90d0bbab365082bb4b">Ave::setTamanhoEnvergadura</a></div><div class="ttdeci">void setTamanhoEnvergadura(double tamanho_da_envergadura)</div><div class="ttdoc">Metodo set para definir a envergadura das asas da ave.</div><div class="ttdef"><b>Definition:</b> ave.cpp:46</div></div>
+<div class="ttc" id="aclassAve_html_ad290be8d6fb95f1cfd24b5f55def7741"><div class="ttname"><a href="classAve.html#ad290be8d6fb95f1cfd24b5f55def7741">Ave::~Ave</a></div><div class="ttdeci">~Ave()</div><div class="ttdoc">Destroi o objeto Ave:: Ave.</div><div class="ttdef"><b>Definition:</b> ave.cpp:24</div></div>
+<div class="ttc" id="aclassAve_html_ad9db8d0f8dbdf58b65ea482d936c4e03"><div class="ttname"><a href="classAve.html#ad9db8d0f8dbdf58b65ea482d936c4e03">Ave::imprimeDados</a></div><div class="ttdeci">virtual ostream &amp; imprimeDados(ostream &amp;o) const</div><div class="ttdoc">Metodo para imprimir os dados da ave.</div><div class="ttdef"><b>Definition:</b> ave.cpp:63</div></div>
+<div class="ttc" id="aclassTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdef"><b>Definition:</b> tratador.hpp:17</div></div>
+<div class="ttc" id="aclassVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdef"><b>Definition:</b> veterinario.hpp:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0
+</small></address>
+</body>
+</html>

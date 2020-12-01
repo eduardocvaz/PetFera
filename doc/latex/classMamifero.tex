@@ -1,0 +1,126 @@
+\hypertarget{classMamifero}{}\doxysection{Referência da Classe Mamifero}
+\label{classMamifero}\index{Mamifero@{Mamifero}}
+Diagrama de hierarquia para Mamifero\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMamifero}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMamifero_abc4add3ef5ab39afe7a9380233d5597d}{Mamifero}} (string nome, string idade, string sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, string cor\+\_\+da\+\_\+pelagem)
+\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classMamifero}{Mamifero}}\+:\+: \mbox{\hyperlink{classMamifero}{Mamifero}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMamifero_a56eb196d45222e754eb6f19000667d5d}\label{classMamifero_a56eb196d45222e754eb6f19000667d5d}} 
+\mbox{\hyperlink{classMamifero_a56eb196d45222e754eb6f19000667d5d}{$\sim$\+Mamifero}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classMamifero}{Mamifero}}\+:\+: \mbox{\hyperlink{classMamifero}{Mamifero}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMamifero_a3aadcf84658a45008bd8fcc3ad21ba01}{set\+Cor\+Pelagem}} (string cor\+\_\+da\+\_\+pelagem)
+\begin{DoxyCompactList}\small\item\em Metodo set para definir c. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classMamifero_a68f493cedd729532ea0ea5624d81416e}{get\+Cor\+Pelagem}} () const
+\begin{DoxyCompactList}\small\item\em Metodo get para obter Metodo get para obter a cor da pelagem do mimefero. \end{DoxyCompactList}\item 
+virtual ostream \& \mbox{\hyperlink{classMamifero_a4db718403960a11b484453d1c38d3c13}{imprime\+Dados}} (ostream \&o) const
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do mamifero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMamifero_abf95a6ecbcc67e9e6a287eb897cd8879}\label{classMamifero_abf95a6ecbcc67e9e6a287eb897cd8879}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classMamifero}{Mamifero}} \&animal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classMamifero_abc4add3ef5ab39afe7a9380233d5597d}\label{classMamifero_abc4add3ef5ab39afe7a9380233d5597d}} 
+\index{Mamifero@{Mamifero}!Mamifero@{Mamifero}}
+\index{Mamifero@{Mamifero}!Mamifero@{Mamifero}}
+\doxysubsubsection{\texorpdfstring{Mamifero()}{Mamifero()}}
+{\footnotesize\ttfamily Mamifero\+::\+Mamifero (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{idade,  }\item[{string}]{sexo,  }\item[{double}]{tamanho,  }\item[{double}]{peso,  }\item[{double}]{valor,  }\item[{\mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$}]{veterinario,  }\item[{\mbox{\hyperlink{classTratador}{Tratador}} $\ast$}]{tratador,  }\item[{string}]{cor\+\_\+da\+\_\+pelagem }\end{DoxyParamCaption})}
+
+
+
+Constroi um novo objeto \mbox{\hyperlink{classMamifero}{Mamifero}}\+:\+: \mbox{\hyperlink{classMamifero}{Mamifero}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do mamifero \\
+\hline
+{\em idade} & Idade do mamifero \\
+\hline
+{\em sexo} & Sexo do mamifero \\
+\hline
+{\em tamanho} & Tamanho do mamifero \\
+\hline
+{\em peso} & Peso do mamifero \\
+\hline
+{\em valor} & Preço do mamifero \\
+\hline
+{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo mamifero \\
+\hline
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo mamifero \\
+\hline
+{\em cor\+\_\+da\+\_\+pelagem} & Cor da pelagem do mamifero \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMamifero_a68f493cedd729532ea0ea5624d81416e}\label{classMamifero_a68f493cedd729532ea0ea5624d81416e}} 
+\index{Mamifero@{Mamifero}!getCorPelagem@{getCorPelagem}}
+\index{getCorPelagem@{getCorPelagem}!Mamifero@{Mamifero}}
+\doxysubsubsection{\texorpdfstring{getCorPelagem()}{getCorPelagem()}}
+{\footnotesize\ttfamily string Mamifero\+::get\+Cor\+Pelagem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Metodo get para obter Metodo get para obter a cor da pelagem do mimefero. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a cor da pelagem do mimefero 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMamifero_a4db718403960a11b484453d1c38d3c13}\label{classMamifero_a4db718403960a11b484453d1c38d3c13}} 
+\index{Mamifero@{Mamifero}!imprimeDados@{imprimeDados}}
+\index{imprimeDados@{imprimeDados}!Mamifero@{Mamifero}}
+\doxysubsubsection{\texorpdfstring{imprimeDados()}{imprimeDados()}}
+{\footnotesize\ttfamily ostream \& Mamifero\+::imprime\+Dados (\begin{DoxyParamCaption}\item[{ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo para imprimir os dados do mamifero. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em o} & Varivel para guardar impressão \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a impressão 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classAnimal}{Animal}}.
+
+
+
+Reimplementado por \mbox{\hyperlink{classMamiferoNativo_a47a775f9deef48c05b0cd8e28ab2d0e5}{Mamifero\+Nativo}} e \mbox{\hyperlink{classMamiferoExotico_a24489f8cbc52c022d28bd6d9105beef0}{Mamifero\+Exotico}}.
+
+\mbox{\Hypertarget{classMamifero_a3aadcf84658a45008bd8fcc3ad21ba01}\label{classMamifero_a3aadcf84658a45008bd8fcc3ad21ba01}} 
+\index{Mamifero@{Mamifero}!setCorPelagem@{setCorPelagem}}
+\index{setCorPelagem@{setCorPelagem}!Mamifero@{Mamifero}}
+\doxysubsubsection{\texorpdfstring{setCorPelagem()}{setCorPelagem()}}
+{\footnotesize\ttfamily void Mamifero\+::set\+Cor\+Pelagem (\begin{DoxyParamCaption}\item[{string}]{cor\+\_\+da\+\_\+pelagem }\end{DoxyParamCaption})}
+
+
+
+Metodo set para definir c. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cor\+\_\+da\+\_\+pelagem} & Define a cor da pelagem do mimefero \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/mamifero.\+hpp\item 
+src/mamifero.\+cpp\end{DoxyCompactItemize}
