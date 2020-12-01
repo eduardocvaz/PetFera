@@ -24,6 +24,8 @@ link do vídeo
 ## Instruções
 Apos a instalação, execute o programa. Ao executá-lo, o menu principal será exibido contendo as funcionalidade descritas acima. O comando "x" retorna para o menu principal.
 
+ps:tivemos problemas com o funcionamento da função de pausar a tela, por isso a sua chamada está comentada.
+
 ## Instalação e Compilação
 Clone o repositório, e execute o make:
 
