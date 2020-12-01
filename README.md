@@ -22,7 +22,7 @@ Nesta versão 1.0 temos as seguintes funcionalidades implementadas:
 link do vídeo
 
 ## Instruções
-Apos a instalação, execute o programa. Ao executá-lo, o menu principal será exibido contendo as funcionalidade descritas acima.
+Apos a instalação, execute o programa. Ao executá-lo, o menu principal será exibido contendo as funcionalidade descritas acima. Digite "x" a qualquer momento para voltar ao menu principal.
 
 ## Instalação e Compilação
 Clone o repositório, e execute o make:
