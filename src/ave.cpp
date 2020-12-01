@@ -13,7 +13,7 @@
  * @param tamanho_do_bico Tamanho do pico da ave
  * @param tamanho_da_envergadura Envergadura das asas da ave
  */
-Ave::Ave(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico,double tamanho_da_envergadura):
+Ave::Ave(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico,double tamanho_da_envergadura):
                 Animal(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,aveDomestico),
                 tamanho_do_bico(tamanho_do_bico),
                 tamanho_da_envergadura(tamanho_da_envergadura) {}

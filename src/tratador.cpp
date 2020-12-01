@@ -42,7 +42,7 @@ ostream& Tratador::imprimeDados(ostream& o) const{
        << setfill(' ') << setw(8) << this->idade
        << setfill(' ') << setw(17) << this->telefone
        << setfill(' ') << setw(15)
-       << (this->tipo==tipoVeterinario ? "Veterinário" : "Tratador")
+       << (this->tipo_profissional==tipoVeterinario ? "Veterinário" : "Tratador")
        << right << setfill(' ') << setw(15)
        << fixed << this->nivel
        << setfill(' ') << setw(15) << "e";

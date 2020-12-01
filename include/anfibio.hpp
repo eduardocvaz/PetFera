@@ -8,7 +8,7 @@ protected:
     string tipo_pele;
 
 public:
-    Anfibio(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele);
+    Anfibio(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele);
     virtual ~Anfibio();
 
     void setTipoPele(string tipo_pele);

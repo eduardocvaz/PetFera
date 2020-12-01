@@ -12,7 +12,7 @@
  * @param tratador Tratador responsavel pelo animal
  * @param cor_da_pelagem Cor da pelagem do mamifero
  */
-Mamifero::Mamifero(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string cor_da_pelagem):
+Mamifero::Mamifero(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string cor_da_pelagem):
                 Animal(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,mamiferoDomestico),
                 cor_da_pelagem(cor_da_pelagem) {}
 /**

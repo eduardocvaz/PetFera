@@ -12,7 +12,7 @@
  * @param tratador  Tratador responsavel pelo animal
  * @param tipo Espécie do animal
  */
-Animal::Animal(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, tpAnimal tipo):
+Animal::Animal(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, tpAnimal tipo):
                 nome(nome),
                 idade(idade),
                 sexo(sexo),
@@ -21,7 +21,7 @@ Animal::Animal(string nome, string idade, char sexo, double tamanho, double peso
                 valor(valor),
                 veterinario(veterinario),
                 tratador(tratador),
-                tipo(tipo)
+                tipo_animal(tipo)
                 {}
 /**
  * @brief Destroi o objeto Animal:: Animal
@@ -74,7 +74,7 @@ void Animal::setIdade(string idade){
  * 
  * @return Macho ou Fêmea
  */
-bool Animal::getSexo() const{
+string Animal::getSexo() const{
     return this->sexo;
 }
 /**
@@ -82,7 +82,7 @@ bool Animal::getSexo() const{
  * 
  * @param sexo  Define o sexo do animal
  */
-void Animal::setSexo(char sexo){
+void Animal::setSexo(string sexo){
     this->sexo = sexo;
 }
 /**
@@ -139,7 +139,7 @@ void Animal::setValor(double valor) {
  * @return Retorna a espécie do animal
  */
 tpAnimal Animal::getTipo() const {
-    return this->tipo;
+    return this->tipo_animal;
 }
 /**
  * @brief Metodo set para definir a espécie do animal
@@ -147,7 +147,7 @@ tpAnimal Animal::getTipo() const {
  * @param tipo Define a espécie do animal
  */
 void Animal::setTipo(tpAnimal tipo){
-    this->tipo = tipo;
+    this->tipo_animal = tipo;
 }
 /**
  * @brief Metodo get para obter o veterinario responsavel pelo animal

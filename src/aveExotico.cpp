@@ -14,7 +14,7 @@
  * @param tamanho_da_envergadura Envergadura das asas da ave
  * @param pais_origem Pais de origem do animal
  */
-AveExotico::AveExotico(string nome, string idade, char sexo, double tamanho, double peso, double valor,Veterinario* veterinario, Tratador* tratador,double tamanho_do_bico,double tamanho_da_envergadura,string pais_origem):
+AveExotico::AveExotico(string nome, string idade, string sexo, double tamanho, double peso, double valor,Veterinario* veterinario, Tratador* tratador,double tamanho_do_bico,double tamanho_da_envergadura,string pais_origem):
                 Ave(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_do_bico,tamanho_da_envergadura),
                 Exotico(pais_origem) {
     setTipo(aveExotico);

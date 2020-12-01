@@ -13,7 +13,7 @@
  * @param cor_da_pelagem Cor da pelagem do mamifero
  * @param estado Estado do animal
  */
-MamiferoNativo::MamiferoNativo(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string cor_da_pelagem,string estado):
+MamiferoNativo::MamiferoNativo(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string cor_da_pelagem,string estado):
                 Mamifero(nome,idade,sexo,tamanho,peso,valor, veterinario, tratador, cor_da_pelagem),
                 Nativo(estado) {
     setTipo(mamiferoNativo);

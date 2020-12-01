@@ -69,9 +69,9 @@ void PetFera::cadastrarAnimal(){
 
     int tipo;
     string nome;
-    char extinto;
+    string extinto;
     string idade;
-    char sexo;
+    string sexo;
     double tamanho;
     double peso;
     double valor;
@@ -82,12 +82,11 @@ void PetFera::cadastrarAnimal(){
     Tratador* tratador;
     Animal* criado = nullptr;
 
-    this->printTitulo("Cadastrar Animal",60);
-
-
     if(!validaVetTrat()){
         return;
     }
+
+    this->printTitulo("Cadastrar Animal",60);
 
     do {
         cout << "(1)  Anfibio" << endl
@@ -119,13 +118,13 @@ void PetFera::cadastrarAnimal(){
     } while (this->findAnimal(nome)!=nullptr);
 
     do {
-        cout << "Em Extinção? (S|N)";
+        cout << "Em Extinção? (S|N): ";
         cin >> extinto;
-        if (extinto!='s' && extinto!='S' && extinto!='n' && extinto!='N') {
+        if (extinto!="s" && extinto!="S" && extinto!="n" && extinto!="N") {
             cout << "Opção inválida! Tente novamente." << endl;
         }
-    } while (extinto!='s' && extinto!='S' && extinto!='n' && extinto!='N');
-    if (extinto=='s' || extinto=='S') {
+    } while (extinto!="s" && extinto!="S" && extinto!="n" && extinto!="N");
+    if (extinto=="s" || extinto=="S") {
         cout << "A comercialização de animais em extinção é proibida!" << endl;
         return;
     }
@@ -136,10 +135,10 @@ void PetFera::cadastrarAnimal(){
     do {
         cout << "Sexo (M|F): ";
         cin >> sexo;
-        if (sexo!='M' && sexo!='m' && sexo!='F' && sexo!='f') {
+        if (sexo!="M" && sexo!="m" && sexo!="F" && sexo!="f") {
             cout << "Opção inválida! Tente novamente." << endl;
         }
-    } while (sexo!='M' && sexo!='m' && sexo!='F' && sexo!='f');
+    } while (sexo!="M" && sexo!="m" && sexo!="F" && sexo!="f");
 
     cout << "Tamanho (cm): ";
     cin >> tamanho;
@@ -153,7 +152,13 @@ void PetFera::cadastrarAnimal(){
         flag = true;
         cout << "Veterinário Responsável: ";
         cin >> vet;
-        if (this->findProfissional(vet)==nullptr || this->findProfissional(vet)->getTipo()!=tipoVeterinario) {
+
+        if(vet=="x" || vet=="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
+        if (this->findProfissional(vet)==nullptr) {
             cout << "Veterinário não encontrado." << endl;
             flag = false;
         } else if (this->findProfissional(vet)->getTipo()!=tipoVeterinario){
@@ -167,6 +172,12 @@ void PetFera::cadastrarAnimal(){
         flag = true;
         cout << "Tratador Responsável: ";
         cin >> trat;
+
+        if(trat=="x" || trat=="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findProfissional(trat)==nullptr){
             cout << "Tratador não encontrado. Tente novamente." << endl;
             flag = false;
@@ -320,15 +331,24 @@ void PetFera::cadastrarAnimal(){
  *
  */
 void PetFera::removerAnimal(){
-    this->printTitulo("Remover Animal",60);
+
     if(this->animais.empty()){
         cout << "Nenhum animal cadastrado" << endl;
         return;
-    }
+    } else {cout << "tem";}
+
+    this->printTitulo("Remover Animal",60);
+
     string nome;
     do {
         cout << "Nome: ";
         cin >> nome;
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findAnimal(nome)==nullptr) {
             cout << "Nome não encontrado! Tente novamente." << endl;
         }
@@ -346,6 +366,13 @@ void PetFera::removerAnimal(){
  *
  */
 void PetFera::alterarAnimal(){
+
+
+    if(this->animais.empty()){
+        cout << "Nenhum animal cadastrado" << endl;
+        return;
+    }
+
     this->printTitulo("Alterar Animal",60);
 
     string nome;
@@ -355,6 +382,12 @@ void PetFera::alterarAnimal(){
     do {
         cout << "Nome do animal: ";
         cin >> nome;
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findAnimal(nome)==nullptr) {
             cout << "Animal não encontrado! Tente novamente." << endl;
         }
@@ -459,6 +492,11 @@ void PetFera::listarClasseAnimal(){
     int classe;
     int tipo;
 
+    if(this->animais.empty()){
+        cout << "Nenhum animal cadastrado" << endl;
+        return;
+    }
+
     this->printTitulo("Listar classe de animais",60);
 
     do {
@@ -467,6 +505,7 @@ void PetFera::listarClasseAnimal(){
              << "(3) Mamífero" << endl
              << "(4) Reptil" << endl;
         cin >> classe;
+
         if (classe!=1 && classe!=2 && classe!=3 && classe!=4) {
             cout << "Opção inválida! Tente novamente." << endl << endl;
         }
@@ -521,14 +560,26 @@ void PetFera::listarClasseAnimal(){
  *
  */
 void PetFera::listarDadosAnimal(){
+
+    if(this->animais.empty()){
+        cout << "Nenhum animal cadastrado" << endl;
+        return;
+    }
+
     this->printTitulo("Listar dados de animal",60);
 
     string nome;
     do {
         cout << "Digite o nome do animal: ";
         cin >> nome;
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findAnimal(nome)==nullptr) {
-            cout << "Profissional não encontrado" << endl;
+            cout << "Animal não encontrado" << endl;
         }
     } while (this->findAnimal(nome)==nullptr);
 
@@ -541,21 +592,37 @@ void PetFera::listarDadosAnimal(){
  */
 void PetFera::listarAnimaisProfissional(){
 
+    if(this->animais.empty()){
+        cout << "Nenhum animal cadastrado" << endl;
+        return;
+    }
+
+    if(this->profissionais.empty()){
+        cout << "Nenhum profissional cadastrado" << endl;
+        return;
+    }
+
     this->printTitulo("Listar animais por profissional",60);
 
     string nome;
     do {
         cout << "Digite o nome do profissional: ";
         cin >> nome;
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findProfissional(nome)==nullptr) {
             cout << "Profissional não encontrado" << endl;
         }
     } while (this->findProfissional(nome)==nullptr);
 
     if (this->findProfissional(nome)->getTipo()==tipoVeterinario) {
-        listaAnimaisProfissional(nome,true);
+        auto lista = listaAnimaisProfissional(nome,true);
     } else {
-        listaAnimaisProfissional(nome,false);
+        auto lista = listaAnimaisProfissional(nome,false);
     }
 }
 
@@ -567,8 +634,8 @@ void PetFera::cadastrarProfissional(){
     string nome;
     string idade;
     string fone;
-    char op;
-    char nivel;
+    string op;
+    string nivel;
     string crmv;
     Profissional* criado = nullptr;
 
@@ -577,6 +644,12 @@ void PetFera::cadastrarProfissional(){
     do {
         cout << "Nome: ";
         cin >> nome;
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findProfissional(nome)!=nullptr) {
             cout << "Este nome já existe" << endl;
         }
@@ -590,13 +663,14 @@ void PetFera::cadastrarProfissional(){
 
     do {
         cout << "(1) Veterinário | (2) Tratador: ";
+        cin.ignore(256, '\n');
         cin >> op;
-        if (op!='1' && op!='2') {
+        if (op!="1" && op!="2") {
             cout << "Opção inválida! Tente novamente." << endl;
         }
-    } while (op!='1' && op!='2');
+    } while (op!="1" && op!="2");
 
-    if (op=='1') {
+    if (op=="1") {
 
         cout << "Registro CRMV: ";
         cin >> crmv;
@@ -609,12 +683,12 @@ void PetFera::cadastrarProfissional(){
                  << "(2) Azul" << endl
                  << "(3) Vermelho" << endl;
             cin >> nivel;
-            if (nivel!='1' && nivel!='2' && nivel!='3') {
+            if (nivel!="1" && nivel!="2" && nivel!="3") {
                 cout << "Opção inválida! Tente novamente." << endl;
             }
-        } while (nivel!='1' && nivel!='2' && nivel!='3');
+        } while (nivel!="1" && nivel!="2" && nivel!="3");
 
-        criado = new Tratador(nome, idade, fone, static_cast<nivelSeguranca>(nivel));
+        criado = new Tratador(nome, idade, fone, static_cast<nivelSeguranca>(stoi(nivel)));
     }
 
     if (this->adicionaProfissional(criado)) {
@@ -630,17 +704,23 @@ void PetFera::cadastrarProfissional(){
  */
 void PetFera::removerProfissional(){
 
-    this->printTitulo("Remover Profissional",60);
-
-    if(this->animais.empty()){
+    if(this->profissionais.empty()){
         cout << "Nenhum profissional cadastrado" << endl;
         return;
     }
+
+    this->printTitulo("Remover Profissional",60);
 
     string nome;
     do {
         cout << "Nome: ";
         cin >> nome;
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findProfissional(nome)==nullptr) {
             cout << "Profissional não encontrado! Tente novamente." << endl;
         }
@@ -657,13 +737,25 @@ void PetFera::removerProfissional(){
  *
  */
 void PetFera::alterarProfissional(){
+
+    if(this->profissionais.empty()){
+        cout << "Nenhum profissional cadastrado" << endl;
+        return;
+    }
+
     this->printTitulo("Alterar Profissional",60);
 
     string nome;
-    char op;
+    string op;
     do {
         cout << "Nome do profissional: ";
         cin >> nome;
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
         if (this->findProfissional(nome)==nullptr) {
             cout << "Profissional não encontrado! Tente novamente." << endl;
         }
@@ -681,12 +773,12 @@ void PetFera::alterarProfissional(){
             cout << "(4) Nível de Segurança" << endl;
         }
         cin >> op;
-        if (op!='1' && op!='2' && op!='3' && op!='4') {
+        if (op!="1" && op!="2" && op!="3" && op!="4") {
             cout << "Opção inválida! Tente novamente." << endl;
         }
-    } while (op!='1' && op!='2' && op!='3' && op!='4');
+    } while (op!="1" && op!="2" && op!="3" && op!="4");
 
-    if (this->alteraProfissional(this->findProfissional(nome), op)) {
+    if (this->alteraProfissional(this->findProfissional(nome), stoi(op))) {
         cout << "Operação realizada com sucesso." << endl;
     } else {
         cout << "Erro!! Operação cancelada." << endl;
@@ -697,17 +789,31 @@ void PetFera::alterarProfissional(){
  * @brief
  *
  */
-void PetFera::consultarProfissional(){
+void PetFera::consultarProfissional() {
+
+    if(this->profissionais.empty()) {
+        cout << "Nenhum profissional cadastrado" << endl;
+        return;
+    }
+
     this->printTitulo("Consultar profissional",60);
+
+
 
     string nome;
     do {
         cout << "Digite o nome do profissional: ";
         cin >> nome;
-        if (this->findAnimal(nome)==nullptr) {
+
+        if(nome=="x" || nome =="X"){
+            cout << "Operação cancelada." << endl;
+            return;
+        }
+
+        if (this->findProfissional(nome)==nullptr) {
             cout << "Profissional não encontrado" << endl;
         }
-    } while (this->findAnimal(nome)==nullptr);
+    } while (this->findProfissional(nome)==nullptr);
 
     cout << this->findProfissional(nome);
 }
@@ -751,7 +857,7 @@ Animal* PetFera::alteraAnimal(Animal* alterado, int op){
 
     string auxStr;
     double auxDouble;
-    char sexo;
+    string sexo;
 
     switch(op) {
         case 0:{
@@ -772,10 +878,11 @@ Animal* PetFera::alteraAnimal(Animal* alterado, int op){
             do {
                 cout << "Digite o novo sexo (M|F): ";
                 cin >> sexo;
-                if (sexo!='m' && sexo!='M' && sexo!='f' && sexo!='F') {
+                if (sexo!="m" && sexo!="M" && sexo!="f" && sexo!="F") {
                     cout << "Opção inválida! Tente novamente." << endl << endl;
                 }
-            } while (sexo!='m' && sexo!='M' && sexo!='f' && sexo!='F');
+            } while (sexo!="m" && sexo!="M" && sexo!="f" && sexo!="F");
+
             alterado->setSexo(sexo);
         }
             break;
@@ -985,6 +1092,7 @@ vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool 
     }
 
     return lista;
+
 }
 
 /**
@@ -1026,7 +1134,7 @@ Profissional* PetFera::removeProfissional(string nome){
 Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
 
     string aux;
-    char nivel;
+    string nivel;
     switch(op){
         case '1':{
             cout << endl << "Digite o novo nome: ";
@@ -1061,11 +1169,11 @@ Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
                          << "(2) Azul" << endl
                          << "(3) Vermelho" << endl;
                     cin >> nivel;
-                    if (nivel!='1' && nivel!='2' && nivel!='3') {
+                    if (nivel!="1" && nivel!="2" && nivel!="3") {
                         cout << "Opção inválida! Tente novamente." << endl;
                     }
-                } while (nivel!='1' && nivel!='2' && nivel!='3');
-                dynamic_cast<Tratador*>(alterado)->setNivel(static_cast<nivelSeguranca>(nivel));
+                } while (nivel!="1" && nivel!="2" && nivel!="3");
+                dynamic_cast<Tratador*>(alterado)->setNivel(static_cast<nivelSeguranca>(stoi(nivel)));
             }
         }
         break;
@@ -1158,15 +1266,15 @@ bool PetFera::validaVetTrat() {
  * @return false
  */
 bool PetFera::validaNaoPerigosoVenenoso() {
-    char op;
+    string op;
     do {
         cout << "O animal é perigoso ou venenoso? (S|N)";
         cin >> op;
-        if (op != 's' && op != 'S' && op != 'n' && op != 'N') {
+        if (op!="s" && op!="S" && op!="n" && op!="N") {
             cout << "Opção inválida! Tente novamente." << endl;
         }
-    } while (op != 's' && op != 'S' && op != 'n' && op != 'N');
-    if (op == 's' || op == 'S') {
+    } while (op!="s" && op!="S" && op!="n" && op!="N");
+    if (op=="s" || op=="S") {
         return false;
     } else return true;
 }

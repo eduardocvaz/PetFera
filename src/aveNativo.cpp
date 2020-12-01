@@ -14,7 +14,7 @@
  * @param tamanho_da_envergadura Envergadura das asas da ave
  * @param estado 
  */
-AveNativo::AveNativo(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico,double tamanho_da_envergadura,string estado):
+AveNativo::AveNativo(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico,double tamanho_da_envergadura,string estado):
                 Ave(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tamanho_do_bico,tamanho_da_envergadura),
                 Nativo(estado) {
     setTipo(aveNativo);

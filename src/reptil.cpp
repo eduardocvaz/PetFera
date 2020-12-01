@@ -12,7 +12,7 @@
  * @param tratador Tratador responsavel pelo animal
  * @param tipo_veneno Tipo de veneno do Réptil
  */
-Reptil::Reptil(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_veneno) :
+Reptil::Reptil(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_veneno) :
             Animal(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,reptilDomestico),
             tipo_veneno(tipo_veneno) {}
 /**

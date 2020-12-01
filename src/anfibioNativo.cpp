@@ -13,7 +13,7 @@
  * @param tipo_pele Tipo de pele do anfibio
  * @param estado Estado do animal
  */
-AnfibioNativo::AnfibioNativo(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele, string estado):
+AnfibioNativo::AnfibioNativo(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele, string estado):
                 Anfibio(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele),
                 Nativo(estado) {
     setTipo(anfibioNativo);

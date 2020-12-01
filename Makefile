@@ -13,9 +13,6 @@ OBJS = $(BIN)/profissional.o $(BIN)/tratador.o $(BIN)/veterinario.o $(BIN)/anima
 all : $(OBJS)
 	$(CC) $(OBJS) -o $(PROG)
 
-debug: CPPFLAGS += -DDEBUG -g -O0
-debug: clean all
-
 $(BIN)/main.o : $(SRC)/main.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/main.cpp -o $@
 $(BIN)/petfera.o : $(SRC)/petfera.cpp $(INC)/petfera.hpp 

@@ -12,7 +12,7 @@
  * @param tratador Tratador responsavel pelo animal
  * @param tipo_pele Tipo de pele do anfibio
  */
-Anfibio::Anfibio(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador,string tipo_pele):
+Anfibio::Anfibio(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador,string tipo_pele):
         Animal(nome,idade,sexo,tamanho,peso,valor, veterinario, tratador, anfibioDomestico),
                 tipo_pele(tipo_pele) {}
 /**

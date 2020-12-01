@@ -31,7 +31,7 @@ protected:
     string nome;
     string idade;
     string telefone;
-    tipoProfissional tipo;
+    tipoProfissional tipo_profissional;
 
 public:
     Profissional(string nome, string idade, string telefone, tipoProfissional tipo);

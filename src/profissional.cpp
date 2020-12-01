@@ -13,7 +13,7 @@ Profissional::Profissional(string nome, string idade, string telefone, tipoProfi
                             nome(nome),
                             idade(idade),
                             telefone(telefone),
-                            tipo(tipo)
+                            tipo_profissional(tipo)
                             {}
 /**
  * @brief Destroi o objeto Profissional:: Profissional
@@ -50,7 +50,7 @@ string Profissional::getTelefone() const{
  * @return Retorna o tipo do profissional 
  */
 tipoProfissional Profissional::getTipo() const{
-    return this->tipo;
+    return this->tipo_profissional;
 }
 /**
  * @brief Metodo set para definir o nome do profissional
@@ -83,7 +83,7 @@ void Profissional::setTelefone(string telefone){
  * @param
  */
 void Profissional::setTipo(tipoProfissional tipo){
-    this->tipo = tipo;
+    this->tipo_profissional = tipo;
 }
 
 /**

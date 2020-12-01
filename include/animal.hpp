@@ -33,17 +33,17 @@ class Animal {
 protected:
     string nome;
     string idade;
-    char sexo;
+    string sexo;
     double tamanho;
     double peso;
     double valor;
-    tpAnimal tipo;
     Veterinario* veterinario;
     Tratador* tratador;
+    tpAnimal tipo_animal;
 
 public:
     
-    Animal(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, tpAnimal tipo);
+    Animal(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, tpAnimal tipo);
     virtual ~Animal();
 
     friend ostream& operator<< (ostream& o, Animal& animal);
@@ -53,8 +53,8 @@ public:
     void setNome(string nome);
     string getIdade() const;
     void setIdade(string idade);
-    bool getSexo() const;
-    void setSexo(char sexo);
+    string getSexo() const;
+    void setSexo(string sexo);
     double getTamanho() const;
     void setTamanho(double tamanho);
     double getPeso() const;

@@ -13,7 +13,7 @@
  * @param tipo_veneno Tipo de veneno do Réptil
  * @param estado Estado do animal
  */
-ReptilNativo::ReptilNativo(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_veneno,string estado):
+ReptilNativo::ReptilNativo(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_veneno,string estado):
                 Reptil(nome,idade,sexo,tamanho,peso,valor, veterinario, tratador,tipo_veneno),
                 Nativo(estado) {
     setTipo(reptilNativo);

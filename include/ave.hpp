@@ -9,7 +9,7 @@ private:
     double tamanho_da_envergadura;
 
 public:
-    Ave(string nome, string idade, char sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico, double tamanho_da_envergadura);
+    Ave(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico, double tamanho_da_envergadura);
     ~Ave();
 
     void setTamanhoBico(double tamanho_do_bico);
