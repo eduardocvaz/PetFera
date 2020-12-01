@@ -61,7 +61,25 @@ double Ave::getTamanhoEnvergadura() const{
  * @return Retorna a impressão
  */
 ostream& Ave::imprimeDados(ostream& o) const{
-    //corpo
+
+    string tipoStr = "Ave Doméstica";
+
+    o << left << setfill(' ') << setw(15) << this->nome
+      << setfill(' ') << setw(7) << right << this->idade << " anos"
+      << setfill(' ') << setw(5) << this->sexo
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(1) << right << this->tamanho << "cm"
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(2) << right << this->peso << "kg"
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(2) << right << "R$" << this->valor
+      << setfill(' ') << setw(15) << right << "Vet.: " << this->veterinario->getNome()
+      << setfill(' ') << setw(15) << right << "Trat.:" << this->tratador->getNome()
+      << setfill(' ') << setw(22) << right << tipoStr
+      << setfill(' ') << setw(15)
+      << fixed << setprecision(2) << right << "Bico (cm):" << this->tamanho_do_bico
+      << setfill(' ') << setw(20)
+      << fixed << setprecision(2) << right << "Envergadura (cm):" << this->tamanho_da_envergadura;
 
     return o;
 }

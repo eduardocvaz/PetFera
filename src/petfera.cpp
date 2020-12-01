@@ -477,6 +477,7 @@ void PetFera::alterarAnimal(){
     } while (!flag);
 
     if (this->alteraAnimal(this->findAnimal(nome), stoi(op))) {
+        cout << *(this->findAnimal(nome)) << endl;
         cout << "Operação realizada com sucesso." << endl;
     } else {
         cout << "Erro!! Operação cancelada." << endl;
@@ -583,7 +584,7 @@ void PetFera::listarDadosAnimal(){
         }
     } while (this->findAnimal(nome)==nullptr);
 
-    cout << this->findAnimal(nome);
+    cout << *(this->findAnimal(nome)) << endl;
 }
 
 /**
@@ -788,6 +789,7 @@ void PetFera::alterarProfissional(){
     } while (op!="1" && op!="2" && op!="3" && op!="4");
 
     if (this->alteraProfissional(this->findProfissional(nome), stoi(op))) {
+        cout << endl << *(this->findProfissional(nome)) << endl;
         cout << "Operação realizada com sucesso." << endl;
     } else {
         cout << "Erro!! Operação cancelada." << endl;
@@ -822,7 +824,7 @@ void PetFera::consultarProfissional() {
         }
     } while (this->findProfissional(nome)==nullptr);
 
-    cout << endl << *(this->findProfissional(nome)) << endl;
+    cout << endl << endl << *(this->findProfissional(nome)) << endl;
 }
 
 /**
@@ -1066,7 +1068,7 @@ vector<Animal*> PetFera::listaClasseAnimal(tpAnimal tipo){
 
     for (auto& animal : classe)
     {
-        cout << animal;
+        cout << (*animal) << endl;
     }
 
     return classe;
@@ -1095,7 +1097,7 @@ vector<Animal*> PetFera::listaAnimaisProfissional(string nome_profissional,bool 
     cout << endl << endl;
     for (auto& animal : lista)
     {
-        cout << animal;
+        cout << (*animal) << endl;
     }
 
     return lista;

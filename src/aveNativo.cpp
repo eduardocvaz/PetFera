@@ -32,6 +32,25 @@ AveNativo::~AveNativo() {}
  */
 ostream& AveNativo::imprimeDados(ostream& o) const{
 
-    //implementar
+    string tipoStr = "Ave Nativa";
+
+    o << left << setfill(' ') << setw(15) << this->nome
+      << setfill(' ') << setw(7) << right << this->idade << " anos"
+      << setfill(' ') << setw(5) << this->sexo
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(1) << right << this->tamanho << "cm"
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(2) << right << this->peso << "kg"
+      << setfill(' ') << setw(8)
+      << fixed << setprecision(2) << right << "R$" << this->valor
+      << setfill(' ') << setw(15) << right << "Vet.: " << this->veterinario->getNome()
+      << setfill(' ') << setw(15) << right << "Trat.:" << this->tratador->getNome()
+      << setfill(' ') << setw(22) << right << tipoStr
+      << setfill(' ') << setw(15)
+      << fixed << setprecision(2) << right << "Bico (cm):" << this->getTamanhoBico()
+      << setfill(' ') << setw(20)
+      << fixed << setprecision(2) << right << "Envergadura (cm):" << this->getTamanhoEnvergadura()
+      << setfill(' ') << setw(17) << right << "Estado: " << this->getEstado();
+
     return o;
 }
