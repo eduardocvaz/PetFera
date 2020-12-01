@@ -1,17 +1,16 @@
 #include "anfibioNativo.hpp"
 /**
- * @brief Constroi um novo objeto Anfibio Exotico:: Anfibio Exotico
- * 
- * @param nome Nome do animal
- * @param idade Idade do animal
- * @param sexo Sexo do animal
- * @param tamanho Tamanho do animal
- * @param peso Peso do animal
- * @param valor Preço do animal
- * @param veterinario Veterinario responsavel pelo animal
- * @param tratador  Tratador responsavel pelo animal
- * @param tipo_pele Tipo de pele do anfibio
- * @param estado Estado do animal
+ * @brief Constroi um novo objeto Anfibio Nativo:: Anfibio Nativo
+ * @param nome Nome do anfibio nativo
+ * @param idade Idade do anfibio nativo
+ * @param sexo Sexo do anfibio nativo
+ * @param tamanho Tamanho do anfibio nativo
+ * @param peso Peso do anfibio nativo
+ * @param valor Preço do anfibio nativo
+ * @param veterinario Veterinario responsavel pelo anfibio nativo
+ * @param tratador  Tratador responsavel pelo anfibio nativo
+ * @param tipo_pele Tipo de pele do anfibio nativo
+ * @param estado Estado do anfibio nativo
  */
 AnfibioNativo::AnfibioNativo(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele, string estado):
                 Anfibio(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele),
@@ -24,7 +23,7 @@ AnfibioNativo::AnfibioNativo(string nome, string idade, string sexo, double tama
  */
 AnfibioNativo::~AnfibioNativo() {}
 /**
- * @brief Metodo para imprimir os dados do animal
+ * @brief Metodo para imprimir os dados do anfibio nativo
  * 
  * @param o Varivel para guardar impressão
  * @return Retorna a impressão

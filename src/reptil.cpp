@@ -2,14 +2,14 @@
 /**
  * @brief Constroi um novo objeto Reptil:: Reptil
  * 
- * @param nome Nome do animal
- * @param idade Idade do animal
- * @param sexo Sexo do animal
- * @param tamanho Tamanho do animal
- * @param peso Peso do animal
- * @param valor Preço do animal
- * @param veterinario Veterinario responsavel pelo animal
- * @param tratador Tratador responsavel pelo animal
+ * @param nome Nome do reptil
+ * @param idade Idade do reptil
+ * @param sexo Sexo do reptil
+ * @param tamanho Tamanho do reptil
+ * @param peso Peso do reptil
+ * @param valor Preço do reptil
+ * @param veterinario Veterinario responsavel pelo reptil
+ * @param tratador Tratador responsavel pelo reptil
  * @param tipo_veneno Tipo de veneno do Réptil
  */
 Reptil::Reptil(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_veneno) :
@@ -37,7 +37,7 @@ string Reptil::getTipoVeneno() const{
     return this->tipo_veneno;
 }
 /**
- * @brief Metodo para imprimir os dados do animal
+ * @brief Metodo para imprimir os dados do reptil
  * 
  * @param o Varivel para guardar impressão
  * @return Retorna a impressão

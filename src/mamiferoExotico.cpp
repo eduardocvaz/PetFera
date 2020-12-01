@@ -2,16 +2,16 @@
 /**
  * @brief Constroi um novo objeto Mamifero Exotico:: Mamifero Exotico
  * 
- * @param nome Nome do animal
- * @param idade Idade do animal
- * @param sexo Sexo do animal
- * @param tamanho Tamanho do animal
- * @param peso Peso do animal
- * @param valor Preço do animal
- * @param veterinario Veterinario responsavel pelo animal
- * @param tratador Tratador responsavel pelo animal
- * @param cor_da_pelagem Cor da pelagem do mamifero
- * @param pais_origem Pais de origem do animal
+ * @param nome Nome do mamifero exotico
+ * @param idade Idade do mamifero exotico
+ * @param sexo Sexo do mamifero exotico
+ * @param tamanho Tamanho do mamifero exotico
+ * @param peso Peso do mamifero exotico
+ * @param valor Preço do mamifero exoticol
+ * @param veterinario Veterinario responsavel pelo mamifero exotico
+ * @param tratador Tratador responsavel pelo mamifero exotico
+ * @param cor_da_pelagem Cor da pelagem do mamifero exotico
+ * @param pais_origem Pais de origem do mamifero exotico
  */
 MamiferoExotico::MamiferoExotico(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string cor_da_pelagem,string pais_origem):
                 Mamifero(nome,idade,sexo,tamanho,peso,valor, veterinario, tratador, cor_da_pelagem),
@@ -24,7 +24,7 @@ MamiferoExotico::MamiferoExotico(string nome, string idade, string sexo, double 
  */
 MamiferoExotico::~MamiferoExotico() {}
 /**
- * @brief Metodo para imprimir os dados do animal
+ * @brief Metodo para imprimir os dados do mamifero exotico
  * 
  * @param o Varivel para guardar impressão
  * @return Retorna a impressão

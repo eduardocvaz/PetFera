@@ -2,16 +2,16 @@
 /**
  * @brief Constroi um novo objeto Ave Nativo:: Ave Nativo
  * 
- * @param nome Nome do animal
- * @param idade Idade do animal
- * @param sexo Sexo do animal
- * @param tamanho Tamanho do animal
- * @param peso Peso do animal
- * @param valor Preço do animal
- * @param veterinario Veterinario responsavel pelo animal
- * @param tratador Tratador responsavel pelo animal
- * @param tamanho_do_bico Tamanho do pico da ave
- * @param tamanho_da_envergadura Envergadura das asas da ave
+ * @param nome Nome da ave nativa
+ * @param idade Idade da ave nativa
+ * @param sexo Sexo da ave nativa
+ * @param tamanho Tamanho da ave nativa
+ * @param peso Peso da ave nativa
+ * @param valor Preço da ave nativa
+ * @param veterinario Veterinario responsavel pela ave nativa
+ * @param tratador Tratador responsavel pela ave nativa
+ * @param tamanho_do_bico Tamanho do pico da ave nativa
+ * @param tamanho_da_envergadura Envergadura das asas da ave nativa
  * @param estado 
  */
 AveNativo::AveNativo(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, double tamanho_do_bico,double tamanho_da_envergadura,string estado):
@@ -25,7 +25,7 @@ AveNativo::AveNativo(string nome, string idade, string sexo, double tamanho, dou
  */
 AveNativo::~AveNativo() {}
 /**
- * @brief Metodo para imprimir os dados do animal
+ * @brief Metodo para imprimir os dados da ave nativa
  * 
  * @param o Varivel para guardar impressão
  * @return Retorna a impressão

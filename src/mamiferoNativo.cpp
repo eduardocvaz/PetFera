@@ -2,16 +2,16 @@
 /**
  * @brief Constroi um novo objeto Mamifero Nativo:: Mamifero Nativo
  * 
- * @param nome Nome do animal
- * @param idade Idade do animal
- * @param sexo Sexo do animal
- * @param tamanho Tamanho do animal
- * @param peso Peso do animal
- * @param valor Preço do animal
- * @param veterinario Veterinario responsavel pelo animal
- * @param tratador Tratador responsavel pelo animal
- * @param cor_da_pelagem Cor da pelagem do mamifero
- * @param estado Estado do animal
+ * @param nome Nome do mamifero nativo
+ * @param idade Idade do mamifero nativo
+ * @param sexo Sexo do mamifero nativo
+ * @param tamanho Tamanho do mamifero nativo
+ * @param peso Peso do mamifero nativo
+ * @param valor Preço do mamifero nativo
+ * @param veterinario Veterinario responsavel pelo mamifero nativo
+ * @param tratador Tratador responsavel pelo mamifero nativo
+ * @param cor_da_pelagem Cor da pelagem do mamifero nativo
+ * @param estado Estado do mamifero nativo
  */
 MamiferoNativo::MamiferoNativo(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string cor_da_pelagem,string estado):
                 Mamifero(nome,idade,sexo,tamanho,peso,valor, veterinario, tratador, cor_da_pelagem),
@@ -24,7 +24,7 @@ MamiferoNativo::MamiferoNativo(string nome, string idade, string sexo, double ta
  */
 MamiferoNativo::~MamiferoNativo() {}
 /**
- * @brief Metodo para imprimir os dados do animal
+ * @brief Metodo para imprimir os dados do mamifero nativo
  * 
  * @param o Varivel para guardar impressão
  * @return Retorna a impressão

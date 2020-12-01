@@ -2,14 +2,14 @@
 /**
  * @brief Constroi um novo objeto Mamifero:: Mamifero
  * 
- * @param nome Nome do animal
- * @param idade Idade do animal
- * @param sexo Sexo do animal
- * @param tamanho Tamanho do animal
- * @param peso Peso do animal
- * @param valor Preço do animal
- * @param veterinario Veterinario responsavel pelo animal
- * @param tratador Tratador responsavel pelo animal
+ * @param nome Nome do mamifero
+ * @param idade Idade do mamifero
+ * @param sexo Sexo do mamifero
+ * @param tamanho Tamanho do mamifero
+ * @param peso Peso do mamifero
+ * @param valor Preço do mamifero
+ * @param veterinario Veterinario responsavel pelo mamifero
+ * @param tratador Tratador responsavel pelo mamifero
  * @param cor_da_pelagem Cor da pelagem do mamifero
  */
 Mamifero::Mamifero(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string cor_da_pelagem):
@@ -37,7 +37,7 @@ string Mamifero::getCorPelagem() const{
     return this->cor_da_pelagem;
 }
 /**
- * @brief Metodo para imprimir os dados do animal
+ * @brief Metodo para imprimir os dados do mamifero
  * 
  * @param o Varivel para guardar impressão
  * @return Retorna a impressão
