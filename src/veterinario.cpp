@@ -38,13 +38,14 @@ string Veterinario::getCRMV() const{
  * @return Retorna a impressão
  */
 ostream& Veterinario::imprimeDados(ostream& o) const{
-    o << setfill(' ') << setw(15) << this->nome
-      << setfill(' ') << setw(8) << this->idade
+
+    string nivelStr;
+
+    o << left << setfill(' ') << setw(15) << this->nome
+      << setfill(' ') << setw(9) << this->idade
       << setfill(' ') << setw(17) << this->telefone
-      << setfill(' ') << setw(15)
+      << setfill(' ') << setw(12)
       << (this->tipo_profissional==tipoVeterinario ? "Veterinário" : "Tratador")
-      << right << setfill(' ') << setw(15)
-      << fixed << this->cod_CRMV
-      << setfill(' ') << setw(15) << "e";
+      << setfill(' ') << setw(15) << this->cod_CRMV;
     return o;
 }

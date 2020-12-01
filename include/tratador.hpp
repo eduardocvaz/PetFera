@@ -9,19 +9,19 @@ using std::string;
 
 enum nivelSeguranca
 {
-    nivelVerde = 1,
-    nivelAzul = 2,
-    nivelVermelho = 3
+    nivelVerde,
+    nivelAzul,
+    nivelVermelho
 };
 
 class Tratador : public Profissional {
 private:
-    nivelSeguranca nivel;
+    nivelSeguranca nivelseguranca;
 public:
-    Tratador(string nome, string idade, string telefone, nivelSeguranca nivel);
+    Tratador(string nome, string idade, string telefone, nivelSeguranca nivelseg);
     ~Tratador();
 
-    void setNivel(nivelSeguranca nivel);
+    void setNivel(nivelSeguranca nivelseguranca);
     nivelSeguranca getNivel() const;
 
     friend ostream& operator<< (ostream& o, Tratador& p);

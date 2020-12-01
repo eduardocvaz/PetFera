@@ -93,5 +93,6 @@ void Profissional::setTipo(tipoProfissional tipo){
  * @return Retorna a impressão
  */
 ostream& operator<< (ostream& o, Profissional& p){
+
     return p.imprimeDados(o);
 }

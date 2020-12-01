@@ -7,9 +7,9 @@
  * @param telefone Numero para contato do tratador
  * @param nivel Nivel de segurança que o tratador tem
  */
-Tratador::Tratador(string nome, string idade, string telefone, nivelSeguranca nivel):
+Tratador::Tratador(string nome, string idade, string telefone, nivelSeguranca nivelseg):
                     Profissional(nome, idade, telefone, tipoTratador),
-                    nivel(nivel) {}
+                    nivelseguranca(nivelseg) {}
 /**
  * @brief Destroi o objeto Tratador:: Tratador
  * 
@@ -21,7 +21,7 @@ Tratador::~Tratador() {}
  * @param nivel Define o nivel de seguranção que o tratador tem
  */
 void Tratador::setNivel(nivelSeguranca nivel){
-    this->nivel = nivel;
+    this->nivelseguranca = nivel;
 }
 /**
  * @brief Metodo set para definir o nivel de seguranção que o tratador tem
@@ -29,7 +29,7 @@ void Tratador::setNivel(nivelSeguranca nivel){
  * @return Retorna o nivel de seguranção que o tratador tem
  */
 nivelSeguranca Tratador::getNivel() const{
-    return this->nivel;
+    return this->nivelseguranca;
 }
 /**
  * @brief Metodo para imprimir os dados do animal
@@ -38,13 +38,23 @@ nivelSeguranca Tratador::getNivel() const{
  * @return Retorna a impressão
  */
 ostream& Tratador::imprimeDados(ostream& o) const{
-    o << setfill(' ') << setw(15) << this->nome
-       << setfill(' ') << setw(8) << this->idade
+
+    string nivelStr;
+    switch(nivelseguranca){
+        case nivelVermelho: nivelStr = "Nível Vermelho";
+        break;
+        case nivelVerde: nivelStr = "Nível Verde";
+        break;
+        case nivelAzul: nivelStr = "Nível Azul";
+        break;
+    }
+
+    o << left << setfill(' ') << setw(15) << this->nome
+       << setfill(' ') << setw(9) << this->idade
        << setfill(' ') << setw(17) << this->telefone
-       << setfill(' ') << setw(15)
+       << setfill(' ') << setw(12)
        << (this->tipo_profissional==tipoVeterinario ? "Veterinário" : "Tratador")
-       << right << setfill(' ') << setw(15)
-       << fixed << this->nivel
-       << setfill(' ') << setw(15) << "e";
+       << setfill(' ') << setw(15) << nivelStr;
+
     return o;
 }

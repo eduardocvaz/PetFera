@@ -6,7 +6,7 @@ INC = ./include
 
 PROG = $(BIN)/petfera
 CC = g++
-CPPFLAGS = -Wall -std=c++17 -I./include
+CPPFLAGS = -Wall -std=c++11 -I./include
 
 OBJS = $(BIN)/profissional.o $(BIN)/tratador.o $(BIN)/veterinario.o $(BIN)/animal.o $(BIN)/anfibio.o $(BIN)/ave.o $(BIN)/mamifero.o $(BIN)/reptil.o $(BIN)/petfera.o $(BIN)/main.o $(BIN)/exotico.o $(BIN)/nativo.o $(BIN)/anfibioExotico.o $(BIN)/anfibioNativo.o  $(BIN)/aveExotico.o  $(BIN)/aveNativo.o  $(BIN)/mamiferoExotico.o $(BIN)/mamiferoNativo.o $(BIN)/reptilExotico.o $(BIN)/reptilNativo.o
 

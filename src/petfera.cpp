@@ -635,7 +635,7 @@ void PetFera::cadastrarProfissional(){
     string idade;
     string fone;
     string op;
-    string nivel;
+    char nivel;
     string crmv;
     Profissional* criado = nullptr;
 
@@ -663,7 +663,7 @@ void PetFera::cadastrarProfissional(){
 
     do {
         cout << "(1) Veterinário | (2) Tratador: ";
-        cin.ignore(256, '\n');
+        //cin.ignore(256, '\n');
         cin >> op;
         if (op!="1" && op!="2") {
             cout << "Opção inválida! Tente novamente." << endl;
@@ -683,12 +683,21 @@ void PetFera::cadastrarProfissional(){
                  << "(2) Azul" << endl
                  << "(3) Vermelho" << endl;
             cin >> nivel;
-            if (nivel!="1" && nivel!="2" && nivel!="3") {
+            if (nivel!='1' && nivel!='2' && nivel!='3') {
                 cout << "Opção inválida! Tente novamente." << endl;
             }
-        } while (nivel!="1" && nivel!="2" && nivel!="3");
+        } while (nivel!='1' && nivel!='2'  && nivel!='3');
 
-        criado = new Tratador(nome, idade, fone, static_cast<nivelSeguranca>(stoi(nivel)));
+        switch(nivel){
+            case '1': {
+                criado = new Tratador(nome, idade, fone, nivelVerde);}
+            break;
+            case '2': {
+                criado = new Tratador(nome, idade, fone, nivelAzul);}
+            break;
+            case '3': {criado = new Tratador(nome, idade, fone, nivelVermelho);}
+            break;
+        }
     }
 
     if (this->adicionaProfissional(criado)) {
@@ -798,8 +807,6 @@ void PetFera::consultarProfissional() {
 
     this->printTitulo("Consultar profissional",60);
 
-
-
     string nome;
     do {
         cout << "Digite o nome do profissional: ";
@@ -815,7 +822,7 @@ void PetFera::consultarProfissional() {
         }
     } while (this->findProfissional(nome)==nullptr);
 
-    cout << this->findProfissional(nome);
+    cout << endl << *(this->findProfissional(nome)) << endl;
 }
 
 /**
@@ -1134,7 +1141,7 @@ Profissional* PetFera::removeProfissional(string nome){
 Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
 
     string aux;
-    string nivel;
+    int nivel;
     switch(op){
         case '1':{
             cout << endl << "Digite o novo nome: ";
@@ -1169,11 +1176,17 @@ Profissional* PetFera::alteraProfissional(Profissional* alterado, char op){
                          << "(2) Azul" << endl
                          << "(3) Vermelho" << endl;
                     cin >> nivel;
-                    if (nivel!="1" && nivel!="2" && nivel!="3") {
+                    if (nivel!=1 && nivel!=2 && nivel!=3) {
                         cout << "Opção inválida! Tente novamente." << endl;
                     }
-                } while (nivel!="1" && nivel!="2" && nivel!="3");
-                dynamic_cast<Tratador*>(alterado)->setNivel(static_cast<nivelSeguranca>(stoi(nivel)));
+                } while (nivel!=1 && nivel!=2 && nivel!=3);
+
+                switch(nivel){
+                    case 1: dynamic_cast<Tratador*>(alterado)->setNivel(nivelVerde);
+                    case 2: dynamic_cast<Tratador*>(alterado)->setNivel(nivelAzul);
+                    case 3: dynamic_cast<Tratador*>(alterado)->setNivel(nivelVermelho);
+                }
+
             }
         }
         break;
