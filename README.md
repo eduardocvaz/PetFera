@@ -35,4 +35,4 @@ Ou acesse a pasta/bin.
 
 ## Execução
 
-> ./programa
+> ./petfera
