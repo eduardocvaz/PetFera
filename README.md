@@ -1,6 +1,6 @@
 # Projeto-PARTE-I
 Projeto da turma 02 de Linguagem de Programação 1 \
-Sistema de cadastro de animais e profissionais de uma loja de animais.
+Sistema de cadastro de animais e profissionais responsáveis em uma loja de animais.
 
 ## Grupo:
 Silvestre Estalonge
@@ -30,9 +30,6 @@ Clone o repositório, e execute o make:
 > git clone https://github.com/eduardocvaz/Projeto-PARTE-I \
 > make 
 
-Mova ../bin/programa para a pasta que preferir. \
-Ou acesse a pasta/bin.
-
 ## Execução
 
-> ./petfera
+> ./bin/petfera
