@@ -16,6 +16,7 @@ using std::cin;
 //using std::left;
 //using std::right;
 //using std::getline;
+
 /**
  * @brief Constroi um novo objeto Pet Fera:: Pet Fera
  *
@@ -511,6 +512,7 @@ void PetFera::listarClasseAnimal(){
             break;
 
         default : cout << endl << "Erro Interno!";
+        //atribuição para lista para posterior utilização em extração de dados
     }
 }
 
