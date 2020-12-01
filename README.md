@@ -33,3 +33,7 @@ Clone o repositório, e execute o make:
 ## Execução
 
 > ./bin/petfera
+
+## Limpar Compilação
+
+> make clean
