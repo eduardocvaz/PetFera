@@ -42,7 +42,7 @@ string Reptil::getTipoVeneno() const{
  * @param o Varivel para guardar impressão
  * @return Retorna a impressão
  */
-ostream &Reptil::imprimeDados(ostream &o) const
+ostream& Reptil::imprimeDados(ostream &o) const
 {
     //implementar
     return o;

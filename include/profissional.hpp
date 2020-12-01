@@ -7,6 +7,14 @@
 #include <vector>
 #include <memory>
 
+using std::setfill;
+using std::setw;
+using std::fixed;
+using std::setprecision;
+using std::left;
+using std::right;
+using std::cout;
+using std::endl;
 using std::string;
 using std::ostream;
 using std::vector;

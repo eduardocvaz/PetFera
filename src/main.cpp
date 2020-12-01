@@ -9,15 +9,15 @@
 /**
  * @mainpage Página Principal
  * 
- * @section intro_sec Documetação do Projeto
+ * @section intro_sec Documetação do Projeto PetFera
  * 
- * Documentação gerada com doxygen
+ * Documentação gerada com Doxygen
  *
  * @section proj_sec Projeto PetFera
  * 
  * Projeto da turma de linguagem de programação 1
  * 
- * Cadastro de animais de uma loja de animais em geral.
+ * Cadastro de animais e profissionais de uma loja de animais.
  *
  * @section group_sec Grupo
  * Silvestre Estalonge

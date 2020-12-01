@@ -783,7 +783,7 @@ Animal* PetFera::alteraAnimal(Animal* alterado, int op){
         case 3:{
             cout << endl << "Digite o novo tamanho (cm): ";
             cin >> auxDouble;
-            alterado->setPeso(auxDouble);
+            alterado->setTamanho(auxDouble);
         }
             break;
 

@@ -1,4 +1,6 @@
 #include "profissional.hpp"
+
+
 /**
  * @brief Constroi um novo objeto Profissional:: Profissional
  * 

@@ -38,6 +38,13 @@ nivelSeguranca Tratador::getNivel() const{
  * @return Retorna a impressão
  */
 ostream& Tratador::imprimeDados(ostream& o) const{
-    //implementar
+    o << setfill(' ') << setw(15) << this->nome
+       << setfill(' ') << setw(8) << this->idade
+       << setfill(' ') << setw(17) << this->telefone
+       << setfill(' ') << setw(15)
+       << (this->tipo==tipoVeterinario ? "Veterinário" : "Tratador")
+       << right << setfill(' ') << setw(15)
+       << fixed << this->nivel
+       << setfill(' ') << setw(15) << "e";
     return o;
 }

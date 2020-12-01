@@ -14,7 +14,7 @@ public:
     void setTipoVeneno(string tipo_veneno);
     string getTipoVeneno() const;
 
-    friend ostream& operator<< (ostream& o, Reptil& Reptil);
+    friend ostream& operator<< (ostream& o, Reptil& reptil);
     virtual ostream& imprimeDados(ostream& o) const;
 };
 

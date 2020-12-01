@@ -2,6 +2,9 @@
 
 #include <string>
 #include <iostream>
+#include <ostream>
+#include <iostream>
+#include <iomanip>
 
 #include "profissional.hpp"
 #include "veterinario.hpp"
