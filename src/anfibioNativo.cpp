@@ -1,13 +1,13 @@
 #include "anfibioNativo.hpp"
 /**
- * @brief Constroi um novo objeto Anfibio Nativo:: Anfibio Nativo
+ * @brief Instancia um novo objeto do tipo Anfíbio Nativo
  * @param nome Nome do anfibio nativo
  * @param idade Idade do anfibio nativo
  * @param sexo Sexo do anfibio nativo
  * @param tamanho Tamanho do anfibio nativo
  * @param peso Peso do anfibio nativo
  * @param valor Preço do anfibio nativo
- * @param veterinario Veterinario responsavel pelo anfibio nativo
+ * @param veterinario Veterinário responsavel pelo anfibio nativo
  * @param tratador  Tratador responsavel pelo anfibio nativo
  * @param tipo_pele Tipo de pele do anfibio nativo
  * @param estado Estado do anfibio nativo
@@ -18,14 +18,14 @@ AnfibioNativo::AnfibioNativo(string nome, string idade, string sexo, double tama
     setTipo(anfibioNativo);
 }
 /**
- * @brief Destroi o objeto Anfibio Nativo:: Anfibio Nativo
+ * @brief Destrói o objeto do tipo Anfíbio Nativo
  * 
  */
 AnfibioNativo::~AnfibioNativo() {}
 /**
- * @brief Metodo para imprimir os dados do anfibio nativo
+ * @brief Método para imprimir os dados do anfíbio nativo
  * 
- * @param o Varivel para guardar impressão
+ * @param o Variável para guardar impressão
  * @return Retorna a impressão
  */
 ostream& AnfibioNativo::imprimeDados(ostream& o) const{

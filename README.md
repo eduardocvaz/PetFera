@@ -19,7 +19,7 @@ Nesta versão 1.0 temos as seguintes funcionalidades implementadas:
 > Todas as atividades relacionadas ao cadastro (Inserção, Alteração, Remoção e Consulta) de veterinários e tratadores. 
 
 ## Vídeo Explicativo
-link do vídeo
+https://youtu.be/Q1BWgalnNpg
 
 ## Documentação
 https://eduardocvaz.github.io/PetFera/index.html
