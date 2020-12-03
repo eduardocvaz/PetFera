@@ -15,7 +15,7 @@
  *
  * @section proj_sec Projeto PetFera
  * 
- * Projeto da turma de linguagem de programação 1
+ * Projeto de Linguagem de Programação 1
  * 
  * Cadastro de animais e profissionais de uma loja de animais.
  *
@@ -40,7 +40,7 @@ void pausar() {
     #if defined _WIN32
         system("pause");
     #elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
-        system("read -n 1 -s -p \"Pressione qualquer tecla para continuar...\"");
+         system("read -n 1 -s -p \"Pressione qualquer tecla para continuar...\"");
     #elif defined (__APPLE__)
         system("read -n 1 -s -p \"Pressione qualquer tecla para continuar...\"");
     #endif

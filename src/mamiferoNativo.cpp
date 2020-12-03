@@ -33,18 +33,25 @@ ostream& MamiferoNativo::imprimeDados(ostream& o) const{
 
     string tipoStr = "Mamífero Nativo";
 
+    string sexo = this->getSexo();
+    if(sexo=="M" || sexo=="m") {
+        sexo = "Macho";
+    } else{
+        sexo = "Fêmea";
+    }
+
     o << left << setfill(' ') << setw(15) << this->nome
-      << setfill(' ') << setw(7) << right << this->idade << " anos"
-      << setfill(' ') << setw(5) << this->sexo
+      << left << setfill(' ') << setw(7) << right << this->idade << " anos"
+      << setfill(' ') << setw(7) << sexo
       << setfill(' ') << setw(8)
-      << fixed << setprecision(1) << right << this->tamanho << "cm"
+      << fixed << setprecision(0) << right << this->tamanho << "cm"
       << setfill(' ') << setw(8)
       << fixed << setprecision(2) << right << this->peso << "kg"
-      << setfill(' ') << setw(8)
-      << fixed << setprecision(2) << right << "R$" << this->valor
+      << setfill(' ') << setw(6) << right << "R$"
+      << fixed << setprecision(2) << this->valor
       << setfill(' ') << setw(15) << right << "Vet.: " << this->veterinario->getNome()
       << setfill(' ') << setw(15) << right << "Trat.: " << this->tratador->getNome()
-      << setfill(' ') << setw(22) << right << tipoStr
+      << right << setfill(' ') << setw(22) << right << tipoStr
       << setfill(' ') << setw(18)
       << fixed << setprecision(2) << right << "Pelagem: " << this->getCorPelagem()
       << setfill(' ') << setw(17) << right << "Estado: " << this->getEstado();
