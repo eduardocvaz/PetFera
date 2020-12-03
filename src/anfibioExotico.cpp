@@ -1,17 +1,17 @@
 #include "anfibioExotico.hpp"
 /**
- * @brief Constroi um novo objeto Anfibio Exotico:: Anfibio Exotico
+ * @brief Instancia um novo objeto Anfibio Exótico
  * 
- * @param nome Nome do anfibio exotico
- * @param idade Idade do anfibio exotico
- * @param sexo Sexo do anfibio exotico
- * @param tamanho Tamanho do anfibio exotico
- * @param peso Peso do anfibio exotico
- * @param valor Preço do anfibio exotico
- * @param veterinario Veterinario responsavel pelo anfibio exotico
- * @param tratador  Tratador responsavel pelo anfibio exotico
- * @param tipo_pele Tipo de pele do anfibio exotico
- * @param pais_origem Pais de origem do anfibio exotico
+ * @param nome Nome do anfíbio exótico
+ * @param idade Idade do anfíbio exótico
+ * @param sexo Sexo do anfíbio exótico
+ * @param tamanho Tamanho do anfíbio exótico
+ * @param peso Peso do anfíbio exótico
+ * @param valor Preço do anfíbio exótico
+ * @param veterinario Veterinário responsavel pelo anfíbio exótico
+ * @param tratador  Tratador responsavel pelo anfíbio exótico
+ * @param tipo_pele Tipo de pele do anfíbio exótico
+ * @param pais_origem Pais de origem do anfíbio exótico
  */
 AnfibioExotico::AnfibioExotico(string nome, string idade, string sexo, double tamanho, double peso, double valor, Veterinario* veterinario, Tratador* tratador, string tipo_pele, string pais_origem):
                 Anfibio(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,tipo_pele),
@@ -19,14 +19,13 @@ AnfibioExotico::AnfibioExotico(string nome, string idade, string sexo, double ta
     setTipo(anfibioExotico);
 }
 /**
- * @brief Destroi o objeto Anfibio Exotico:: Anfibio Exotico
- * 
+ * @brief Destrói o objeto Anfibio Exótico
  */
 AnfibioExotico::~AnfibioExotico() {}
 /**
- * @brief Metodo para imprimir os dados do anfibio exotico
+ * @brief Método para imprimir os dados do anfíbio exótico.
  * 
- * @param o Varivel para guardar impressão
+ * @param o Variável para guardar o stream da impressão
  * @return Retorna a impressão
  */
 ostream& AnfibioExotico::imprimeDados(ostream& o) const{

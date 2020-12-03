@@ -1,6 +1,6 @@
 #include "animal.hpp"
 /**
- * @brief Constroi um novo objeto Animal:: Animal
+ * @brief Constrói um novo objeto do tipo Animal
  * 
  * @param nome Nome do animal
  * @param idade Idade do animal
@@ -24,21 +24,21 @@ Animal::Animal(string nome, string idade, string sexo, double tamanho, double pe
                 tipo_animal(tipo)
                 {}
 /**
- * @brief Destroi o objeto Animal:: Animal
+ * @brief Destrói o objeto Animal
  * 
  */
 Animal::~Animal() {}
 /**
  * @brief Operador para imprimir dados do animal
  * 
- * @param o Varivel para guardar impressão
- * @param animal Especificação do animal
+ * @param o Variável para guardar impressão
+ * @param animal Objeto do tipo Animal
  */
 ostream& operator<< (ostream& o, Animal& animal) {
     return animal.imprimeDados(o);
 }
 /**
- * @brief Metodo get para obter o nome do animal
+ * @brief Método get para obter o nome do animal
  * 
  * @return Retorna o nome do animal
  */
@@ -54,7 +54,7 @@ void Animal::setNome(string nome){
     this->nome = nome;
 }
 /**
- * @brief Metodo get para obter a idade do animal
+ * @brief Método get para obter a idade do animal
  * 
  * @return Retorna a idade do animal
  */
@@ -62,7 +62,7 @@ string Animal::getIdade() const{
     return this->idade;
 }
 /**
- * @brief Metodo set para definir a idade do animal
+ * @brief Método set para definir a idade do animal
  * 
  * @param nome Define a idade do animal
  */
@@ -70,7 +70,7 @@ void Animal::setIdade(string idade){
     this->idade = idade;
 }
 /**
- * @brief Metodo get para obter o sexo do animal
+ * @brief Método get para obter o sexo do animal
  * 
  * @return Macho ou Fêmea
  */
@@ -78,7 +78,7 @@ string Animal::getSexo() const{
     return this->sexo;
 }
 /**
- * @brief Metodo set para definir o sexo do animal
+ * @brief Método set para definir o sexo do animal
  * 
  * @param sexo  Define o sexo do animal
  */
@@ -160,7 +160,7 @@ Veterinario* Animal::getVeterinario() const{
 /**
  * @brief Metodo set para definir o veterinario responsavel pelo animal
  * 
- * @param veterinario Define o veterinario responsavel pelo animal
+ * @param veterinario Objeto do tipo Veterinário
  */
 void Animal::setVeterinario(Veterinario* veterinario){
     this->veterinario = veterinario;
@@ -168,7 +168,7 @@ void Animal::setVeterinario(Veterinario* veterinario){
 /**
  * @brief Metodo get para obter o tratador responsavel pelo animal
  * 
- * @return Retorna o tratador responsavel pelo animal
+ * @return Retorna o tratador responsável pelo animal
  */
 Tratador* Animal::getTratador() const{
     return this->tratador;
@@ -176,7 +176,7 @@ Tratador* Animal::getTratador() const{
 /**
  * @brief Metodo set para definir o tratador responsavel pelo animal
  * 
- * @param tratador Define o tratador responsavel pelo animal
+ * @param tratador Objeto do tipo Tratador
  */
 void Animal::setTratador(Tratador* tratador){
     this->tratador = tratador;
