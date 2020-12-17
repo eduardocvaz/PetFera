@@ -1323,13 +1323,26 @@ bool PetFera::validaNaoPerigosoVenenoso() {
     } else return true;
 }
 /*void PetFera::carregarArquivo(){
+    ifstream arqDados("media.csv");
 
 }*/
 void PetFera::escreverArquivo(){
     ofstream arqDados("media.csv");
+    for (auto profissional : this->profissionais)
+    {
+        arqDados << (profissional->getTipo()) << "\t" << (profissional->getNome())  << "\t" << (profissional->getIdade()) << "\t" << (profissional->getTelefone()) << "\t";
+        if ((profissional->getTipo())==1)
+        {
+            arqDados << (dynamic_cast<Tratador*>(profissional)->getNivel()) << endl;
+        }
+        if ((profissional->getTipo())==0)
+        {
+            arqDados << (dynamic_cast<Veterinario*>(profissional)->getCRMV()) << endl;
+        }
+    }
     for (auto animal : this->animais)
     {
-        arqDados << "\t" << (animal->getTipo()) << "\t" << (animal->getNome())  << "\t" << (animal->getIdade()) << "\t" << (animal->getSexo()) << "\t" << (animal->getTamanho()) << "\t" << (animal->getPeso()) << "\t" << (animal->getValor()) << "\t" << (animal->getVeterinario()->getNome()) << "\t" << (animal->getTratador()->getNome()) << "\t";
+        arqDados << (animal->getTipo()) << "\t" << (animal->getNome())  << "\t" << (animal->getIdade()) << "\t" << (animal->getSexo()) << "\t" << (animal->getTamanho()) << "\t" << (animal->getPeso()) << "\t" << (animal->getValor()) << "\t" << (animal->getVeterinario()->getNome()) << "\t" << (animal->getTratador()->getNome()) << "\t";
         if ((animal->getTipo())==2)
         {
             arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << endl;
