@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @author Eduardo C. Vaz & Leandro S. Ferreira (https://github.com/eduardocvaz/Projeto-PARTE-I)
- * @version 0.1
+ * @version 1.1
  * @date 2020-11-29
  */
 #include "petfera.hpp"
@@ -126,9 +126,9 @@ void menuPrincipal(PetFera* petfera) {
 int main () {
 
     PetFera* petfera(new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Amazônia - BR"));
-
+	//petfera->carregarArquivo();
     menuPrincipal(petfera);
-
+	petfera->escreverArquivo();
     delete petfera;
 
     return 0;

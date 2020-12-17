@@ -5,6 +5,8 @@
 #include <iomanip>
 #include <limits>
 #include <cstring>
+#include <fstream>
+#include <sstream>
 
 using std::setfill;
 using std::setw;
@@ -16,6 +18,12 @@ using std::cin;
 //using std::left;
 //using std::right;
 //using std::getline;
+using std::ostream;
+using std::istream;
+using std::ios;
+using std::stringstream;
+using std::ifstream;
+using std::ofstream;
 
 /**
  * @brief Constroi um novo objeto Pet Fera:: Pet Fera
@@ -1314,3 +1322,61 @@ bool PetFera::validaNaoPerigosoVenenoso() {
         return false;
     } else return true;
 }
+/*void PetFera::carregarArquivo(){
+
+}*/
+void PetFera::escreverArquivo(){
+    ofstream arqDados("media.csv");
+    for (auto animal : this->animais)
+    {
+        arqDados << "\t" << (animal->getTipo()) << "\t" << (animal->getNome())  << "\t" << (animal->getIdade()) << "\t" << (animal->getSexo()) << "\t" << (animal->getTamanho()) << "\t" << (animal->getPeso()) << "\t" << (animal->getValor()) << "\t" << (animal->getVeterinario()->getNome()) << "\t" << (animal->getTratador()->getNome()) << "\t";
+        if ((animal->getTipo())==2)
+        {
+            arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << endl;
+        }
+        else if ((animal->getTipo())==1)//exotico
+        {
+            arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << "\t" << (dynamic_cast<AnfibioNativo*>(animal)->getEstado()) << endl;
+        }
+        else if ((animal->getTipo())==0)//nativo
+        {
+            arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << "\t" << (dynamic_cast<AnfibioExotico*>(animal)->getPais_origem())<< endl;
+        }
+        if ((animal->getTipo())==5)
+        {
+            arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "\t" << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << endl;
+        }
+        else if ((animal->getTipo())==4)//exotico
+        {
+            arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "\t" << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << "\t" << (dynamic_cast<AveNativo*>(animal)->getEstado()) << endl;
+        }
+        else if ((animal->getTipo())==3)//nativo
+        {
+            arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "\t" << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << "\t" << (dynamic_cast<AveExotico*>(animal)->getPais_origem())<< endl;
+        }
+        else if ((animal->getTipo())==8)
+        {
+            arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) <<  endl;
+        }
+        else if ((animal->getTipo())==7)//exotico
+        {
+            arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) << "\t" << (dynamic_cast<MamiferoNativo*>(animal)->getEstado()) << endl;
+        }
+        else if ((animal->getTipo())==6)//nativo
+        {
+            arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) << "\t" << (dynamic_cast<MamiferoExotico*>(animal)->getPais_origem())<< endl;
+        }
+        else if ((animal->getTipo())==11)
+        {
+            arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << endl;
+        }
+        else if ((animal->getTipo())==10)//exotico
+        {
+            arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << "\t" << (dynamic_cast<ReptilNativo*>(animal)->getEstado()) << endl;
+        }
+        else if ((animal->getTipo())==9)//nativo
+        {
+            arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << "\t" << (dynamic_cast<ReptilExotico*>(animal)->getPais_origem())<< endl;
+        }
+    }
+}   
