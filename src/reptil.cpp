@@ -1,6 +1,6 @@
 #include "reptil.hpp"
 /**
- * @brief Constroi um novo objeto Reptil:: Reptil
+ * @brief Constrói um novo objeto Réptil Doméstico
  * 
  * @param nome Nome do reptil
  * @param idade Idade do reptil
@@ -16,7 +16,7 @@ Reptil::Reptil(string nome, string idade, string sexo, double tamanho, double pe
             Animal(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,reptilDomestico),
             tipo_veneno(tipo_veneno) {}
 /**
- * @brief Destroi o objeto Reptil:: Reptil
+ * @brief Destrói o objeto Reptil Doméstico
  * 
  */
 Reptil::~Reptil() {}

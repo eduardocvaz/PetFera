@@ -9,7 +9,7 @@
 /**
  * @mainpage Página Principal
  * 
- * @section intro_sec Documetação do Projeto PetFera
+ * @section intro_sec Documentação do Projeto PetFera
  * 
  * Documentação gerada com Doxygen
  *
@@ -67,7 +67,7 @@ void limpaTela() {
  * @param petfera Loja passada por parâmetro
  * @return void
  */
-void menuPrincipal(PetFera* petfera) {
+void menuPrincipal(shared_ptr<PetFera> petfera) {
     char opcao;
 	petfera->carregarArquivo();
 	do {
@@ -125,11 +125,10 @@ void menuPrincipal(PetFera* petfera) {
 
 int main () {
 
-    PetFera* petfera(new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Amazônia - BR"));
+    shared_ptr<PetFera> petfera(new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Amazônia - BR"));
 
     menuPrincipal(petfera);
 	petfera->escreverArquivo();
-    delete petfera;
 
     return 0;
 }

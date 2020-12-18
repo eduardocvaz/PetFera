@@ -1,6 +1,6 @@
 #include "mamifero.hpp"
 /**
- * @brief Constroi um novo objeto Mamifero:: Mamifero
+ * @brief Constrói um novo objeto Mamífero Doméstico
  * 
  * @param nome Nome do mamifero
  * @param idade Idade do mamifero
@@ -16,14 +16,14 @@ Mamifero::Mamifero(string nome, string idade, string sexo, double tamanho, doubl
                 Animal(nome,idade,sexo,tamanho,peso,valor,veterinario,tratador,mamiferoDomestico),
                 cor_da_pelagem(cor_da_pelagem) {}
 /**
- * @brief Destroi o objeto Mamifero:: Mamifero
+ * @brief Destroi o objeto Mamifero Doméstico
  * 
  */
 Mamifero::~Mamifero() {}
 /**
  * @brief Metodo set para definir c
  * 
- * @param cor_da_pelagem Define a cor da pelagem do mimefero
+ * @param cor_da_pelagem Define a cor da pelagem do mamífero
  */
 void Mamifero::setCorPelagem(string cor_da_pelagem) {
     this->cor_da_pelagem = cor_da_pelagem;
