@@ -1361,7 +1361,7 @@ void PetFera::carregarArquivo(){
 	while(getline(arqDados1,linha1)) {
         stringstream s(linha1);
         vector <string> tokens1; 
-        while (getline(s, palavra1, '\t')) {
+        while (getline(s, palavra1, ',')) {
         	tokens1.push_back(palavra1); 
         }
         switch(stoi(tokens1.at(0))){
@@ -1426,55 +1426,57 @@ void PetFera::escreverArquivo(){
     }
     ofstream arqDados("animais.csv");
     for (auto animal : this->animais)
-    {
-        arqDados << (animal->getTipo()) << "\t" << (animal->getNome())  << "\t" << (animal->getIdade()) << "\t" << (animal->getSexo()) << "\t" << (animal->getTamanho()) << "\t" << (animal->getPeso()) << "\t" << (animal->getValor()) << "\t" << (animal->getVeterinario()->getNome()) << "\t" << (animal->getTratador()->getNome()) << "\t";
-        if ((animal->getTipo())==2)
-        {
-            arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << endl;
-        }
-        else if ((animal->getTipo())==1)//exotico
-        {
-            arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << "\t" << (dynamic_cast<AnfibioNativo*>(animal)->getEstado()) << endl;
-        }
-        else if ((animal->getTipo())==0)//nativo
-        {
-            arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << "\t" << (dynamic_cast<AnfibioExotico*>(animal)->getPais_origem())<< endl;
-        }
-        if ((animal->getTipo())==5)
-        {
-            arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "\t" << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << endl;
-        }
-        else if ((animal->getTipo())==4)//exotico
-        {
-            arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "\t" << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << "\t" << (dynamic_cast<AveNativo*>(animal)->getEstado()) << endl;
-        }
-        else if ((animal->getTipo())==3)//nativo
-        {
-            arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "\t" << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << "\t" << (dynamic_cast<AveExotico*>(animal)->getPais_origem())<< endl;
-        }
-        else if ((animal->getTipo())==8)
-        {
-            arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) <<  endl;
-        }
-        else if ((animal->getTipo())==7)//exotico
-        {
-            arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) << "\t" << (dynamic_cast<MamiferoNativo*>(animal)->getEstado()) << endl;
-        }
-        else if ((animal->getTipo())==6)//nativo
-        {
-            arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) << "\t" << (dynamic_cast<MamiferoExotico*>(animal)->getPais_origem())<< endl;
-        }
-        else if ((animal->getTipo())==11)
-        {
-            arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << endl;
-        }
-        else if ((animal->getTipo())==10)//exotico
-        {
-            arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << "\t" << (dynamic_cast<ReptilNativo*>(animal)->getEstado()) << endl;
-        }
-        else if ((animal->getTipo())==9)//nativo
-        {
-            arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << "\t" << (dynamic_cast<ReptilExotico*>(animal)->getPais_origem())<< endl;
+    {   
+        arqDados << (animal->getTipo()) << "," << (animal->getNome())  << "," << (animal->getIdade()) << "," << (animal->getSexo()) << "," << (animal->getTamanho()) << "," << (animal->getPeso()) << "," << (animal->getValor()) << "," << (animal->getVeterinario()->getNome()) << "," << (animal->getTratador()->getNome()) << ",";
+        switch(animal->getTipo()){
+            case 2: {
+                arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << endl;
+                break;
+            }
+            case 1: {
+                arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << "," << (dynamic_cast<AnfibioNativo*>(animal)->getEstado()) << endl;
+                break;
+            }
+            case 0: {
+                arqDados << (dynamic_cast<Anfibio*>(animal)->getTipoPele()) << "," << (dynamic_cast<AnfibioExotico*>(animal)->getPais_origem())<< endl;
+                break;
+            }
+            case 5: {
+                arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "," << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << endl;
+                break;
+            }
+            case 4: {
+                arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "," << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << "," << (dynamic_cast<AveNativo*>(animal)->getEstado()) << endl;
+                break;
+            }
+            case 3: {
+                arqDados << (dynamic_cast<Ave*>(animal)->getTamanhoBico()) << "," << (dynamic_cast<Ave*>(animal)->getTamanhoEnvergadura()) << "," << (dynamic_cast<AveExotico*>(animal)->getPais_origem())<< endl;
+                break;
+            }
+            case 8: {
+                arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) <<  endl;
+                break;
+            }
+            case 7: {
+                arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) << "," << (dynamic_cast<MamiferoNativo*>(animal)->getEstado()) << endl;
+                break;
+            }
+            case 6: {
+                arqDados << (dynamic_cast<Mamifero*>(animal)->getCorPelagem()) << "," << (dynamic_cast<MamiferoExotico*>(animal)->getPais_origem())<< endl;
+                break;
+            }
+            case 11: {
+                arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << endl;
+                break;
+            }
+            case 10: {
+                arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << "," << (dynamic_cast<ReptilNativo*>(animal)->getEstado()) << endl;
+                break;
+            }
+            case 9: {
+                arqDados << (dynamic_cast<Reptil*>(animal)->getTipoVeneno()) << "," << (dynamic_cast<ReptilExotico*>(animal)->getPais_origem())<< endl;
+                break;
+            }
         }
     }
 }   
