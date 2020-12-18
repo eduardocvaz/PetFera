@@ -40,7 +40,11 @@ Leandro Silva Ferreira Junior
 > - Todas as atividades relacionadas ao cadastro (Inserção, Alteração, Remoção e Consulta) de veterinários e tratadores. 
 
 ## Vídeo Explicativo
-https://youtu.be/Q1BWgalnNpg
+> Versão 2.0
+> https://youtu.be/D_JK3oYjOjI \
+
+> Versão 1.0
+> https://youtu.be/Q1BWgalnNpg 
 
 ## Documentação
 https://eduardocvaz.github.io/PetFera/index.html
