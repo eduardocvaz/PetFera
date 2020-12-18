@@ -1330,7 +1330,7 @@ void PetFera::carregarArquivo(){
 	while(getline(arqDados2,linha)) {
         stringstream s(linha);
         vector <string> tokens; 
-        while (getline(s, palavra, '\t')) {
+        while (getline(s, palavra, ',')) {
         	tokens.push_back(palavra); 
         }
         if(tokens.at(0)=="0"){
@@ -1414,7 +1414,7 @@ void PetFera::escreverArquivo(){
     ofstream arqDados2("profissionais.csv");
     for (auto profissional : this->profissionais)
     {
-        arqDados2 << (profissional->getTipo()) << "\t" << (profissional->getNome())  << "\t" << (profissional->getIdade()) << "\t" << (profissional->getTelefone()) << "\t";
+        arqDados2 << (profissional->getTipo()) << "," << (profissional->getNome())  << "," << (profissional->getIdade()) << "," << (profissional->getTelefone()) << ",";
         if ((profissional->getTipo())==1)
         {
             arqDados2 << (dynamic_cast<Tratador*>(profissional)->getNivel()) << endl;
