@@ -68,7 +68,7 @@ public:
     bool adicionaProfissional(Profissional* novo);
     Profissional* removeProfissional(string nome);
     Profissional* alteraProfissional(Profissional* alterado, char op);
-    //void carregarArquivo();
+    void carregarArquivo();
     void escreverArquivo();
 
 };

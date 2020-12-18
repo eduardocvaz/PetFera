@@ -1322,24 +1322,109 @@ bool PetFera::validaNaoPerigosoVenenoso() {
         return false;
     } else return true;
 }
-/*void PetFera::carregarArquivo(){
-    ifstream arqDados("media.csv");
+void PetFera::carregarArquivo(){
+    ifstream arqDados2("profissionais.csv");
+    string linha;
+	string palavra;
+    Profissional* criado = nullptr;
+	while(getline(arqDados2,linha)) {
+        stringstream s(linha);
+        vector <string> tokens; 
+        while (getline(s, palavra, '\t')) {
+        	tokens.push_back(palavra); 
+        }
+        if(tokens.at(0)=="0"){
+            criado = new Veterinario(tokens.at(1), tokens.at(2), tokens.at(3), tokens.at(4));
+        }
+        if(tokens.at(0)=="1"){
+            switch(stoi(tokens.at(4))){
+                case 0: {
+                    criado = new Tratador(tokens.at(1), tokens.at(2), tokens.at(3), nivelVerde);}
+                    break;
+                case 1: {
+                    criado = new Tratador(tokens.at(1), tokens.at(2), tokens.at(3), nivelAzul);}
+                    break;
+                case 2: {
+                    criado = new Tratador(tokens.at(1), tokens.at(2), tokens.at(3), nivelVermelho);}
+                    break;
+            }
+        }
+        this->adicionaProfissional(criado);
 
-}*/
+    }
+    cout << endl << "Arquivo dos Profissionais Carregado";
+
+    ifstream arqDados1("animais.csv");
+    string linha1;
+	string palavra1;
+    Animal* criado1 = nullptr;
+	while(getline(arqDados1,linha1)) {
+        stringstream s(linha1);
+        vector <string> tokens1; 
+        while (getline(s, palavra1, '\t')) {
+        	tokens1.push_back(palavra1); 
+        }
+        switch(stoi(tokens1.at(0))){
+                case 0: {
+                    criado1 = new AnfibioExotico(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9),tokens1.at(10));}
+                    break;
+                case 1: {
+                    criado1 = new AnfibioNativo(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9),tokens1.at(10));}
+                    break;
+                case 2: {
+                    criado1 = new Anfibio(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9));}
+                    break;
+                case 3: {
+                    criado1 = new AveExotico(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),stod(tokens1.at(9)),stod(tokens1.at(10)),tokens1.at(11));}
+                    break;
+                case 4: {
+                    criado1 = new AveNativo(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),stod(tokens1.at(9)),stod(tokens1.at(10)),tokens1.at(11));}
+                    break;
+                case 5: {
+                    criado1 = new Ave(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),stod(tokens1.at(9)),stod(tokens1.at(10)));}
+                    break;
+                case 6: {
+                    criado1 = new MamiferoExotico(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9),tokens1.at(10));}
+                    break;
+                case 7: {
+                    criado1 = new MamiferoNativo(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9),tokens1.at(10));}
+                    break;
+                case 8: {
+                    criado1 = new Mamifero(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9));}
+                    break;
+                case 9: {
+                    criado1 = new ReptilExotico(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9),tokens1.at(10));}
+                    break;
+                case 10: {
+                    criado1 = new ReptilNativo(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9),tokens1.at(10));}
+                    break;
+                case 11: {
+                    criado1 = new Reptil(tokens1.at(1), tokens1.at(2), tokens1.at(3), stod(tokens1.at(4)),stod(tokens1.at(5)),stod(tokens1.at(6)),(dynamic_cast<Veterinario*>(findProfissional(tokens1.at(7)))),(dynamic_cast<Tratador*>(findProfissional(tokens1.at(8)))),tokens1.at(9));}
+                    break;
+        }
+        this->adicionaAnimal(criado1);
+        
+
+    }
+    cout << endl << "Arquivo dos Animais Carregado";
+}
+    
+
 void PetFera::escreverArquivo(){
-    ofstream arqDados("media.csv");
+    ofstream arqDados2("profissionais.csv");
     for (auto profissional : this->profissionais)
     {
-        arqDados << (profissional->getTipo()) << "\t" << (profissional->getNome())  << "\t" << (profissional->getIdade()) << "\t" << (profissional->getTelefone()) << "\t";
+        arqDados2 << (profissional->getTipo()) << "\t" << (profissional->getNome())  << "\t" << (profissional->getIdade()) << "\t" << (profissional->getTelefone()) << "\t";
         if ((profissional->getTipo())==1)
         {
-            arqDados << (dynamic_cast<Tratador*>(profissional)->getNivel()) << endl;
+            arqDados2 << (dynamic_cast<Tratador*>(profissional)->getNivel()) << endl;
         }
         if ((profissional->getTipo())==0)
         {
-            arqDados << (dynamic_cast<Veterinario*>(profissional)->getCRMV()) << endl;
+            arqDados2 << (dynamic_cast<Veterinario*>(profissional)->getCRMV()) << endl;
         }
     }
+    ofstream arqDados("animais.csv");
     for (auto animal : this->animais)
     {
         arqDados << (animal->getTipo()) << "\t" << (animal->getNome())  << "\t" << (animal->getIdade()) << "\t" << (animal->getSexo()) << "\t" << (animal->getTamanho()) << "\t" << (animal->getPeso()) << "\t" << (animal->getValor()) << "\t" << (animal->getVeterinario()->getNome()) << "\t" << (animal->getTratador()->getNome()) << "\t";

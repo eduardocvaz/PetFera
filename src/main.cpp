@@ -69,7 +69,7 @@ void limpaTela() {
  */
 void menuPrincipal(PetFera* petfera) {
     char opcao;
-	
+	petfera->carregarArquivo();
 	do {
 		cout<< endl << "-----------------------------------";
 		cout<< endl << "(0) Cadastrar animal";
@@ -126,7 +126,7 @@ void menuPrincipal(PetFera* petfera) {
 int main () {
 
     PetFera* petfera(new PetFera("(84) 4002-8922","Rua Mata Densa, 569, Bairro Floresta Encantada, Amazônia - BR"));
-	//petfera->carregarArquivo();
+
     menuPrincipal(petfera);
 	petfera->escreverArquivo();
     delete petfera;
