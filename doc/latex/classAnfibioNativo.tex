@@ -10,12 +10,12 @@ Diagrama de hierarquia para Anfibio\+Nativo\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classAnfibioNativo_a0c5eb08afc93d2fb7edd04ca351c340c}{Anfibio\+Nativo}} (string nome, string idade, string sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, string tipo\+\_\+pele, string estado)
-\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Instancia um novo objeto do tipo Anfíbio \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAnfibioNativo_a10ecde482410d669995fd852ba150d75}\label{classAnfibioNativo_a10ecde482410d669995fd852ba150d75}} 
 \mbox{\hyperlink{classAnfibioNativo_a10ecde482410d669995fd852ba150d75}{$\sim$\+Anfibio\+Nativo}} ()
-\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrói o objeto do tipo Anfíbio \mbox{\hyperlink{classNativo}{Nativo}}. \end{DoxyCompactList}\item 
 ostream \& \mbox{\hyperlink{classAnfibioNativo_a932b7e408188abeabf9cbef8dc194bfb}{imprime\+Dados}} (ostream \&o) const
-\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do anfibio nativo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método para imprimir os dados do anfíbio nativo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,7 +34,7 @@ ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classAnfibi
 
 
 
-Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlink{classNativo}{Nativo}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlink{classNativo}{Nativo}}. 
+Instancia um novo objeto do tipo Anfíbio \mbox{\hyperlink{classNativo}{Nativo}}. 
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -50,7 +50,7 @@ Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlin
 \hline
 {\em valor} & Preço do anfibio nativo \\
 \hline
-{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo anfibio nativo \\
+{\em veterinario} & Veterinário responsavel pelo anfibio nativo \\
 \hline
 {\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo anfibio nativo \\
 \hline
@@ -70,11 +70,11 @@ Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}} \mbox{\hyperlin
 
 
 
-Metodo para imprimir os dados do anfibio nativo. 
+Método para imprimir os dados do anfíbio nativo. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em o} & Varivel para guardar impressão \\
+{\em o} & Variável para guardar impressão \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}

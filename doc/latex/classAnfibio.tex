@@ -10,16 +10,16 @@ Diagrama de hierarquia para Anfibio\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classAnfibio_a912f5adb8f69fd2968203ed71d14b15c}{Anfibio}} (string nome, string idade, string sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, string tipo\+\_\+pele)
-\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Instancia um novo objeto do tipo Anfíbio Doméstico. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}\label{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}} 
 virtual \mbox{\hyperlink{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}{$\sim$\+Anfibio}} ()
-\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classAnfibio}{Anfibio}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destrói um objeto do tipo Anfíbio Doméstico. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classAnfibio_a555c68f13d07f5b6bf5a8d14a7dc6d7e}{set\+Tipo\+Pele}} (string tipo\+\_\+pele)
-\begin{DoxyCompactList}\small\item\em Metodo set para definir o tipo de pele do anfibio. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Método set para atribuir o tipo de pele do anfíbio. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classAnfibio_ae925bd8e5b9ef25d03a3fa5cb2dbb9a2}{get\+Tipo\+Pele}} () const
-\begin{DoxyCompactList}\small\item\em Metodo get para obter o tipo de pele do anfibio. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Método get para obter o tipo de pele do anfíbio. \end{DoxyCompactList}\item 
 virtual ostream \& \mbox{\hyperlink{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}{imprime\+Dados}} (ostream \&o) const
-\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados do anfibio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método para imprimir os dados do anfibio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,27 +43,27 @@ ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classAnfibi
 
 
 
-Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}}\+:\+: \mbox{\hyperlink{classAnfibio}{Anfibio}}. 
+Instancia um novo objeto do tipo Anfíbio Doméstico. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em nome} & Nome do anfibio \\
+{\em nome} & Nome do anfíbio \\
 \hline
-{\em idade} & Idade do anfibio \\
+{\em idade} & Idade do anfíbio \\
 \hline
-{\em sexo} & Sexo do anfibio \\
+{\em sexo} & Sexo do anfíbio \\
 \hline
-{\em tamanho} & Tamanho do anfibio \\
+{\em tamanho} & Tamanho do anfíbio \\
 \hline
-{\em peso} & Peso do anfibio \\
+{\em peso} & Peso do anfíbio \\
 \hline
-{\em valor} & Preço do anfibio \\
+{\em valor} & Preço do anfíbio \\
 \hline
-{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pelo anfibio \\
+{\em veterinario} & Veterinário responsável pelo anfíbio \\
 \hline
-{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pelo anfibio \\
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsável pelo anfíbio \\
 \hline
-{\em tipo\+\_\+pele} & Tipo de pele do anfibio \\
+{\em tipo\+\_\+pele} & Tipo de pele do anfíbio \\
 \hline
 \end{DoxyParams}
 
@@ -77,10 +77,10 @@ Constroi um novo objeto \mbox{\hyperlink{classAnfibio}{Anfibio}}\+:\+: \mbox{\hy
 
 
 
-Metodo get para obter o tipo de pele do anfibio. 
+Método get para obter o tipo de pele do anfíbio. 
 
 \begin{DoxyReturn}{Retorna}
-retorna o tipo de pele do animal 
+Retorna o tipo de pele do animal 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}\label{classAnfibio_abc00c716f99e2cfe4cb2a5d32cf82307}} 
 \index{Anfibio@{Anfibio}!imprimeDados@{imprimeDados}}
@@ -90,11 +90,11 @@ retorna o tipo de pele do animal
 
 
 
-Metodo para imprimir os dados do anfibio. 
+Método para imprimir os dados do anfibio. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em o} & Varivel para guardar impressão \\
+{\em o} & Variável para guardar o stream da impressão \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
@@ -116,11 +116,11 @@ Reimplementado por \mbox{\hyperlink{classAnfibioNativo_a932b7e408188abeabf9cbef8
 
 
 
-Metodo set para definir o tipo de pele do anfibio. 
+Método set para atribuir o tipo de pele do anfíbio. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em tipo\+\_\+pele} & Define o tipo de pele do anfibio \\
+{\em tipo\+\_\+pele} & Define o valor do tipo de pele do anfíbio \\
 \hline
 \end{DoxyParams}
 

@@ -10,20 +10,20 @@ Diagrama de hierarquia para Ave\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classAve_a2b183b9bd5fe4384ba7fbfd010a2f7e1}{Ave}} (string nome, string idade, string sexo, double tamanho, double peso, double valor, \mbox{\hyperlink{classVeterinario}{Veterinario}} $\ast$veterinario, \mbox{\hyperlink{classTratador}{Tratador}} $\ast$tratador, double tamanho\+\_\+do\+\_\+bico, double tamanho\+\_\+da\+\_\+envergadura)
-\begin{DoxyCompactList}\small\item\em Constroi um novo objeto \mbox{\hyperlink{classAve}{Ave}}\+:\+: \mbox{\hyperlink{classAve}{Ave}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Instancia um objetivo do tipo \mbox{\hyperlink{classAve}{Ave}} Doméstica. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAve_ad290be8d6fb95f1cfd24b5f55def7741}\label{classAve_ad290be8d6fb95f1cfd24b5f55def7741}} 
 \mbox{\hyperlink{classAve_ad290be8d6fb95f1cfd24b5f55def7741}{$\sim$\+Ave}} ()
-\begin{DoxyCompactList}\small\item\em Destroi o objeto \mbox{\hyperlink{classAve}{Ave}}\+:\+: \mbox{\hyperlink{classAve}{Ave}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destroi o objeto do tipo \mbox{\hyperlink{classAve}{Ave}} Doméstica. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classAve_aa6bd97a510edae1af14c1a7110503636}{set\+Tamanho\+Bico}} (double tamanho\+\_\+do\+\_\+bico)
-\begin{DoxyCompactList}\small\item\em Metodo set para definir o tamanho do bico da ave. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Método set para definir o tamanho do bico da ave. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classAve_ac45d162eb2a8d6a6fc9a837f5e6293ed}{get\+Tamanho\+Bico}} () const
-\begin{DoxyCompactList}\small\item\em Metodo get para obter o tamanho do bico da ave. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Método get para obter o tamanho do bico da ave. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classAve_ac9c0eee1339a7b90d0bbab365082bb4b}{set\+Tamanho\+Envergadura}} (double tamanho\+\_\+da\+\_\+envergadura)
 \begin{DoxyCompactList}\small\item\em Metodo set para definir a envergadura das asas da ave. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classAve_a5a93e397dc5a5b4e69072d63d2f1f1b4}{get\+Tamanho\+Envergadura}} () const
 \begin{DoxyCompactList}\small\item\em Metodo get para obter a envergadura das asas da ave. \end{DoxyCompactList}\item 
 virtual ostream \& \mbox{\hyperlink{classAve_ad9db8d0f8dbdf58b65ea482d936c4e03}{imprime\+Dados}} (ostream \&o) const
-\begin{DoxyCompactList}\small\item\em Metodo para imprimir os dados da ave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método para imprimir os dados da ave. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,7 +42,7 @@ ostream \& {\bfseries operator$<$$<$} (ostream \&o, \mbox{\hyperlink{classAve}{A
 
 
 
-Constroi um novo objeto \mbox{\hyperlink{classAve}{Ave}}\+:\+: \mbox{\hyperlink{classAve}{Ave}}. 
+Instancia um objetivo do tipo \mbox{\hyperlink{classAve}{Ave}} Doméstica. 
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -58,13 +58,13 @@ Constroi um novo objeto \mbox{\hyperlink{classAve}{Ave}}\+:\+: \mbox{\hyperlink{
 \hline
 {\em valor} & Preço da ave \\
 \hline
-{\em veterinario} & \mbox{\hyperlink{classVeterinario}{Veterinario}} responsavel pela ave \\
+{\em veterinario} & Veterinário responsável pela ave \\
 \hline
-{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsavel pela ave \\
+{\em tratador} & \mbox{\hyperlink{classTratador}{Tratador}} responsável pela ave \\
 \hline
-{\em tamanho\+\_\+do\+\_\+bico} & Tamanho do pico da ave \\
+{\em tamanho\+\_\+do\+\_\+bico} & Tamanho do pico da ave (cm) \\
 \hline
-{\em tamanho\+\_\+da\+\_\+envergadura} & Envergadura das asas da ave \\
+{\em tamanho\+\_\+da\+\_\+envergadura} & Envergadura das asas da ave (cm) \\
 \hline
 \end{DoxyParams}
 
@@ -78,7 +78,7 @@ Constroi um novo objeto \mbox{\hyperlink{classAve}{Ave}}\+:\+: \mbox{\hyperlink{
 
 
 
-Metodo get para obter o tamanho do bico da ave. 
+Método get para obter o tamanho do bico da ave. 
 
 \begin{DoxyReturn}{Retorna}
 Retorna o tamanho do bico da ave 
@@ -104,7 +104,7 @@ Retorna a envergadura das asas da ave
 
 
 
-Metodo para imprimir os dados da ave. 
+Método para imprimir os dados da ave. 
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -130,7 +130,7 @@ Reimplementado por \mbox{\hyperlink{classAveNativo_a959a5115639e80ea61b70b1c69df
 
 
 
-Metodo set para definir o tamanho do bico da ave. 
+Método set para definir o tamanho do bico da ave. 
 
 
 \begin{DoxyParams}{Parâmetros}
